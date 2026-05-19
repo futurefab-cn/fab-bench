@@ -1,0 +1,61 @@
+{
+  "test_id": "GEN_039",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Fill] In an overlay metrology system using polarization-based imaging, the first-layer structure of the overlay target rotates the polarization of one or more _____ diffraction orders relative to zero-order diffraction, enabling isolation of its image by aligning the collection polarizer at _____ degrees relative to the incident illumination polarization, while the second-layer structure maintains the polarization and is isolated by aligning the collection polarizer at _____ degrees.",
+  "gold_context_sources": [
+    {
+      "section_title": "DETAILED DESCRIPTION",
+      "evidence": "The first-layer structure 202 includes a first set of periodic features and a second set of periodic features oriented at a 90-degree angle with respect to the first set of periodic features, arranged to rotate a polarization of one or more rotated diffraction orders from the first-layer structure relative to a polarization of zero-order diffraction, wherein the one or more rotated diffraction orders include at least first-order diffraction. The imaging sub-system includes collection polarizers oriented to isolate images by passing polarization-rotated diffraction orders (e.g., at 135 degrees) while blocking zero-order diffraction and vice versa (e.g., at 45 degrees) to isolate the second-layer structure that maintains polarization.",
+      "doc_id": "US20250110412A1",
+      "has_image": false
+    },
+    {
+      "section_title": "DETAILED DESCRIPTION",
+      "evidence": "FIG. 4 illustrates zero-order diffraction having the same electric field direction as the incident illumination beam, whereas non-zero diffraction orders are orthogonally polarized to zero-order diffraction. A collection polarizer oriented at 135 degrees blocks zero-order diffraction and isolates rotated non-zero diffraction orders, enabling independent imaging of the first-layer structure.",
+      "doc_id": "US20250110412A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is first-order; 135; 45. Reasoning: The first-layer structure in the overlay target is designed to rotate the polarization of non-zero diffraction orders (at least first-order diffraction) by 90 degrees relative to zero-order diffraction. This allows the collection polarizer to be oriented at 135 degrees relative to the incident illumination polarization to pass only the rotated diffraction orders and block zero-order diffraction, isolating the first-layer structure's image. Conversely, the second-layer structure maintains the incident polarization, so setting the collection polarizer at 45 degrees passes this polarization while blocking the rotated orders, isolating the second-layer structure's image. This polarization-based separation effectively eliminates cross-talk between the layers in overlay metrology.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_109",
+  "generation_metadata": {
+    "generation_id": 264,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 22,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T13:21:17.171560",
+    "semiconductor_analysis": {
+      "technical_density": 0.001020776790759281,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 157,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 25,
+        "processes": 22,
+        "testing": 18,
+        "applications": 23,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_039.json"
+}

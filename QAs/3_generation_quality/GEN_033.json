@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_033",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Choice] In the context of Chemical Mechanical Planarization (CMP) modeling, which combination of polishing pad characteristics and process parameters would most likely lead to increased metal dishing while minimizing dielectric erosion? A) High pad roughness parameter with low pad compliance and low selectivity B) Low pad roughness parameter with high pad compliance and high selectivity C) High pad roughness parameter with high pad compliance and low selectivity D) Low pad roughness parameter with low pad compliance and low selectivity",
+  "gold_context_sources": [
+    {
+      "section_title": "A model for chemical–mechanical polishing of a material surface based on contact mechanics",
+      "evidence": "According to the model, pad roughness enhances dishing of metal lines significantly, but has only a limited effect on dielectric erosion. Fig. 6a clearly shows that metal recess increases with increasing values of the roughness parameter o. According to Eq. (12), the amount of dishing in the steady state increases linearly with ¢. The curves in Fig. 6a indeed tend to a straight line with increasing polish time, but the steady state is clearly not yet attained for larger values of o. Fig. 6b depicts the erosion of the dielectric as a function of o, where erosion is defined as the excess dielectric removed at the edge of a metal feature due to the presence of that feature. Dielectric erosion decreases slightly with increasing o. This is so because as ¢ increases a bigger fraction of the load is supported by the recessed metal feature, increasing the removal rate of the metal, but decreasing that of the dielectric. ... Figs. 5a and b illustrate the effect of the plane-strain elastic modulus of the pad on the surface profile of the wafer. A more compliant pad clearly results in more dishing since the pad deflects more easily into recessed areas on the wafer. Fig. 5b shows that the metal recess in the steady state increases linearly with pad compliance. This observation agrees with Eq. (12) since the pad deflection Aw, is inversely proportional to pad stiffness. ... Fig. 4 shows the dishing of a metal line as a function of time for various values of the selectivity. Dishing here is defined as the recess of the center of the metal line with respect to the edge of the dielectric. Dishing increases with increasing polish time and decreasing selectivity, and eventually reaches a steady state.",
+      "doc_id": "1-s2.0-S0022509603001285-main",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is C. Reasoning: According to the detailed CMP contact mechanics model, metal dishing increases linearly with both the polishing pad roughness parameter and the pad compliance (which is inversely related to pad stiffness). A higher pad roughness causes more asperity contact variations, enhancing metal dishing, while a more compliant (less stiff) pad deflects more easily into recessed areas, also increasing dishing. Moreover, dishing increases with decreasing selectivity, meaning that lower selectivity (ratio of metal to dielectric wear coefficients) causes more metal recess relative to dielectric erosion. The dielectric erosion tends to decrease slightly with increasing roughness because the load shifts towards the metal. Therefore, the combination of high pad roughness, high pad compliance, and low selectivity (Option C) leads to increased metal dishing while minimizing dielectric erosion. Options A and B contradict these dependencies, and D features low roughness and compliance, which reduces dishing.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_67",
+  "generation_metadata": {
+    "generation_id": 208,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 8,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T13:05:47.478178",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011084227393800441,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 149,
+      "categories_found": {
+        "manufacturing": 24,
+        "materials": 23,
+        "devices": 24,
+        "processes": 18,
+        "testing": 20,
+        "applications": 19,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_033.json"
+}

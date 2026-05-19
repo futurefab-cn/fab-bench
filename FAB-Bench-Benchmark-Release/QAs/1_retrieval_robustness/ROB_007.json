@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_007",
+  "test_type": "robustness",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "[Choice] According to the detailed description of the preferred embodiments of the clean water production system using membrane distillation and thermoelectric generator (patent_6), which of the following accurately describes the relative vertical arrangement of the first and second membrane distillation systems and the flow of brine between them? A) The second membrane distillation system is located above the first membrane distillation system, and brine flows from the first evaporation layer to the second evaporation layer. B) The second membrane distillation system is located under the first membrane distillation system, and brine flows from the second evaporation layer to the first evaporation layer. C) Both membrane distillation systems are side-by-side at the same vertical level, and brine flows alternately between their evaporation layers. D) The first membrane distillation system is located under the second membrane distillation system, and brine flows from the first evaporation layer to the second evaporation layer.",
+  "gold_context_sources": [
+    {
+      "section_title": "2. Description of the Related Art - DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS",
+      "evidence": "A clean water production method, in another embodiment, includes producing heat through a photovoltaic panel; receiving brine through a first evaporation layer of a first membrane distillation system located under the photovoltaic layer, and allowing brine to flow to a second evaporation layer of a second membrane distillation system located under the first membrane distillation system; ... The second evaporation layer receives brine from a brine tank and allows flow of brine from the second evaporation layer to the first evaporation layer.",
+      "doc_id": "patent_6",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is B. Reasoning: The patent detailed description explicitly states that the first membrane distillation system is located under the photovoltaic panel, and the second membrane distillation system is located under the first membrane distillation system. It further specifies that the second evaporation layer receives brine from a brine tank and allows flow of brine from the second evaporation layer to the first evaporation layer, indicating the flow is from the second to the first evaporation layer, consistent with option B. Options A, C, and D incorrectly describe the relative vertical positions or flow directions.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_14",
+  "generation_metadata": {
+    "generation_id": 59,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 3,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T00:47:30.869976",
+    "semiconductor_analysis": {
+      "technical_density": 0.0009692009476631463,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 157,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 21,
+        "devices": 26,
+        "processes": 25,
+        "testing": 17,
+        "applications": 23,
+        "parameters": 18
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_007.json"
+}

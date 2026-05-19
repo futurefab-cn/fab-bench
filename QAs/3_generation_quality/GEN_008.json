@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_008",
+  "test_type": "generation_quality",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "Explain the key challenges and historical development steps that delayed the practical implementation of full-chip Inverse Lithography Technology (ILT) in semiconductor manufacturing, and discuss how recent advances have overcome these challenges to make full-chip ILT a practical reality.",
+  "gold_context_sources": [
+    {
+      "section_title": "3 History of Inverse Lithography",
+      "evidence": "Early ILT methods produced good lithographic quality in simulation but required unreasonably long computation times, making them impractical for production. The initial approaches often used continuous-tone or grayscale masks, which are easier mathematically but impractical for current production that requires binary or phase-shifting masks. Intel’s sponsorship led to advances using pixilated masks and commercial attempts by Luminescent Technologies based on level-set methods. However, excessive computational run-times remained a barrier. Advances in GPU-accelerated approaches and multibeam mask writers eventually enabled full-chip ILT mask solutions within practical run-times (a day or two). The 2019 D2S system using a stitchless SIMD approach demonstrated full-chip ILT masks meeting edge-placement error requirements and superior lithographic results, marking the transition of full-chip, curvilinear ILT into practical reality.",
+      "doc_id": "030901_1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The practical implementation of full-chip Inverse Lithography Technology (ILT) was delayed primarily due to the excessive computational complexity and run-times required by early ILT algorithms. Initial ILT methods often produced high-quality lithographic masks in simulations but were based on continuous-tone or grayscale masks, which, although mathematically simpler to optimize, are not practical for current manufacturing that uses binary or phase-shifting masks. These methods, including simulated annealing, branch-and-bound, genetic algorithms, and level-set approaches, suffered from prohibitively long computation times, making full-chip ILT unfeasible for production. Intel's sponsorship catalyzed research focusing on pixilated masks, and companies like Luminescent Technologies advanced level-set based ILT products. However, the challenge of computational run-time persisted, limiting ILT’s use to critical hotspots rather than full-chip application. Significant breakthroughs came with the development of GPU-accelerated algorithms and multibeam mask writing technologies that could handle the complexity of full-chip ILT masks. The 2019 D2S system introduced a stitchless SIMD GPU-accelerated approach that could compute a full-chip ILT solution within one to two days, producing continuous and symmetric masks that met stringent edge-placement error requirements and delivered over 100% process-window improvement. This advancement, along with compatible multibeam mask writers, effectively overcame the historical run-time and manufacturability challenges, establishing full-chip, curvilinear ILT as a practical reality in semiconductor manufacturing.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_26",
+  "generation_metadata": {
+    "generation_id": 1112,
+    "attempt": 1,
+    "temperature_used": 0.7700000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 16,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T08:08:26.985868",
+    "semiconductor_analysis": {
+      "technical_density": 0.0012184589771603942,
+      "precision_level": "high",
+      "dominant_category": "parameters",
+      "total_tech_terms": 166,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 27,
+        "processes": 24,
+        "testing": 17,
+        "applications": 24,
+        "parameters": 24
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_008.json"
+}

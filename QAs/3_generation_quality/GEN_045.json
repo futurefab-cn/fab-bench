@@ -1,0 +1,61 @@
+{
+  "test_id": "GEN_045",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Fill] In the design of a semiconductor die with backside power delivery, the _____ transistors that implement the power switches are fabricated on the _____ side of the semiconductor substrate, while the _____ transistors of the signal network are fabricated on the _____ side, enabling independent optimization of transistor types and aspect ratios.",
+  "gold_context_sources": [
+    {
+      "section_title": "DETAILED DESCRIPTION - Backside Power Delivery in Semiconductor Dies (Source: US20250210521A1)",
+      "evidence": "The semiconductor die includes a semiconductor substrate defining a front side and a backside. A signal network is provided on the front side including first transistors, and a power delivery network including power switches with second transistors is provided on the backside. The first transistors of the signal network can be different types and have different aspect ratios from the second transistors of the power switches. This separation allows independent fabrication and optimization of the front side logic transistors and backside power delivery transistors.",
+      "doc_id": "US20250210521A1",
+      "has_image": false
+    },
+    {
+      "section_title": "Abstract and Claims for Semiconductor Die with Backside Power Delivery (Source: US20250210521A1)",
+      "evidence": "A semiconductor die comprising a semiconductor substrate defining a front side and a backside; a signal network provided on the front side including first transistors; and a power delivery network provided on the backside including a power switch with second transistors. The power switch causes operation of the first transistors to switch between operating states. The first transistors are fabricated separately from the second transistors and can be a different transistor type and have different aspect ratios.",
+      "doc_id": "US20250210521A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is 'second; backside; first; front'. Reasoning: According to the detailed descriptions in US20250210521A1, the power switches' transistors (second transistors) are fabricated on the backside of the semiconductor substrate, while the signal network's transistors (first transistors) are fabricated on the front side. This physical separation enables independent optimization of transistor types and aspect ratios, improving manufacturing and performance. Hence, the blank spaces are filled as: 'second' transistors on the 'backside', and 'first' transistors on the 'front' side.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_127",
+  "generation_metadata": {
+    "generation_id": 287,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 27,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T13:27:53.645109",
+    "semiconductor_analysis": {
+      "technical_density": 0.001034679253918183,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 163,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 28,
+        "processes": 25,
+        "testing": 18,
+        "applications": 20,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_045.json"
+}

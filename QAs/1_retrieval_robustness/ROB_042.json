@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_042",
+  "test_type": "robustness",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "[Calculation] Given a semiconductor substrate with a layered structure where the second material layer thickness varies continuously between the first and third regions, the aerial image light intensity function I_total(x,y) on the substrate surface is modeled as the convolution of an overall correction function G(x,y) and a standard aerial image light intensity function I(x,y), i.e., I_total(x,y) = G(x,y) * I(x,y). If the Gaussian function is used to approximate the correction function G(x,y) due to its continuity, and the standard aerial image light intensity function is known, calculate the aerial image light intensity at a point (x0,y0) given that the Gaussian correction function has standard deviation σ, and the value of I(x,y) at (x0,y0) is I0. Assume a 1D simplification along x with G(x) = (1/(σ√(2π))) * exp(-x²/(2σ²)) and I(x) = I0 * δ(x - x0), where δ is the Dirac delta function. What is the value of I_total at x = x0?",
+  "gold_context_sources": [
+    {
+      "section_title": "US20150286131A1: BRIEF SUMMARY OF THE DISCLOSURE",
+      "evidence": "The aerial image light intensity function on the surface of the substrate is obtained by the convolution of the correction function and the standard aerial image light intensity function. The Gaussian function, being continuous, is used as the overall correction function G(x,y). The photoresist model is the convolution of the aerial image light intensity function and a Gaussian function to reflect ion diffusion effect in photoresist.",
+      "doc_id": "US20150286131A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is I_total(x0) = I0 * (1/(σ√(2π))). Reasoning: The convolution of the Gaussian correction function G(x) with the delta function I(x) = I0 * δ(x - x0) results in shifting G(x) by x0 and scaling by I0. Evaluating at x = x0 gives I_total(x0) = ∫ G(x0 - t) I(t) dt = I0 * G(0) = I0 * (1/(σ√(2π))) * exp(0) = I0 / (σ√(2π)). This shows the corrected aerial image intensity at x0 is the original intensity scaled by the Gaussian function's peak value, reflecting the smoothing and diffusion effect modeled by the correction function.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_47",
+  "generation_metadata": {
+    "generation_id": 49,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 1,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T11:12:09.193668",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011042716104349237,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 151,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 25,
+        "processes": 21,
+        "testing": 18,
+        "applications": 17,
+        "parameters": 20
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_042.json"
+}

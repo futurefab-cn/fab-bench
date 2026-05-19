@@ -1,0 +1,67 @@
+{
+  "test_id": "MULTI_049",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "Explain how the use of phase-shifting masks improves the resolution and contrast in photolithography compared to conventional transmission masks, considering the effects of coherent and partially coherent illumination. Additionally, discuss how this principle is applied in modern semiconductor manufacturing processes such as chemical mechanical polishing (CMP) endpoint detection and hybrid bonding techniques to enhance process control and device performance.",
+  "gold_context_sources": [
+    {
+      "section_title": "INTRODUCTION",
+      "evidence": "When light is transmitted through an aperture, diffraction causes intensity spreading. Conventional transmission masks yield constructive interference between waves diffracted by adjacent apertures, reducing resolution under coherent illumination. Phase-shifting masks introduce a phase shift (180°) between adjacent apertures, causing destructive interference and minimizing intensity between images, thereby improving resolution and contrast. The phase-shifting mask requires less spatial bandwidth, effectively doubling the useful resolution compared to transmission masks. Contrast functions show phase-shifting masks maintain higher contrast to higher spatial frequencies for all degrees of partial coherence relevant in lithography. Partial coherence reduces contrast for transmission masks more significantly than for phase-shifting masks, which maintain higher contrast up to twice the cutoff spatial frequency.",
+      "doc_id": "Improving_resolution_in_photolithography_with_a_phase-shifting_mask",
+      "has_image": false
+    },
+    {
+      "section_title": "DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS",
+      "evidence": "The chemical mechanical polishing (CMP) process uses an optically transparent polishing belt allowing optical endpoint detection by monitoring reflected light intensity changes. As different layers (e.g., copper overburden, barrier layer, oxide) are polished away, reflectivity changes are detected through the belt, enabling precise endpoint determination. This optical detection principle is enabled by improved lithographic and surface processing techniques, ensuring clean, uniform surfaces necessary for high-quality bonding and polishing.",
+      "doc_id": "US20020173225A1",
+      "has_image": false
+    },
+    {
+      "section_title": "1. INTRODUCTION - III. RESULTS AND DISCUSSION",
+      "evidence": "In chip-to-wafer (C2W) hybrid bonding, surface cleanliness and topography control are critical to achieving void-free bonding with sub-micron accuracy. CMP surface preparation ensures flatness and smoothness of bonding surfaces. Post-bond accuracy directly affects electrical yield, with small misalignments maintaining high yield and larger misalignments causing yield loss. Thus, lithographic resolution improvements and CMP endpoint detection contribute to improved hybrid bonding quality and device performance.",
+      "doc_id": "3D_Heterogeneous_Integration_with_Sub-3m_Bond_Pitch_Chip-to-Wafer_Hybrid_Bonding",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "Phase-shifting masks improve photolithography resolution and contrast by introducing a 180° phase difference between adjacent apertures, causing destructive interference that minimizes light intensity between images. This contrasts with conventional transmission masks, where constructive interference increases intensity between apertures, reducing resolution. The phase-shifting mask requires less spatial bandwidth, effectively doubling the useful resolution compared to transmission masks. Under coherent illumination, the contrast of phase-shifting masks remains high up to twice the cutoff spatial frequency, whereas transmission masks suffer reduced contrast. Partial coherence reduces contrast but phase-shifting masks maintain superior contrast across practical degrees of partial coherence. These principles enable finer feature patterning on semiconductor wafers.\n\nIn modern semiconductor manufacturing, such as chemical mechanical polishing (CMP), the benefits of improved lithography and surface quality are leveraged. CMP endpoint detection uses an optically transparent polishing belt allowing optical signals to pass through, monitoring reflected light intensity changes to determine layer removal endpoints precisely. This ensures process control accuracy essential for multilayer device fabrication.\n\nFurthermore, in chip-to-wafer hybrid bonding, surface planarity and cleanliness achieved through advanced lithography and CMP directly influence bonding quality. Sub-micron bonding accuracy and void-free interfaces are critical, with bonding misalignment strongly affecting electrical yield. Thus, the enhanced resolution and contrast from phase-shifting masks indirectly contribute to better surface preparation and bonding, improving overall device performance and reliability.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_11",
+  "generation_metadata": {
+    "generation_id": 688,
+    "attempt": 3,
+    "temperature_used": 0.9300000000000002,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 223,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T06:11:31.382071",
+    "semiconductor_analysis": {
+      "technical_density": 0.001044195883579814,
+      "precision_level": "high",
+      "dominant_category": "parameters",
+      "total_tech_terms": 164,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 28,
+        "processes": 23,
+        "testing": 19,
+        "applications": 21,
+        "parameters": 24
+      }
+    },
+    "similarity_threshold_used": 0.6,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_049.json"
+}

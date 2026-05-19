@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_018",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Judge] In the context of the pellicle membrane design described in US20230333462A1, embedding a high-emissivity material grid within the pellicle membrane plane always leads to increased EUV transmissivity compared to pellicle membranes with an external grid structure (True/False).",
+  "gold_context_sources": [
+    {
+      "section_title": "SUMMARY OF THE INVENTION",
+      "evidence": "The key feature of the present invention is the presence of two materials combined in a single plane having a smooth surface in order to ensure appropriate imaging, while combining two functions, namely thermal control and EUV transmission. ... Since the variation in the present pellicle membrane is in-plane and the grid is incorporated into the closed film itself, there is a net gain in EUV transmissivity compared to previous pellicle membranes. In addition, the pellicle membrane according to the present invention have slower degradation.",
+      "doc_id": "US20230333462A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is True. Reasoning: According to the detailed description in US20230333462A1, incorporating a grid of high-emissivity material directly within the pellicle membrane plane (in-plane variation) results in a net gain in EUV transmissivity compared to conventional pellicle membranes that use an external grid for mechanical support. This is because the embedded grid reduces EUV absorbance and surface area exposed, thus lowering degradation and improving optical performance, unlike external grids which can overlap with the membrane causing more EUV absorbance and degradation.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_15",
+  "generation_metadata": {
+    "generation_id": 1504,
+    "attempt": 2,
+    "temperature_used": 0.9700000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 299,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T09:41:51.584434",
+    "semiconductor_analysis": {
+      "technical_density": 0.000959155129067665,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 153,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 23,
+        "devices": 26,
+        "processes": 21,
+        "testing": 19,
+        "applications": 16,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.6499999999999999,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_018.json"
+}

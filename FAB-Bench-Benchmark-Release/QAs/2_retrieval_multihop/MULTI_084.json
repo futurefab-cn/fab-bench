@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_084",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Judge] In the context of semiconductor integrated circuit timing analysis, assuming that all gate delays are fully correlated will always lead to a pessimistic (overestimated) total circuit delay, while assuming all gate delays are independent will always lead to an optimistic (underestimated) total circuit delay. (True/False)",
+  "gold_context_sources": [
+    {
+      "section_title": "Statistical Timing Analysis From Basic Principles to State of the Art - B. Impact of Correlation on Circuit Delay",
+      "evidence": "Given a combinational-circuit block, the overall circuit delay maybe either over- or underestimated by both the fully correlated and independence assumptions. The fully correlated assumption will overestimate the delay of individual paths, whereas it will underestimate the maximum of those path delays. Hence, the ﬁnal outcome depends on the topology of the circuit. If the logic depth of the circuit is large while, at the same time, only a few paths are critical, the overestimation along the critical paths will dominate, resulting in a pessimistic analysis result. On the other hand, for circuits with shallow logic depth and highly balanced paths, the underestimation occurring in the maximum computation will dominate, and the analysis will be optimistic under the fully correlated assumption. The inverse is true for the independence assumption.",
+      "doc_id": "semi_docs_064",
+      "has_image": false
+    },
+    {
+      "section_title": "Statistical Timing Analysis From Basic Principles to State of the Art - A. Problem Formulation",
+      "evidence": "Deﬁnition: Let a path pi be a set of ordered edges from the source node to the sink node in G, and let Di be the path-length distribution of pi, computed as the sum of the weights d for all edges k on the path. Finding the distribution of Dmax = maximum(D1,...,Di,...,Dnpaths) among all paths (indexed from 1 to n paths) in the graph G is referred to as the SSTA problem of a circuit.",
+      "doc_id": "semi_docs_064",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is False. Reasoning: The statement is a conjunction of two opposing views on correlation, which together attempt to define the bounds of the actual circuit delay. However, both parts of the statement are often incorrect or overly simplistic in the context of Statistical Static Timing Analysis (SSTA), leading to a False judgment.The core principle in SSTA is that assuming perfect correlation or perfect independence rarely reflects the real physical world, and these assumptions do not always produce clean pessimistic/optimistic bounds:Fully Correlated ($\rho = 1$) $\rightarrow$ Pessimistic (Overestimated) Delay:General Assumption: In the simplistic view of calculating the maximum path delay, assuming perfect correlation ($\rho=1$) results in the highest possible path delay (the worst-case combination of random variations). This is often used as a conservative, pessimistic upper bound.Why the Statement is False (Not 'Always'): Traditional deterministic STA running at worst-case corners assumes perfect correlation, but this approach is known to be 'overly pessimistic' for certain circuit topologies, adding unnecessary pessimism. More importantly, the total circuit delay is the maximum of all path delays ($\\zeta = \\max(X_1, X_2, \\ldots, X_N)$). In complex circuits, assuming full correlation among all gates may not always find the true worst-case path combination because the real critical path may be the one with the highest combination of both mean delay and variation, which an ideal $\\rho=1$ assumption might misrepresent.Independent ($\rho = 0$) $\\rightarrow$ Optimistic (Underestimated) Delay:General Assumption: Assuming all delays are independent ($\\rho=0$) leads to calculating the variance as the sum of variances ($\\sigma^2_{\text{total}} = \\sum \\sigma^2_i$). This reduces the impact of process variations, often leading to an optimistic (underestimated) delay boundary.Why the Statement is False (Not 'Always'): The inability of deterministic STA (which is similar to assuming independence in some simplified contexts) to model within-die variation 'can result in either an over- or underestimate of the circuit delay, depending on the circuit topology'. The key issue is that independence ignores structural correlations (due to reconvergent fanouts) and spatial correlations (due to components being physically close). Ignoring these real-world correlations can sometimes result in an overestimate of delay as well, depending on how the error accumulates across the path, meaning the result is not always optimistic.Since neither assumption ('fully correlated' or 'independent') is guaranteed to always produce its corresponding pessimistic or optimistic bound across all circuits, and since the goal of SSTA is often to model the upper and lower bounds rather than just the extreme corners, the blanket statement is False.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_75",
+  "generation_metadata": {
+    "generation_id": 102,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 7,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:31:18.368662",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010619126410928823,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 163,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 28,
+        "processes": 26,
+        "testing": 19,
+        "applications": 20,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_084.json"
+}

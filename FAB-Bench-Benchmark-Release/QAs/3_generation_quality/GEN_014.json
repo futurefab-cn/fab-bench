@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_014",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Calculation] Given a semiconductor device with backside vias connecting source/drain (S/D) features to backside power rails, if the dielectric liner layer thickness is 3 nm, the B-SAC layer thickness is 10 nm, and the dielectric fill layer thickness is 20 nm, calculate the minimum vertical distance between the via metal and the gate stack assuming the via fills the trench without penetrating the B-SAC layer. Explain why the B-SAC layer thickness critically determines this distance and why the liner layer is selectively deposited on sidewalls but not on the via bottom.",
+  "gold_context_sources": [
+    {
+      "section_title": "US20210336004A1: BRIEF DESCRIPTION OF THE DRAWINGS",
+      "evidence": "The B-SAC layer 203 may have a thickness d5 in a range of 0.5 nm to about 50 nm. In some embodiment, if the B-SAC layer 203 is too thin (such as less than 0.5 nm), then it may not provide sufficient isolation to the channel layers 215 and the gate stack 240. In some embodiment, if the B-SAC layer 203 is too thick (such as more than 50 nm), then the backside vias would be long and the resistance thereof would be high. The dielectric liner layer 304 is deposited to have a substantially uniform thickness along the various surfaces of the B-SAC layer 203, the isolation structure 230, and the inner spacers 255 in this embodiment. Due to the hydrophobic property of the inhibitor 302, the dielectric liner layer 304 is not deposited on the inhibitor 302 except some edge areas of the inhibitor 302. The dielectric liner layer 304 functions to isolate the S/D contacts (backside vias) that are to be formed in the trenches later. Without the dielectric liner layer 304, metals from the S/D contacts may diffuse into the isolation structure 230 over time to cause issues. The liner layer is selectively deposited on sidewalls of a via hole but not on the bottom of the via hole. This eliminates the need to break through the liner when subsequently forming the via and reduces the risk of shorting metal gates to the backside via.",
+      "doc_id": "US20210336004A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is 10 nm. Reasoning: The vertical distance between the via metal and the gate stack is determined primarily by the thickness of the B-SAC layer (given as 10 nm). This layer acts as an isolation barrier preventing electrical shorting between the via metal and the gate stack. The dielectric liner layer thickness (3 nm) and the dielectric fill layer thickness (20 nm) are deposited over and around the via trench but do not set the minimum spacing from the gate stack; rather, they provide electrical isolation and mechanical fill in the trench. The liner layer is selectively deposited only on the sidewalls and not on the via bottom to avoid covering the bottom silicide contact, which facilitates good electrical contact. Selective deposition also eliminates the need for an additional etch step to open the liner at the via bottom, improving process control and reducing damage risk. Therefore, the B-SAC layer thickness is critical because if it is too thin (<0.5 nm), isolation fails causing shorts; if too thick (>50 nm), via resistance increases unacceptably. Hence, with a B-SAC thickness of 10 nm, the minimum vertical spacing between the via metal and the gate stack is about 10 nm.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_37",
+  "generation_metadata": {
+    "generation_id": 1206,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 59,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T08:34:23.077429",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011092547983526273,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 161,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 26,
+        "processes": 25,
+        "testing": 18,
+        "applications": 19,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_014.json"
+}

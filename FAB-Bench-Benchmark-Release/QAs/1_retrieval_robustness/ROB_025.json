@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_025",
+  "test_type": "robustness",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "[Calculation] Given the standard formula for equivalent oxide thickness (t_ox) as t_ox = t / k_rel where t is the physical thickness and k_rel is the relative dielectric constant compared to SiO2 (k_SiO2=3.9), calculate the physical thickness t needed to achieve an equivalent oxide thickness t_ox of 10 Å using a HfAlO dielectric film with a dielectric constant k_HfAlO of 16. Assume no interfacial SiO2 layer is formed (no additional thickness). What is the physical thickness t? Use the adjusted formula coefficients as described in the detailed description to ensure precision.",
+  "gold_context_sources": [
+    {
+      "section_title": "WO2003105205A1: Detailed Description of the Preferred Embodiments",
+      "evidence": "t_ox is defined as the thickness of a theoretical SiO2 layer that would be required to have the same capacitance density as a given dielectric. Materials with a dielectric constant greater than that of SiO2 (3.9) will have a physical thickness that can be considerably larger than the desired t_ox while providing the same electrical performance. For example, a dielectric material with a dielectric constant of 10 could have a thickness of about 25.6 Å to provide a t_ox of 10 Å. HfAlO films have a dielectric constant ranging from 9 to 25, and films containing HfAlO can be formed with physical thicknesses of 2 to 3 nm and above to achieve t_ox values in the range of 3 Å to 12 Å. The t_ox is related to physical thickness t by t_ox = t * (k_SiO2 / k_film), where k_SiO2 = 3.9 and k_film is the dielectric constant of the film.",
+      "doc_id": "WO2003105205A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is 41.03 Å. Reasoning: Using the formula t_ox = t * (k_SiO2 / k_film), rearranged to t = t_ox * (k_film / k_SiO2), and given t_ox = 10 Å, k_film = 16, and k_SiO2 = 3.9, the physical thickness t = 10 * (16 / 3.9) ≈ 41.03 Å. This calculation uses the adjusted formula coefficients as detailed in the source, accounting for the dielectric constant of the HfAlO film, ensuring precise physical thickness estimation to achieve the desired equivalent oxide thickness without assuming an interfacial SiO2 layer.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_7",
+  "generation_metadata": {
+    "generation_id": 52,
+    "attempt": 2,
+    "temperature_used": 0.8700000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3379,
+    "similarity_failures": 3,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T03:21:22.040155",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010569537393915504,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 163,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 24,
+        "processes": 27,
+        "testing": 19,
+        "applications": 21,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.6499999999999999,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_025.json"
+}

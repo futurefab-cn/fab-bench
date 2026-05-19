@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_015",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Judge] In chemical-mechanical polishing (CMP), the local removal rate is directly proportional to the contact pressure between wafer and polishing pad, and the presence of a rough polishing pad surface uniformly decreases the dishing of metal lines during CMP (True/False).",
+  "gold_context_sources": [
+    {
+      "section_title": "A model for chemical–mechanical polishing of a material surface based on contact mechanics",
+      "evidence": "The simplest linear relationship between wear rate, pressure, and velocity is known as Preston’s law and is given by R(x;y;t) = k(x;y;t)v(x;y;t)p(x;y;t); where k(x;y;t) is the wear coefficient. The model successfully predicts experimentally observed trends reported in the literature. According to the model, pad roughness enhances dishing of metal lines significantly, but has only a limited effect on dielectric erosion.",
+      "doc_id": "1-s2.0-S0022509603001285-main",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is False. Reasoning: The statement makes two claims. While the first part is correct, the second part is definitively incorrect according to the text.Claim 1: '...the local removal rate is directly proportional to the contact pressure...' (This is TRUE)The document states that the simplest and most often used relationship is Preston's law: $R(x,y,t)=k(x,y,t)v(x,y,t)p(x,y,t)$, where $R$ is the removal rate and $p$ is the pressure 1. This shows a direct, linear relationship.Claim 2: '...a rough polishing pad surface uniformly decreases the dishing of metal lines...' (This is FALSE)The document explicitly states the opposite. It finds that roughness increases dishing.The text says, 'Fig. 6a clearly shows that metal recess increases with increasing values of the roughness parameter $\\sigma$' 2.The model also concludes, 'According to the model, pad roughness enhances dishing of metal lines significantly...'3.Since the second part of the statement is false, the entire statement is false.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_7",
+  "generation_metadata": {
+    "generation_id": 1228,
+    "attempt": 3,
+    "temperature_used": 1.0,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 71,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T08:41:00.652332",
+    "semiconductor_analysis": {
+      "technical_density": 0.001025596473740521,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 158,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 27,
+        "processes": 24,
+        "testing": 18,
+        "applications": 17,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.6,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_015.json"
+}

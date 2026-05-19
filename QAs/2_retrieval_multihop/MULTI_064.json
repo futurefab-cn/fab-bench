@@ -1,0 +1,67 @@
+{
+  "test_id": "MULTI_064",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "Analyze the impact of bond pad pitch scaling on electrical yield in direct die-to-wafer hybrid bonding processes using plasma diced dies, and discuss how the pad design (shape and size) influences the electrical yield and bonding quality. Additionally, explain how surface preparation and bonding parameters contribute to the bonding strength and interface quality in patterned niobium pad bonding for quantum applications.",
+  "gold_context_sources": [
+    {
+      "section_title": "1. INTRODUCTION - A. Process Flow - IV. CONCLUSIONS",
+      "evidence": "In this paper, direct die-to-wafer hybrid bonding has been demonstrated using plasma diced dies with bond pad pitch scaling down to 3 and eventually 2 µm. For the 3 µm pitch designs, the best Kelvin yield is >95% and daisy chain yield > 90%; for the 2 µm pitch design, the Kelvin e-yield is >85% and daisy chain yield is > 70%. The comparison of 3 µm pitch results show that better e-yields are from the square pads (design B and design C), although the overlay tolerance is more forgiving for the rectangle pads (design D). Therefore, the Cu bulge-out probably outweighs the placement accuracy in this case. Comparison between design B and design C shows that a larger top pad is more favored as it is expected to have higher Cu bulge out and thus better Cu-Cu bonding.",
+      "doc_id": "Direct_Die-to-Wafer_Hybrid_Bonding_Using_Plasma_Diced_Dies_and_Bond_Pad_Pitch_Scaling_Down_to_2_m",
+      "has_image": false
+    },
+    {
+      "section_title": "I. INTRODUCTION - 2) Characterizations of the layer to layer bonding",
+      "evidence": "Chemical mechanical polishing is then applied using processes developed in [12]. As displayed in the atomic force microscopy (AFM) scans of Fig. 1, the quadratic root mean square roughness (Rq) of the Nb layers goes from 3.2 nm after PVD down to 0.1 nm after CMP. This latter value makes the Nb layer compatible with hydrophilic direct bonding processes. Following the bonding process, the samples are annealed for two hours at 400 °C to favor the oxide dissolution and the interface reconstruction. Annealing is used to reinforce forces at the interface, widen contact zones, and create new bonds. ... Several characterizations have been conducted to evaluate the quality and the strength of the full-sheet Nb-Nb hydrophilic direct bonding. ... The Nb-Nb layers appear to be well bonded with a properly recrystallized interface as shown by Fig. 5B.",
+      "doc_id": "Fine_pitch_Nb-Nb_Direct_Bonding_for_quantum_applications",
+      "has_image": false
+    },
+    {
+      "section_title": "II. FULL-SHEET BONDING OF NIOBIUM LAYERS - 2) Characterizations of the pad to pad bonding",
+      "evidence": "The bonding of metal pads in a pattern surrounded by air presents several technical challenges. ... AFM is used immediately after this step to assess the resulting surface roughness. A 1 µm x 1 µm scan is shown in Fig. 7 evidencing a Rq roughness of 0.15 nm, slightly higher to the one measured after CMP, but still in line with the specifications required for direct bonding. Therefore, the stripping process appears compatible with direct bonding in term of roughness. ... TEM analysis to evaluate the quality of the interface at the microscopic and even atomic scale. The bonding structure, consisting of two niobium pads (pitch 7µm), is observed Fig. 9. No bonding defects are visible at this scale. ... the interface is less reconstructed and present a thin amorphous zone. This 2 nm amorphous layer on either side of the interface may correspond to an oxygen-enriched region, although its nature is difficult to determine with confidence.",
+      "doc_id": "Fine_pitch_Nb-Nb_Direct_Bonding_for_quantum_applications",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The electrical yield (e-yield) in direct die-to-wafer hybrid bonding using plasma diced dies is significantly influenced by the bond pad pitch scaling and pad design. When scaling the bond pad pitch from 3 µm to 2 µm, the electrical yield decreases, with Kelvin structure yields dropping from greater than 95% at 3 µm pitch to over 85% at 2 µm pitch, and interwoven daisy chain yields decreasing from over 90% to above 70%, respectively. This decrease reflects the increased difficulty in achieving high-quality bonding and alignment at smaller pitches. Pad design plays a crucial role in these yields: square pad designs achieve better electrical yields compared to rectangular pads, likely due to better Cu bulge-out effects which enhance Cu-Cu bonding quality. Larger top pads further improve yield, as they promote higher Cu bulge out and thus stronger bonding interfaces, compensating for placement accuracy limitations. Regarding surface preparation and bonding parameters in patterned niobium pad bonding for quantum applications, achieving ultra-smooth surfaces is essential. Chemical mechanical polishing (CMP) reduces the root mean square roughness of Nb layers from 3.2 nm after deposition to approximately 0.1 nm, enabling compatibility with hydrophilic direct bonding. Post-bonding annealing at 400°C for two hours facilitates oxide dissolution and interface reconstruction, enhancing bonding strength and forming well-recrystallized interfaces with bonding energies exceeding 1.6 J/m², sufficient to withstand further processing. In patterned Nb pad bonding, the presence of air gaps and the lack of surrounding dielectrics create additional challenges such as potential oxidation and particle contamination. Although stripping processes prior to bonding slightly increase surface roughness to around 0.15 nm, this remains within acceptable limits. Transmission electron microscopy reveals the presence of a thin (~2 nm) amorphous oxygen-enriched layer at the bonding interface, possibly due to oxidation during longer processing times or stripping. Despite this, the bonds are mechanically strong and sufficiently dense to survive grinding and thinning, indicating that careful surface preparation, precise alignment, and optimized bonding and annealing steps are critical to achieving high-quality, strong bonds in advanced hybrid bonding applications at fine pitches.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_16",
+  "generation_metadata": {
+    "generation_id": 966,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 416,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T07:25:10.139872",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010646552147480254,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 153,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 25,
+        "processes": 24,
+        "testing": 18,
+        "applications": 17,
+        "parameters": 20
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_064.json"
+}

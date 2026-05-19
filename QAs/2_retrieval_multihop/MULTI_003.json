@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_003",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Fill] In the context of wafer-level hybrid bonding for achieving fine pitch interconnects below 0.5 μm, _____ blank material has been found to provide advantages such as high bond strength at low annealing temperatures and excellent diffusion barrier capabilities, compared to the traditionally used CVD-SiO2, as described in the experimental methods section. Additionally, the electrical yield results of Kelvin structures for designs with bond pad pitches of 2 μm and 3 μm demonstrate that the best e-yield for 3 μm pitch comes from design _____ blank, which yields over 95%.",
+  "gold_context_sources": [
+    {
+      "section_title": "I. INTRODUCTION - II. EXPERIMENTAL METHODS",
+      "evidence": "Traditionally, CVD-SiO2 has been the material of choice for interfacial dielectric bonding (see Table 1). However, SiCN has gained significant interest as an alternative due to its superior performance in several key bonding criteria compared to SiO2. CVD-SiCN exhibits advantages such as high bond strength at low annealing temperatures, reduced void formation after post-bond annealing, and excellent diffusion barrier capabilities against Cu [16-22].",
+      "doc_id": "Low_Temperature_Wafer_Level_Hybrid_Bonding_Enabled_by_Advanced_SiCN_and_Surface_Activation",
+      "has_image": false
+    },
+    {
+      "section_title": "1. INTRODUCTION - A. Process Flow - IV. CONCLUSIONS",
+      "evidence": "The electrical yield (e-yield) results of Kelvin structures and interwoven daisy chains are presented in Fig. 8(a) and 8(b), respectively. All the 4 designs for 3 um and 2 pm pitches are yielding electrically at the same time thanks to well-balanced CMP process and the daisy chain results in general follow the trend of Kelvin result. The best results of 3 pm pitch comes from design C: it is yielding >95% for Kelvin structures and >90% for interwoven daisy chain structures.",
+      "doc_id": "Direct_Die-to-Wafer_Hybrid_Bonding_Using_Plasma_Diced_Dies_and_Bond_Pad_Pitch_Scaling_Down_to_2_m",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is SiCN and C. Reasoning: From the experimental methods section, it is clear that CVD-SiCN is the alternative bonding dielectric material to traditional CVD-SiO2 with advantages including high bond strength at low annealing temperatures and excellent diffusion barrier capabilities against Cu. From the electrical yield results section, among the four designs tested for 3 μm pitch, design C demonstrated the best electrical yield (>95%) for Kelvin structures. Therefore, the two blanks in the question are correctly filled with SiCN and design C respectively.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_25",
+  "generation_metadata": {
+    "generation_id": 198,
+    "attempt": 1,
+    "temperature_used": 0.6400000000000001,
+    "top_p_used": 0.9,
+    "max_tokens_used": 3993,
+    "similarity_failures": 0,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T04:00:05.596301",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010700804201542726,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 162,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 23,
+        "devices": 27,
+        "processes": 25,
+        "testing": 18,
+        "applications": 22,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_003.json"
+}

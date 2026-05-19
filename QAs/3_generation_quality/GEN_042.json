@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_042",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Judge] The negative resistance effect in the rectifying memristor device described in patent_3 arises solely from the interaction of PNP and NPN transistor structures forming a thyristor, which clamps voltage and current after overshoot and enables continuous resistance regulation (True/False).",
+  "gold_context_sources": [
+    {
+      "section_title": "DESCRIPTION OF THE INVENTION",
+      "evidence": "The first N+ implantation region 106, the first P-Well region 1031 and the N-Well region 104 form an NPNz2 triode. Because in the equivalent circuit, there are two paths for positive and negative symmetry, and there are two NPN tubes, so for the sake of distinction, subscript 2 is added. At the same time, the fourth P+ implantation region 112, the N-Well region 104 and the first P+ implantation region 105 form a PNP triode structure, the base of which is connected with the collector of the NPNb2 triode structure through the parasitic resistance Rn of the N-Well region 104, and the base of the NPN2 triode structure is connected with the collector of the PNP triode structure through the parasitic resistance Rp2 of the first P-Well region 1031, namely the PNP triode structure and the NPN2z triode structure form a thyristor structure. The formation of thyristor structure produces negative resistance effect, which makes the device clamp to a lower value after the voltage and current overshoot, and the voltage and current lag in the same time, thus realizing the continuous regulation of the device resistance.",
+      "doc_id": "patent_3",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is True. Reasoning: The negative resistance effect described in the memristor device arises specifically from the formation of a thyristor structure composed of interconnected PNP and NPN transistor triodes. This thyristor formation results in voltage and current overshoot clamps and a simultaneous lag in voltage and current, enabling continuous resistance regulation. No other mechanisms beyond this transistor interaction are described as contributing to the negative resistance effect in the device.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_119",
+  "generation_metadata": {
+    "generation_id": 278,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 26,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T13:25:45.835668",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010536088565038164,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 159,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 25,
+        "processes": 24,
+        "testing": 17,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_042.json"
+}

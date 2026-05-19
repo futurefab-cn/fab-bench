@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_025",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Fill] The system described in Section 22 dynamically adjusts the input current limit of the boost converter circuitry based on the calculated power dissipation, input voltage, input current, and efficiency value. This approach helps to reduce the risk of excessive increases in _____ and prevents potential damage caused by overheating in the semiconductor die.",
+  "gold_context_sources": [
+    {
+      "section_title": "Detailed Description",
+      "evidence": "The controller 210 is configured to dynamically adjust an input current limit for the boost converter circuitry 230 based on the input voltage Vin, the input current lin, and the efficiency value Eff. The controller 210 determines a power dissipation value Pdiss indicative of the on-chip power dissipation of the boost converter circuitry 230. The controller compares the determined power dissipation value Pdiss with one or more threshold power dissipation values. If the determined power dissipation value exceeds a threshold power dissipation value, the controller reduces the input current limit to reduce the risk that the on-chip power dissipation could cause excessive heating of the semiconductor die on which the boost converter circuitry 230 is implemented.",
+      "doc_id": "GB2627014_GB2627014A",
+      "has_image": false
+    },
+    {
+      "section_title": "I. INTRODUCTION - II. DFR WORKFLOW COMPONENTS",
+      "evidence": "As shown in Figure 2, which showcases the latest innovative nanosheet gate-all-around (GAA) process node, the thermal effect on nanosheet device and regional higher power density at chip-level asks for multi-level analysis. Without accurate thermal modeling, the increase in temperature can significantly deteriorate the lifetime of both the device and its interconnects. The rise in self-heating can lead to electromigration (EM) issues affecting both power and signal integrity, necessitating the development of a self-heating EM design methodology.",
+      "doc_id": "Design_for_Reliability_DFR_Aware_EDA_Solution_for_Product_Reliability_Invited",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is die junction temperature. Reasoning: Section 22 explains that the system dynamically controls the input current limit based on power dissipation to prevent excessive heating of the semiconductor die, thus avoiding damage due to overheating. Section 36 further supports this by describing that thermal effects at the device level, such as increased temperature and self-heating, can degrade device lifetime and cause reliability issues like electromigration. Therefore, the dynamic adjustment aims to reduce the risk of excessive increases in die junction temperature to maintain device reliability.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_20",
+  "generation_metadata": {
+    "generation_id": 364,
+    "attempt": 2,
+    "temperature_used": 0.8500000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 50,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T04:50:25.029954",
+    "semiconductor_analysis": {
+      "technical_density": 0.001010069781821391,
+      "precision_level": "high",
+      "dominant_category": "parameters",
+      "total_tech_terms": 162,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 27,
+        "processes": 24,
+        "testing": 18,
+        "applications": 22,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.6499999999999999,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_025.json"
+}

@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_047",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "How do the formation and characteristics of as-grown electron traps (AETs) and generated defects in high-k/SiON gate stacks influence the modeling and mitigation of Positive Bias Temperature Instability (PBTI) in modern CMOS technologies, and what role does the thickness of the high-k layer play in this context?",
+  "gold_context_sources": [
+    {
+      "section_title": "3. Positive Bias Temperature Instability (PBTI)",
+      "evidence": "PBTI mainly affects nMOSFETs and originates from negative charge formation in the gate dielectric through filling acceptor-like electron traps. Early work showed that electron traps can be as-grown or generated during operation. The as-grown electron traps (AETs) can be rapidly filled and saturate, whereas energy alternating defects (EADs) fill following a power law. PBTI is significant in high-k/SiON stacks, and suppression of shallow as-grown traps by using thinner high-k layers has allowed their commercial use since 45 nm CMOS technology. Modeling must separate contributions from as-grown defects and generated defects to accurately predict PBTI behavior. The as-grown-generation (AG) model integrates both effects and is essential for reliable predictions, especially at low bias.",
+      "doc_id": "electronics-11-01420-v2",
+      "has_image": false
+    },
+    {
+      "section_title": "3. Positive Bias Temperature Instability (PBTI)",
+      "evidence": "Figure 37a,b show PBTI in a HfO2 (4 nm)/SiO2 (1 nm) stack, where electron trapping is unstable and some electrons are lost during longer falling edges. The energy profile of electron traps peaks around 1.4 eV below the conduction band edge of HfO2. The traps are as-grown and can be repeatedly charged and discharged, but generated traps appear after heavy stress and are more stable. Thinner high-k layers reduce PBTI rapidly by suppressing these shallow traps.",
+      "doc_id": "electronics-11-01420-v2",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "As-grown electron traps (AETs) and generated defects both play crucial roles in the manifestation and modeling of Positive Bias Temperature Instability (PBTI) in high-k/SiON gate stacks of modern CMOS technologies. AETs are inherent defects present in the gate dielectric as fabricated; they can be rapidly filled during positive bias and tend to saturate. In contrast, generated defects, including energy alternating defects (EADs) and anti-neutralization electron traps (ANETs), form or evolve during device operation and stress, following different kinetics such as a power law. Accurate modeling of PBTI requires separating the contributions of as-grown and generated defects because their filling dynamics and stability differ significantly. The as-grown-generation (AG) model integrates both effects and enables reliable prediction of threshold voltage shifts (ΔVth), particularly at low bias conditions where direct power-law fitting fails. The thickness of the high-k layer critically influences PBTI severity; thinner high-k layers suppress shallow as-grown electron traps by allowing trapped electrons near the layer edges to escape to electrodes, preventing steady space charge formation. This suppression has been instrumental in enabling the commercial adoption of high-k dielectrics since 45 nm CMOS technology. Therefore, controlling high-k thickness and understanding the distinct roles of AETs and generated defects are essential for mitigating PBTI, optimizing device reliability, and guiding process development in advanced CMOS technologies.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_1",
+  "generation_metadata": {
+    "generation_id": 672,
+    "attempt": 1,
+    "temperature_used": 0.7700000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 217,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T06:06:48.821912",
+    "semiconductor_analysis": {
+      "technical_density": 0.0012536220664027039,
+      "precision_level": "high",
+      "dominant_category": "parameters",
+      "total_tech_terms": 160,
+      "categories_found": {
+        "manufacturing": 25,
+        "materials": 21,
+        "devices": 27,
+        "processes": 24,
+        "testing": 20,
+        "applications": 19,
+        "parameters": 24
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_047.json"
+}

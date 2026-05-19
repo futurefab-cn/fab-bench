@@ -1,0 +1,67 @@
+{
+  "test_id": "MULTI_087",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "How does the Argon plasma pre-treatment affect the interfacial strength of the Al-Si interface as measured by the laser spallation method, and what are the underlying physical mechanisms contributing to this effect? Discuss how the experimental observations of delamination energy, interfacial stress profiles, and surface energy changes support these conclusions.",
+  "gold_context_sources": [
+    {
+      "section_title": "1. INTRODUCTION - B. Interface strength of as-deposited Al-Si interface - IV. CONCLUSION",
+      "evidence": "As shown in Table 2, the critical energy for delamination was clearly increase with plasma treatment time; These results means that no delamination of plasma treated sample was observed with critical energy of bare Si case. From these results, it was confirmed that the adhesion of pre- treated samples was improved compared than untreated samples. ... The interfacial strength of the Al-Si interface is determined through wave propagation analysis of compressive stress wave formed by the laser pulse. As a results, the Al-Si interface strength is determined to be 113 MPa for Al-Si interface with bare sample while the enhanced interface strength (290 MPa) was measured with increasing Argon plasma treatment time (case 3). ... It was assumed that the adhesion between Al film and Si substrate was improved by increasing surface energy due to Ar plasma treatment.",
+      "doc_id": "Measurement_of_the_interfacial_strength_of_thin_metal_film_by_laser_spallation_method_for_advanced_wafer_level_package",
+      "has_image": false
+    },
+    {
+      "section_title": "1. INTRODUCTION - B. Interface strength of as-deposited Al-Si interface - IV. CONCLUSION",
+      "evidence": "Fig. 8 shows the interferometric results and interfacial strength of Al-Si interface of the plasma treated samples. The free-surface displacement of Al film was shown in Fig. 8(a). It was observed that the slope of displacement increased as the plasma treatment time increased. ... Fig. 8(d) shows the maximum tensile stress (interfacial strength of Al-Si interface). In the case of bare Si samples, the interfacial strength of 113 MPa was measured as mentioned above. It was confirmed that interfacial strength increased as the Ar plasma treatment time increased. The interfacial strengths of case 2 and case 3 were measured to be 136 MPa and 257 MPa, respectively. In case 3, the interfacial strength increased by about 2 times (290 MPa) compared than bare Si sample (113 MPa).",
+      "doc_id": "Measurement_of_the_interfacial_strength_of_thin_metal_film_by_laser_spallation_method_for_advanced_wafer_level_package",
+      "has_image": false
+    },
+    {
+      "section_title": "1. INTRODUCTION - B. Interface strength of as-deposited Al-Si interface - IV. CONCLUSION",
+      "evidence": "It was reported that the Argon plasma pre-treatment has improved the surface energy significantly, resulting in enhancement of adhesion between film and substrate [14]. The measurement of water contact angle was shown in Fig. 9. It was clearly showed that the water contact angle decreased with Ar plasma treatment, indicating that plasma-treated surface was changed to hydrophilic surfaces. From these results, it was assumed that the adhesion between Al film and Si substrate was improved by increasing surface energy due to Ar plasma treatment.",
+      "doc_id": "Measurement_of_the_interfacial_strength_of_thin_metal_film_by_laser_spallation_method_for_advanced_wafer_level_package",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The Argon plasma pre-treatment significantly enhances the interfacial strength of the Al-Si interface as quantitatively measured by the laser spallation method. Experimentally, the critical energy for delamination of the Al film on Si substrate increases with plasma treatment time, indicating improved adhesion. Bare Si samples exhibit an interfacial strength of approximately 113 MPa, whereas samples treated with Argon plasma for longer durations (case 3) demonstrate a roughly twofold increase to about 290 MPa. This enhancement is supported by interferometric measurements showing increased free-surface displacement slopes and higher tensile interface stresses with increasing plasma treatment time, confirming stronger adhesion at the interface.\n\nThe underlying physical mechanism is attributed to the Argon plasma treatment modifying the Si substrate surface to increase its surface energy, as evidenced by decreased water contact angles indicating a transition to a more hydrophilic surface. This surface energy increase improves the chemical and physical adhesion between the Al film and the Si substrate. The laser spallation test captures these effects by measuring the critical laser loading energy required to induce delamination and analyzing the wave propagation of compressive stress waves generated by the laser pulse. The combination of increased critical delamination energy, higher tensile interface stress profiles, and surface energy modifications from plasma treatment provide a comprehensive understanding that Argon plasma pre-treatment effectively enhances the interfacial adhesion and mechanical strength of the Al-Si interface.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_90",
+  "generation_metadata": {
+    "generation_id": 122,
+    "attempt": 1,
+    "temperature_used": 0.8200000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 12,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:37:16.922497",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010100598335892426,
+      "precision_level": "high",
+      "dominant_category": "devices",
+      "total_tech_terms": 158,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 28,
+        "processes": 22,
+        "testing": 18,
+        "applications": 20,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_087.json"
+}

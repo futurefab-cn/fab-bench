@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_070",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "How does the Vertical Fan-Out (VFO) package technology improve mechanical, electrical, and reliability performance compared to traditional FBGA packages, and what are the key material and structural factors contributing to these improvements?",
+  "gold_context_sources": [
+    {
+      "section_title": "Vertical Fan OutVFO package with enhanced form factor and performances for mobile applications",
+      "evidence": "The VFO package demonstrated a remarkable 27% reduction in z-height, exhibiting wafer warpage under 1mm and a consistent package warpage trend compared to FBGA. Improvements were observed in the electrical characteristics with tDS and tDH showing enhancements of 5.5% and 20.0%, respectively. EMI performance was reduced by -2.0dB at high frequencies. BLR-Drop and TC tests exhibited improved characteristics with an increase of 50 cycles and 1800 cycles at the first failure point, respectively. The superior performance of VFO in Drop test can be attributed to the lower Young's Modulus, approximately 10% less than FBGA, in EMC and DI materials of VFO which were believed to enhance BLR drop characteristics. The reliability evaluation indicated no critical failures.",
+      "doc_id": "Vertical_Fan_OutVFO_package_with_enhanced_form_factor_and_performances_for_mobile_applications",
+      "has_image": false
+    },
+    {
+      "section_title": "Vertical Fan OutVFO package with enhanced form factor and performances for mobile applications",
+      "evidence": "The wafer warpage performance of VFO, influenced by the coefficient of thermal expansion (CTE) of epoxy mold compound (EMC), was assessed using three types of EMC to minimize warpage during the fabrication process. To mitigate the warpage of wafer, CTE of EMC and glass carrier should be as close as possible. The lower Young's Modulus in EMC and DI materials of VFO contributed to improved mechanical reliability and reduced warpage.",
+      "doc_id": "Vertical_Fan_OutVFO_package_with_enhanced_form_factor_and_performances_for_mobile_applications",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The Vertical Fan-Out (VFO) package technology enhances mechanical, electrical, and reliability performance compared to traditional FBGA packages through several key factors. Mechanically, VFO achieves a significant 27% reduction in package z-height and maintains wafer warpage under 1mm with consistent warpage trends. This is largely due to the use of epoxy mold compounds (EMC) and dielectric (DI) materials with a lower Young's Modulus—approximately 10% less than that in FBGA packages—and a careful matching of the coefficient of thermal expansion (CTE) between the EMC and the glass carrier. Minimizing CTE mismatch reduces tensile residual stresses, thereby mitigating wafer warpage and improving mechanical stability. Electrically, the VFO package demonstrates improved signal integrity, with enhancements of 5.5% in tDS and 20.0% in tDH, attributed to optimized redistribution layer (RDL) thicknesses and copper dimensions that better match impedance and reduce parasitic effects. Electromagnetic interference (EMI) performance is also improved, showing up to 2 dB reduction in magnetic field strength at high frequencies. From a reliability perspective, VFO outperforms FBGA in board-level reliability drop tests and thermal cycling, with failure cycles increasing by more than 2.5 times and 80% respectively. This improved reliability is due to the thinner package profile, lower Young's Modulus materials reducing mechanical stress, and optimized structural design that avoids delamination and joint cracks in RDLs. Collectively, these material and structural optimizations in VFO technology enable superior mechanical robustness, enhanced electrical performance, and greater package reliability compared to traditional FBGA solutions, making VFO highly suitable for thin, high-performance mobile device applications.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_4",
+  "generation_metadata": {
+    "generation_id": 24,
+    "attempt": 1,
+    "temperature_used": 0.5,
+    "top_p_used": 0.9,
+    "max_tokens_used": 3993,
+    "similarity_failures": 0,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:08:39.714764",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010362082051328637,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 161,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 27,
+        "processes": 25,
+        "testing": 17,
+        "applications": 20,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_070.json"
+}

@@ -1,0 +1,61 @@
+{
+  "test_id": "GEN_003",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Fill] In the heterogeneous 3D monolithic CFETs described, the top-tier p-FET uses a Ge (_____) GAA nanosheet channel to achieve record-high hole mobility, while the bottom-tier n-FET employs a Si (_____) tri-gate structure. Fill in the two crystal orientations in the blanks.",
+  "gold_context_sources": [
+    {
+      "section_title": "Ge(110) GAA Nanosheet / Si(100) Tri-gate Nanosheet Monolithic CFETs Featuring Record-High Hole Mobility",
+      "evidence": "In this study, we demonstrated heterogeneous 3D monolithic CFETs (mCFETs) by utilizing Ge (110)/<110> gate-all-around (GAA) nanosheet p-FETs as the top-tier transistors and Si (100)/<110> tri-gate n-FETs as the bottom-tier transistors. ... The configuration employs a high-quality hetero-epitaxial structure consisting of Ge (110) channel/Si0.5Ge0.5/Ge buffer/Si (110) substrate. ... Fig. 8 show the STEM image, EDX profiles and diffraction patterns of the top- and bottom-tier channel layers for the Ge (110) GAA p-FETs and Si (100) tri-gate n-FETs, indicating the achievement of optimized surface and channel orientation for both the top- and bottom-tier transistors during the DWB step without additional process modifications.",
+      "doc_id": "Ge110_GAA_Nanosheet___Si100_Tri-gate_Nanosheet_Monolithic_CFETs_Featuring_Record-High_Hole_Mobility",
+      "has_image": false
+    },
+    {
+      "section_title": "First_Demonstration_of_Monolithic_CFET_Inverter_at_48nm_Gate_Pitch_Toward_Future_Logic_Technology_Scaling",
+      "evidence": "Following the introduction of FinFET and gate-all-around (GAA) technologies, the complimentary field-effect transistor (CFET) device architecture has emerged as the leading contender for extending future logic scaling. By stacking nFET and pFET vertically... vertical dipole patterning for independent threshold voltage tuning of the top nFET and bottom pFET devices... vertical MDLI for connecting n-type and p-type epitaxy (EPI) at the common drain... The vertical stacking approach of the CFET architecture introduces a new paradigm for middle-of-line (MOL) local interconnect structures that differ markedly from those in conventional CMOS technologies.",
+      "doc_id": "First_Demonstration_of_Monolithic_CFET_Inverter_at_48nm_Gate_Pitch_Toward_Future_Logic_Technology_Scaling",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is [110] for the Ge top-tier p-FET and [100] for the Si bottom-tier n-FET. Reasoning: According to the detailed technical description, the heterogeneous 3D monolithic CFETs integrate Ge (110)/<110> gate-all-around nanosheet p-FETs as the top-tier transistors and Si (100)/<110> tri-gate n-FETs as the bottom-tier transistors. The (110) crystal orientation of Ge is critical to achieving record-high hole mobility due to the anisotropic valence band structure, while the Si (100) orientation is standard for tri-gate n-FETs. This complementary orientation engineering is essential for minimizing the mobility mismatch between electrons and holes in the CFET architecture, enabling improved device performance and scaling.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_19",
+  "generation_metadata": {
+    "generation_id": 1049,
+    "attempt": 1,
+    "temperature_used": 0.7400000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 0,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T07:48:55.436150",
+    "semiconductor_analysis": {
+      "technical_density": 0.0012728472640670247,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 157,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 25,
+        "processes": 23,
+        "testing": 17,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_003.json"
+}

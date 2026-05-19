@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_068",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "How do the selective chemical vapor deposition (CVD) process and subsequent rapid thermal processing in the self-aligned silicide fabrication method improve the electrical performance and reliability of semiconductor devices, and what are the key material and process parameters involved?",
+  "gold_context_sources": [
+    {
+      "section_title": "DESCRIPTION OF THE PREFERRED EMBODIMENT",
+      "evidence": "Referring to FIG. 1B, a metal layer 110, such as a titanium layer, is formed over the semiconductor substrate 100. ... A rapid thermal process (RTP) is performed to make the metal layer 110 react with the polysilicon of the gate 102 and the source/drain regions 106. First metal silicide layers 110a and 110b, such as titanium silicide, are thus formed. ... The metal layer 110 does not react with other material, such as silicon oxide or silicon nitride, and therefore there is no metal layer to remove from the spacer 104 or other regions of the substrate 100 lacking polysilicon. ... selectively forming a second metal silicide layer on the first metal silicide layer; and performing a second rapid thermal process to transform the first metal silicide layer and the second metal silicide layer from a high-resistance phase into a low-resistance phase. ... The selective CVD is performed at a temperature of about 500-700°C and a pressure of about 3-10 torr. ... The rapid thermal process is performed at a temperature of about 825-875°C and at a pressure of about 1-10 torr for about 10-30 seconds.",
+      "doc_id": "US6287967",
+      "has_image": false
+    },
+    {
+      "section_title": "DESCRIPTION OF THE PREFERRED EMBODIMENT",
+      "evidence": "The selective CVD forms titanium silicide on a first metal silicide layer because the selective titanium silicide is affected by doping density and surface condition of the gate and the source/drain regions while directly forming titanium silicide on the gate or on the source/drain regions. ... The metal layer is thin (about 50-150 Å) so that the metal layer reacting with the gate and the source/drain regions only consumes light polysilicon of the gate and of the source/drain regions. Junction leakage formed between the source/drain regions and the substrate can thus be prevented. Furthermore, the second metal silicide layer is formed using selective raised CVD with little consuming polysilicon of the gate and the source/drain regions so that a thick second metal silicide layer can be formed to decrease sheet resistance of the gate.",
+      "doc_id": "US6287967",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The self-aligned silicide fabrication method improves the electrical performance and reliability of semiconductor devices by employing a two-step silicide formation process. Initially, a thin metal layer (typically titanium, 50-150 Å thick) is deposited over the semiconductor substrate, including the polysilicon gate and source/drain regions. A first rapid thermal process (RTP) at approximately 825-875°C induces a reaction between the metal and polysilicon, forming a first metal silicide layer (e.g., titanium silicide). This layer forms selectively only on the polysilicon regions without reacting with other materials like silicon oxide or nitride, preventing unwanted metal deposition and facilitating subsequent processing steps.\n\nNext, a selective chemical vapor deposition (CVD) process is performed at 500-700°C and 3-10 torr pressure to form a second metal silicide layer on top of the first silicide layer. This selective CVD process uses gas sources such as silane (SiH4) and titanium chloride (TiCl4) and leverages the nucleation effect of the first silicide layer to deposit silicide without consuming additional polysilicon. The selective nature prevents junction leakage by minimizing polysilicon consumption and enables the formation of a thicker silicide layer, which significantly decreases the sheet resistance of the gate and source/drain regions.\n\nFinally, a second RTP transforms both silicide layers from a high-resistance phase to a low-resistance phase, enhancing conductivity and device performance. The precise control of temperature, gas flow rates, and pressure during CVD and RTP steps ensures uniformity, reliability, and optimized electrical characteristics of the silicide layers. This approach reduces junction leakage, lowers sheet resistance, and maintains integrity of the transistor structures, leading to improved device performance and longevity.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_36",
+  "generation_metadata": {
+    "generation_id": 1026,
+    "attempt": 2,
+    "temperature_used": 0.8700000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 456,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T07:40:59.689488",
+    "semiconductor_analysis": {
+      "technical_density": 0.001220732126668539,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 165,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 26,
+        "processes": 29,
+        "testing": 19,
+        "applications": 20,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.6499999999999999,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_068.json"
+}

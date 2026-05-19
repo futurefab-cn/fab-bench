@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_020",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Fill] According to the chemical–mechanical polishing (CMP) model based on contact mechanics, the steady-state dishing of metal lines increases linearly with _____ blank and is significantly enhanced by _____ blank, while the pad compliance affects the amount of dishing by influencing the pad _____ blank.",
+  "gold_context_sources": [
+    {
+      "section_title": "A model for chemical–mechanical polishing of a material surface based on contact mechanics",
+      "evidence": "The model successfully predicts experimentally observed trends reported in the literature. According to the model, pad roughness enhances dishing of metal lines significantly, but has only a limited effect on dielectric erosion. ... The effect of line width on dishing is shown in Fig. 8. According to the model, steady-state dishing of metal lines increases linearly with line width in agreement with experimental results (Steigerwald et al., 1997). ... Figs. 5a and b illustrate the effect of the plane-strain elastic modulus of the pad on the surface profile of the wafer. A more compliant pad clearly results in more dishing since the pad deflects more easily into recessed areas on the wafer. Fig. 5b shows that the metal recess in the steady state increases linearly with pad compliance. This observation agrees with Eq. (12) since the pad deflection Aw, is inversely proportional to pad stiffness.",
+      "doc_id": "1-s2.0-S0022509603001285-main",
+      "has_image": false
+    },
+    {
+      "section_title": "A model for chemical–mechanical polishing of a material surface based on contact mechanics",
+      "evidence": "Figs. 6a and b illustrate the effect of the roughness parameter o. Fig. 6a clearly shows that metal recess increases with increasing values of the roughness parameter o. According to Eq. (12), the amount of dishing in the steady state increases linearly with ¢.",
+      "doc_id": "1-s2.0-S0022509603001285-main",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is [line width, pad roughness, deflection]. Reasoning: The CMP model based on contact mechanics predicts that the steady-state dishing of metal lines increases linearly with line width, as supported by Fig. 8 and experimental results. Pad roughness significantly enhances dishing, with the roughness parameter ¢ showing a linear relationship with metal recess (dishing). Furthermore, the pad compliance affects dishing by influencing the pad deflection: a more compliant pad deflects more easily into recessed areas, increasing dishing, with the pad deflection Aw inversely proportional to pad stiffness. Thus, the steady-state dishing depends linearly on line width and roughness, and is modulated by pad deflection due to compliance.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_27",
+  "generation_metadata": {
+    "generation_id": 310,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 29,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T04:34:23.392143",
+    "semiconductor_analysis": {
+      "technical_density": 0.0009776757979893227,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 153,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 26,
+        "processes": 20,
+        "testing": 17,
+        "applications": 20,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_020.json"
+}

@@ -1,0 +1,67 @@
+{
+  "test_id": "MULTI_082",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Calculation] In the context of multi-hop reliability testing of semiconductor lasers, given the acceleration factor formula for wearout aging mechanisms, if the activation energy is 0.8 eV (from Section 10), the operating voltage is 1 V (from Section 14), and the correction factor for temperature and voltage is 1.2 (assumed from combined operating conditions in Sections 10 and 14), calculate the effective acceleration factor for device aging. Use the Arrhenius equation form: AF = correction_factor * exp(activation_energy / (k * T)), where k is Boltzmann's constant (8.617 x 10^-5 eV/K) and T is absolute temperature (assume 350 K operating temperature).",
+  "gold_context_sources": [
+    {
+      "section_title": "C. Test Platforms and Burn-in Platforms - IV. RELIABILITY TESTING ON SEMICONDUCTOR LASERS",
+      "evidence": "Once initial reliability data has been collected, setting up a reliability acceleration matrix allows the user to determine thermal and current acceleration factors for wearout aging mechanisms (usually driven by gradual degradation from point-defect motion and trap formation).",
+      "doc_id": "Reliability_testing_for_silicon_photonics_and_optoelectronics_Invited",
+      "has_image": false
+    },
+    {
+      "section_title": "Low Voltage Operation of FeERAM",
+      "evidence": "It has been demonstrated that scaling HZO film thickness to 4-5 nm can reduce operating voltage below 1 V (~0.8 V) with sufficient 2P by performing 10° cycles of wakeup.",
+      "doc_id": "Hafnia-based_ferroelectric_devices_for_lower_power_memory_and_AI_applications",
+      "has_image": false
+    },
+    {
+      "section_title": "General Content on reliability and device operating conditions",
+      "evidence": "The recommended solution to this problem is artificially induce defects in every laser in the population, so that instead of having to test hundreds or thousands of good lasers for every bad one, you can study reasonably-sized populations of a few dozen lasers per acceleration condition, and see how rapidly the defects grow under conditions closer to actual use condition.",
+      "doc_id": "Reliability_testing_for_silicon_photonics_and_optoelectronics_Invited",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is:$3.97 \\times 10^{11}$ (approximately)\nReasoning:The answer is calculated by strictly adhering to the formula and parameters provided in the user's prompt.\nFormula Given:$$AF = \\text{correction\\_factor} \\times \\exp(\\text{activation\\_energy} / (k \\times T))$$\nParameters Given:$\\text{correction\\_factor} = 1.2$\n$\\text{activation\\_energy} = 0.8 \\text{ eV}$\n$k \\text{ (Boltzmann's constant)} = 8.617 \\times 10^{-5} \\text{ eV/K}$\n$T \\text{ (Absolute temperature)} = 350 \\text{ K}$\nStep-by-Step Calculation:\nFirst, calculate the value of the thermal energy ($k \\times T$):\n$$k \\times T = (8.617 \\times 10^{-5} \\text{ eV/K}) \\times (350 \\text{ K})$$\n$$k \\times T \\approx 0.03016 \\text{ eV}$$\nNext, calculate the value of the exponent ($\\text{activation\\_energy} / (k \\times T)$):\n$$\\text{Exponent} = 0.8 \\text{ eV} / 0.03016 \\text{ eV}$$\n$$\\text{Exponent} \\approx 26.525$$\nFinally, calculate the Acceleration Factor ($AF$) using the full formula:\n$$AF = 1.2 \\times \\exp(26.525)$$\n$$AF = 1.2 \\times (3.308 \\times 10^{11})$$\n$$AF \\approx 3.97 \\times 10^{11}$$",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_71",
+  "generation_metadata": {
+    "generation_id": 98,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 7,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:29:52.152904",
+    "semiconductor_analysis": {
+      "technical_density": 0.0009982993273997727,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 157,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 25,
+        "processes": 23,
+        "testing": 18,
+        "applications": 21,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_082.json"
+}

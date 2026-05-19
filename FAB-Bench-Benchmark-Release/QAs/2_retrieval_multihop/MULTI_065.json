@@ -1,0 +1,55 @@
+{
+  "test_id": "MULTI_065",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Judge] According to the contact mechanics-based CMP model, if the polishing pad roughness parameter (σ) is very large and the pad compliance is low, then the metal line dishing in the steady state will be minimal because high roughness decreases pad deflection, resulting in less metal recess. (True/False)",
+  "gold_context_sources": [
+    {
+      "section_title": "A model for chemical–mechanical polishing of a material surface based on contact mechanics",
+      "evidence": "Figs. 5a and b illustrate the effect of the plane-strain elastic modulus of the pad on the surface profile of the wafer. A more compliant pad clearly results in more dishing since the pad deflects more easily into recessed areas on the wafer. Fig. 5b shows that the metal recess in the steady state increases linearly with pad compliance. This observation agrees with Eq. (12) since the pad deflection Δw, is inversely proportional to pad stiffness. Figs. 6a and b illustrate the effect of the roughness parameter σ. Fig. 6a clearly shows that metal recess increases with increasing values of the roughness parameter σ. According to Eq. (12), the amount of dishing in the steady state increases linearly with σ.",
+      "doc_id": "1-s2.0-S0022509603001285-main",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is False. Reasoning: The CMP model explains that both increased pad compliance and increased pad roughness parameter (σ) lead to increased metal line dishing. Specifically, a more compliant pad deflects more, causing more dishing, and increased roughness parameter σ linearly increases the steady-state metal recess. Therefore, if the pad compliance is low (meaning a stiffer pad) but the roughness parameter is very large, the roughness would still increase dishing, not decrease it. The statement incorrectly claims that high roughness decreases pad deflection and reduces metal recess, which contradicts the model findings. Hence, the statement is false.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_27",
+  "generation_metadata": {
+    "generation_id": 992,
+    "attempt": 3,
+    "temperature_used": 1.0,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 431,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T07:31:36.648087",
+    "semiconductor_analysis": {
+      "technical_density": 0.0009776757979893227,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 153,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 26,
+        "processes": 20,
+        "testing": 17,
+        "applications": 20,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.6,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_065.json"
+}

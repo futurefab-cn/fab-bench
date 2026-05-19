@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_020",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Calculation] Given the physical constraints of electromigration (EM) induced resistance degradation in on-chip BEOL Cu interconnects described in Section 3, how would you calculate the critical stress (σ_crit) at which void nucleation occurs in a metal line? Consider that the void growth reduces the system free energy when the increase in surface energy due to removal of atoms from grain boundaries and surfaces is less than the reduction in strain energy. Use the typical values for grain facet surface tension (γ) and grain facet spacing (d-spacing) mentioned, and explain why this model applies specifically to these EM-induced voids.",
+  "gold_context_sources": [
+    {
+      "section_title": "I. INTRODUCTION - II. EXPERIMENTAL",
+      "evidence": "EM in groove vicinity exceeds crit , atoms migrate out of groove surface through GBs, dislocations, and cap interface, which results in increase of the groove volume. It happens when groove growth reduces free energy of the portion of Cu line confined by capping layer. EM induced migration of surface atoms along the groove facet and their dissolution in GBs and Cu/cap interface increases the groove facet surface S and groove volume V S where is the “diffusion layer thickness” proportional to the gap between grain facet crystallographic planes (d-spacing). Removal of the surface atoms increases the groove surface energy by surfE , where is the grain facet surface tension, and S reduce the strain energy by E . The groove growth V will reduce the system free energy when . Using typical values of d-spacing and surface tension for different Cu grain facets provides for crit the values between several hundreds of MPa and 1-2GPa. The weak dependence on the groove geometry allows one to expect crit to be distributed in narrow interval. The variation of crit results in variation of location where void is nucleated.",
+      "doc_id": "A_Unified_Physics-Based_Stochastic_Model_for_EM-Induced_Resistance_Degradation_in_BEoL_Interconnect_Segments",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is calculated by balancing the increase in surface energy and decrease in strain energy during void nucleation and growth. Specifically, the critical stress σ_crit is reached when the energy gain from reducing strain energy (due to void volume increase) exceeds the energy cost from increased surface energy (due to new surfaces formed by void growth). Mathematically, this can be expressed as: ΔE_strain > γ × S, where γ is the grain facet surface tension and S is the groove facet surface area related to the diffusion layer thickness proportional to the d-spacing between crystallographic planes. Using typical values for γ and d-spacing for Cu grain facets leads to σ_crit values between several hundred MPa and 1–2 GPa. This model applies specifically because EM-induced voids nucleate and grow by atomic migration along grain boundaries and surfaces, constrained by the capping layer and line geometry, thus directly influencing the free energy balance of surface and strain energies. The narrow distribution of σ_crit arises due to the weak dependence on groove geometry, making this physics-based model appropriate for predicting void nucleation stress in Cu interconnects under EM stress.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_2",
+  "generation_metadata": {
+    "generation_id": 1580,
+    "attempt": 3,
+    "temperature_used": 0.9500000000000002,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 348,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T10:03:06.375733",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011586884166088622,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 164,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 27,
+        "processes": 27,
+        "testing": 18,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.6,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_020.json"
+}

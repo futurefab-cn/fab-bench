@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_010",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Calculation] Given a synchronous circuit modeled as a graph with vertex propagation delays d(v), edge register counts w(e), and a clock period P, calculate the minimum feasible clock period O(G) using the constraints MIN(i,j), MAX(i,j) for data propagation delays between flip-flops FF_i and FF_j, the constants a and b defining clock delay variation (ax_i ≤ x ≤ bx_i), setup and hold times, and the linear programming constraints for avoiding zero-clocking and race conditions. Given: the constants a=0.9, b=1.1, setup time = 2 ns, hold time = 1 ns, clock period P=10 ns, MIN(i,j) = 3 ns, MAX(i,j) = 7 ns, and nominal clock delays x_i = 4 ns for all i. Calculate the minimum clock period P_min that satisfies the timing constraints.",
+  "gold_context_sources": [
+    {
+      "section_title": "Clock skew optimization",
+      "evidence": "For 1 ≤ i, j ≤ L, we compute lower and upper bounds MIN(i, j) and MAX(i, j) for the time required for a signal edge to propagate from FF_i to FF_j. To avoid zero-clocking and race conditions, the data edge generated at FF_i by a clock edge must arrive at FF_j no sooner than HOLD after the latest possible arrival of the same clock edge and no later than SETUP before the earliest arrival of the next clock edge. The constraints are: ax_j + MIN(i,j) ≥ b x_i + HOLD and b x_j + MAX(i,j) ≤ a x_i + P - SETUP.",
+      "doc_id": "Clock_skew_optimization",
+      "has_image": false
+    },
+    {
+      "section_title": "LeisersonRetiming",
+      "evidence": "A synchronous circuit is modeled as a graph G=(V,E,d,w) with vertex propagation delays d(v) and edge register counts w(e). The clock period O(G) is defined as the maximum propagation delay through which any signal must ripple between clock ticks, ensuring no zero-weight cycles and timing correctness.",
+      "doc_id": "LeisersonRetiming",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is 9.8 ns.ReasoningThe minimum feasible clock period ($P_{min}$) for the circuit is strictly determined by the zero-clocking constraint (setup constraint), which is one of the linear programming constraints defined for the circuit's correct operation.The Performance Constraint (Zero-Clocking):The constraint ensures that the slowest possible data path delay, plus the flip-flop setup time, arrives before the earliest possible arrival of the next clock edge. This relationship must hold true for the worst-case scenario (the longest path), which dictates $P_{min}$:$$\\beta x_i + \\text{MAX}(i, j) + \\text{SETUP} \\le \\alpha x_j + P$$ Calculation of the Minimum Period ($P_{min}$):The $P_{min}$ is found by solving this inequality as an equality:$$P_{min} = \\beta x_i - \\alpha x_j + \\text{MAX}(i, j) + \\text{SETUP}$ $Given $x_i = x_j = x = 4 \\text{ ns}$, $\\alpha=0.9$, $\\beta=1.1$, $\\text{MAX}(i, j)=7 \\text{ ns}$, and $\\text{SETUP}=2 \\text{ ns}$:$$P_{min} = (1.1 \\times 4) - (0.9 \\times 4) + 7 + 2$$  $$P_{min} = 4.4 \\text{ ns} - 3.6 \\text{ ns} + 9 \\text{ ns}$$ $$P_{min} = 0.8 \\text{ ns} + 9 \\text{ ns} = \\mathbf{9.8 \\text{ ns}}$$ The Safety Constraint (Race Condition / Hold Time): The constraint to avoid a race condition (double-clocking) must also be satisfied: $$\\alpha x_i + \\text{MIN}(i, j) \\ge \beta x_j + \\text{HOLD}$$$$0.9(4) + 3 \\ge 1.1(4) + 1$$$$6.6 \text{ ns} \\ge 5.4 \\text{ ns}$$Since $6.6 \\text{ ns} > 5.4 \\text{ ns}$, the safety constraint is satisfied, confirming that the calculated $\\mathbf{9.8 \\text{ ns}}$ is the mathematically derived minimum feasible clock period dictated by the linear constraints.Note on Engineering Practice: Although the strict mathematical minimum is $9.8 \\text{ ns}$, in real-world design, an extra safety margin ($\\epsilon$) or quantification to the nearest integer is often required to ensure robust, non-zero clocking performance, which would lead to a period of $9.8 \\text{ ns} + \\epsilon$ (e.g., $10 \text{ ns}$). However, based on the pure linear programming constraints provided, $9.8 \\text{ ns}$ is the absolute minimum.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_29",
+  "generation_metadata": {
+    "generation_id": 248,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 5,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T04:16:57.377228",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011058884524898357,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 160,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 27,
+        "processes": 22,
+        "testing": 18,
+        "applications": 20,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_010.json"
+}

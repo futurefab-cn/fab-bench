@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_013",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Fill] In the method to improve interfacial adhesion of copper-glass interfaces in Through Glass Vias (TGVs), the curable polymer material used to form the dielectric liner must have a viscosity of less than _____ Poise in its liquid state, and upon curing, the dielectric liner must exhibit a tensile strength greater than _____ Mpa and a dielectric loss less than _____.",
+  "gold_context_sources": [
+    {
+      "section_title": "patent_11: DETAILED DESCRIPTION",
+      "evidence": "A method of improving interfacial adhesion of a copper-glass interface in a Through Glass Via (TGV) of an electronic device, comprising: ... forming a coating of a curable polymer material on an internal wall of a TGV of the plurality of TGVs, wherein a viscosity of the curable polymer material is less than 30 Poise; curing the coating of the curable polymer material to form a dielectric liner having a tensile strength greater than about 8 Mpa and a dielectric loss less than about 0.002; ...",
+      "doc_id": "patent_11",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is 30; 8; 0.002. Reasoning: According to the detailed description in the patent_11 source, the curable polymer material used for the dielectric liner in TGVs must have a viscosity less than 30 Poise in its liquid state to ensure proper flow and coating of the via walls. Upon curing, the dielectric liner must exhibit a tensile strength greater than about 8 Mpa to provide mechanical robustness, and a dielectric loss less than about 0.002 to ensure good electrical insulating properties and minimize signal loss. These parameters are critical to mitigate delamination and thermal stress due to the CTE mismatch between copper and glass.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_32",
+  "generation_metadata": {
+    "generation_id": 1195,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 53,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T08:31:12.068202",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010581644331228972,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 162,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 26,
+        "processes": 28,
+        "testing": 19,
+        "applications": 20,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_013.json"
+}

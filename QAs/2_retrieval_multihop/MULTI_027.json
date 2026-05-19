@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_027",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Fill] In the novel uniaxial strained-Silicon process flow introduced for 90-nm logic technology, strain is introduced from the _____ blank for pMOSFETs and from the _____ blank capping film for nMOSFETs, whereas the traditional approach applies strain from the bottom using strained-Si on relaxed SiGe.",
+  "gold_context_sources": [
+    {
+      "section_title": "II. STRAINED-SILICON PROCESS FLOW",
+      "evidence": "Unlike the traditional approach where strain is applied into the channel from the bottom using strained-Si on relaxed SiGe, in this paper, strain is introduced from the side using SiGe in the pMOSFETs and a silicon nitride-capping film for the nMOSFET.",
+      "doc_id": "A_90-nm_logic_technology_featuring_strained-silicon",
+      "has_image": false
+    },
+    {
+      "section_title": "II. STRAINED-SILICON PROCESS FLOW",
+      "evidence": "An Si recess etch is inserted post spacer formation and followed by selective epitaxial chemical vapor deposition (CVD) of SiGe. The process flow steps are shown in Fig. 3. In this paper 17% germanium concentration is used which has a lattice spacing larger than Si. The mismatch in the SiGe to Si lattice causes the smaller lattice constant Si channel to be under compressive stress. Longitudinal uniaxial tensile and out-of-plane compressive stress is introduced into the nMOSFET by engineering the stress and thickness of the Si nitride-capping layer.",
+      "doc_id": "A_90-nm_logic_technology_featuring_strained-silicon",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is [side, silicon nitride]. Reasoning: The novel uniaxial strained-Silicon process flow described in the document specifies that, unlike the traditional method which introduces strain from the bottom using strained-Si on relaxed SiGe, the strain for pMOSFETs is introduced from the side using SiGe, while for nMOSFETs, strain is introduced by a silicon nitride-capping film. This is confirmed by the statements that the Si recess etch and selective epitaxial CVD of SiGe are used for pMOSFETs and that the silicon nitride-capping film's stress and thickness engineering introduces the longitudinal uniaxial tensile and out-of-plane compressive stress into the nMOSFETs.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_32",
+  "generation_metadata": {
+    "generation_id": 390,
+    "attempt": 1,
+    "temperature_used": 0.7700000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 64,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T04:57:03.555848",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010587524134322134,
+      "precision_level": "high",
+      "dominant_category": "parameters",
+      "total_tech_terms": 166,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 21,
+        "devices": 27,
+        "processes": 25,
+        "testing": 19,
+        "applications": 23,
+        "parameters": 25
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_027.json"
+}

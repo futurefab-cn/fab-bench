@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_027",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Judge] In a dual damascene semiconductor fabrication process, the use of an amorphous fluorocarbon (a-FC) low-k etch stop layer deposited from gases comprising C4F8 and CH4 enables a single-step anisotropic etch for both horizontal and vertical interconnects, thereby reducing process complexity and improving sidewall profile control. (True/False)",
+  "gold_context_sources": [
+    {
+      "section_title": "DETAILED DESCRIPTION OF A PREFERRED EMBODIMENT",
+      "evidence": "The a-FC etch stop layer is deposited by flowing octafluorocyclobutane (C4F8) and methane (CH4) into the chamber at a rate of between about 20 sccm and about 200 sccm, preferably about 50 sccm. ... Etching the horizontal and vertical interconnects is a single step etch process. ... The entire dual damascene structure is etched in a single step by exposing the substrate to a carbon rich, oxygen free, fluorine-carbon etching environment. Preferably, the FSG layers are etched anisotropically with a plasma of CxFy or CxFy and Ar so that the interconnects and contacts/vias are formed with relatively straight sidewalls and no undercuts.",
+      "doc_id": "US6291334",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is True. Reasoning: According to the detailed description in US6291334, the amorphous fluorocarbon (a-FC) low-k etch stop layer is deposited using gases including C4F8 and CH4. This layer enables the dual damascene structure to be etched in a single anisotropic etch step that simultaneously defines both horizontal interconnects and vertical vias. The process yields straight sidewalls without undercuts, demonstrating improved process simplicity and control. Therefore, the statement about the single-step anisotropic etch enabled by the a-FC low-k etch stop layer is correct.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_15",
+  "generation_metadata": {
+    "generation_id": 149,
+    "attempt": 1,
+    "temperature_used": 0.7700000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 1,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:49:03.290153",
+    "semiconductor_analysis": {
+      "technical_density": 0.0013470239953956235,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 157,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 21,
+        "devices": 27,
+        "processes": 23,
+        "testing": 19,
+        "applications": 22,
+        "parameters": 18
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_027.json"
+}

@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_046",
+  "test_type": "robustness",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "Explain the atomic layer etching (ALE) process for selectively etching metallic ruthenium features in semiconductor fabrication, detailing the plasma chemistries used, the sequence of operations, and how the process achieves high selectivity and precise thickness control.",
+  "gold_context_sources": [
+    {
+      "section_title": "US12020908: DETAILED DESCRIPTION",
+      "evidence": "The ALE methods provided herein allow for precise etching of metals such as Ru, W, Mo with high selectivity relative to dielectric materials. The process includes cyclic operations where a metallic ruthenium layer is exposed to a first plasma formed from an oxygen-containing gas, chlorine-containing gas, or combination thereof, to produce a solid ruthenium oxide and gaseous ruthenium oxide. Then, a secondary plasma including hydrogen-containing or chlorine-containing gases is applied to convert the solid ruthenium oxide back to metallic ruthenium or volatile ruthenium oxychloride, enabling controlled thickness reduction by about 0.5 to 2 nm per cycle. The process operates at temperatures below 100°C, pressures around 1 to 60 mTorr, and RF powers between 50 W to 2000 W. Purging steps with inert gases like helium or argon may be used between plasma exposures to remove byproducts. This cyclical exposure enables linear etching kinetics and high selectivity (>20:1) to dielectric materials, facilitating precise recessing of metal features without damaging adjacent layers.",
+      "doc_id": "US12020908",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The atomic layer etching (ALE) process for selectively etching metallic ruthenium (Ru) features in semiconductor fabrication involves cyclic plasma treatments designed to achieve precise thickness control and high selectivity relative to dielectric materials. The process starts by positioning a substrate with metallic ruthenium layers in a process chamber. First, the substrate is exposed to a plasma formed from an oxygen-containing gas, a chlorine-containing gas, or their combination—commonly an oxygen plasma with high atomic oxygen content (~80-90%) mixed with inert gases like helium or argon. This exposure oxidizes the metallic ruthenium surface, forming a solid ruthenium oxide layer and generating gaseous ruthenium oxide species within the chamber. Subsequently, the solid ruthenium oxide is exposed to a secondary plasma, typically a hydrogen plasma or a chlorine-based plasma, which chemically reduces the solid oxide back to metallic ruthenium or converts it into volatile ruthenium oxychloride compounds that desorb from the surface. This cycle effectively removes a controlled thickness of the ruthenium layer, typically about 0.5 to 2 nm per cycle. Process parameters such as substrate temperature (maintained below 100°C), chamber pressure (1 to 60 mTorr), and RF power (50 to 2000 W) are carefully controlled to optimize etching kinetics and selectivity. Purge steps using inert gases may be introduced between plasma steps to clear reaction byproducts, improving process purity and repeatability. The cyclic nature of this ALE process leads to self-limiting reactions and linear etching rates, enabling fine control over metal feature dimensions with selectivity ratios exceeding 20:1 compared to surrounding dielectric materials. This method is particularly effective for back-end-of-line (BEOL) metal layers where sub-20 nm features require precise etch control to maintain device integrity.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_65",
+  "generation_metadata": {
+    "generation_id": 67,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 1,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T11:16:51.480904",
+    "semiconductor_analysis": {
+      "technical_density": 0.001148350582630013,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 164,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 27,
+        "processes": 23,
+        "testing": 19,
+        "applications": 23,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_046.json"
+}

@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_006",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Judge] In the context of hydrophilic direct bonding of niobium pads, annealing at 400°C for 2 hours is necessary to remove the oxidized surface layer completely and achieve a bonding strength higher than 1.6 J/m2. (True/False)",
+  "gold_context_sources": [
+    {
+      "section_title": "Fine_pitch_Nb-Nb_Direct_Bonding_for_quantum_applications: I. INTRODUCTION - 2) Characterizations of the layer to layer bonding",
+      "evidence": "Annealing is used to reinforce forces at the interface, widen contact zones, and create new bonds. In the case of metal bonding, it enables remodeling the interface through possible recrystallization and the creation of metallic bonds between the lower and upper metals. For example, in the case of copper to copper bonding, annealing removes the oxidized surface layer, resulting in improved electrical conduction and mechanical strength [13]. ... A bonding energy (Gc) of 1.6 J/m2 was measured using acoustic microscopy. ... This means that the broken interface, the one for which we have really estimated the adherence, is in fact not the bonding one but more likely the Nb interface deposition on SiO2. Thus, it can be concluded that the hydrophilic Nb-Nb bonding adherence, annealed at 400°C for 2 hours, is higher than 1.6 J/m2.",
+      "doc_id": "Fine_pitch_Nb-Nb_Direct_Bonding_for_quantum_applications",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is False. Reasoning: Although annealing at 400°C for 2 hours is performed to reinforce the bonding interface, widen contact zones, and create new metallic bonds, the measured bonding energy of 1.6 J/m2 corresponds not to the actual Nb-Nb bonding interface but to the interface between the Nb layer and the underlying SiO2. Therefore, the actual Nb-Nb bonding strength is higher than 1.6 J/m2, indicating that annealing does not completely remove the oxidized surface layer in the sense that 1.6 J/m2 is a lower bound measurement. Thus, the statement that annealing at 400°C for 2 hours is necessary to completely remove the oxidized layer and achieve bonding strength higher than 1.6 J/m2 is false.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_2",
+  "generation_metadata": {
+    "generation_id": 1077,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 5,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T07:58:03.761163",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011586884166088622,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 164,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 27,
+        "processes": 27,
+        "testing": 18,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_006.json"
+}

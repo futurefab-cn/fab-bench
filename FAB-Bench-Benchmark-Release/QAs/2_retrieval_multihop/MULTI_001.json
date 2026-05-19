@@ -1,0 +1,55 @@
+{
+  "test_id": "MULTI_001",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Judge] Atomic layer etching (ALE) processes for SiO2 that use trimethylaluminum (TMA) exposures followed by fluorination with HF vapor achieve etch rates higher than 5 Å per cycle and increase surface roughness, making them unsuitable for smoothing optical microdevices. (True/False)",
+  "gold_context_sources": [
+    {
+      "section_title": "I. INTRODUCTION - II. METHODS",
+      "evidence": "There are two currently known classes of isotropic ALE processes for SiO2. In the first process class, the SiO2 surface is modified by conversion to ammonium fluorosilicate ((NH4)2SiF6) using a combination of NH3 and fluorination agent, such as CF4 plasma, NF3 plasma, HF vapor, H2/NF3 plasma, or H2/SF6 plasma. This step is followed by desorption via heating. This approach yields etch rates in the range of 10 − 100 ˚A/cycle. The second class of processes uses a “conversion etch” whereby SiO2 is modified by conversion to alumina and aluminosilicates using trimethylaluminum (TMA) exposures, followed by fluorination induced by HF vapor or CHF3, which forms fluorinated alumina and aluminosilicate compounds. Another TMA exposure causes transmetalation and volatilization of the modified surface, while simultaneously forming more alumina and aluminosilicates. This approach yields etch rates of ∼ 0.31 − 0.35 ˚A/cycle. Each method has practical complications when applied to device fabrication. These issues include the lack of atomic scale control (etch rates are > 5 ˚A/cycle); the use of HF vapor, which cannot be used in some commercial ALD systems; and measurements of surface roughness show either no effect or an increase after ALE.",
+      "doc_id": "2405.05491v1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is False. Reasoning: The statement is a conjunctive proposition, meaning it requires two conditions to be simultaneously true: (1) the etch rate is higher than 5 Å per cycle, and (2) the process increases surface roughness, making it unsuitable for smoothing. Based on the provided context (which was used in our previous analysis), the statement fails because both conditions are false. Etch Rate: The statement claims an etch rate 'higher than 5 Å per cycle'. This is factually incorrect. The document explicitly states the process has a low etch-rate-per-cycle (EPC) of '≈ 0.8 Å/cycle' and is also described as being in the range of '0.31–0.35 Å/cycle'. This is significantly lower than 5 Å/cycle. Surface Roughness: The statement claims the process 'increase[s] surface roughness' and is 'unsuitable for smoothing'. This is also factually incorrect. The document states the exact opposite, describing it as 'ultra-smooth etching' which is 'shown to reduce the surface roughness' and is a 'promising candidate' for smoothing optical microdevices. Since both parts of the conjunctive statement are false, the entire statement is False.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_9",
+  "generation_metadata": {
+    "generation_id": 181,
+    "attempt": 1,
+    "temperature_used": 0.6000000000000001,
+    "top_p_used": 0.9,
+    "max_tokens_used": 3993,
+    "similarity_failures": 0,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T03:53:19.656660",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010811030296262805,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 151,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 21,
+        "devices": 25,
+        "processes": 22,
+        "testing": 18,
+        "applications": 19,
+        "parameters": 20
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_001.json"
+}

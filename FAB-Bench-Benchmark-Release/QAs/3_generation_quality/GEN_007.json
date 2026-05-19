@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_007",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Fill] In the semiconductor chip assembly described, the flexible sheetlike dielectric interposer overlies the _____ blank region of the chip front surface and includes central terminals facing away from the chip for interconnection to a substrate, while peripheral contact leads connect the chip's peripheral contacts to the central terminals, enabling compensation for thermal expansion by allowing the central terminals to be _____ blank relative to the peripheral contacts.",
+  "gold_context_sources": [
+    {
+      "section_title": "US5148265: DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS",
+      "evidence": "(a) a semiconductor chip having a front surface defining the top of the chip, said front surface including a central region and a peripheral region surrounding said central region, whereby said central region is disposed inwardly of said peripheral region, said chip having a plurality of peripheral contacts disposed in said peripheral region of said front surface; (b) a sheetlike dielectric interposer overlying said central region of said chip front surface, said interposer having a first surface facing toward said chip and a second surface facing away from said chip, said interposer having outward edges disposed inwardly of said peripheral contacts; (c) a plurality of central terminals disposed on said interposer and overlying said central region of said chip front surface, said central terminals facing away from said chip and being exposed at said second surface of said interposer for interconnection to a substrate; and (d) a plurality of peripheral contact leads connecting at least some of said peripheral contacts and at least some of said central terminals, each said peripheral contact lead having a central terminal end overlying said interposer and connected to one of said central terminals and a contact end projecting outwardly beyond one of said edges of said interposer and connected to one of said peripheral contacts, whereby each said peripheral contact lead extends inwardly from one of said peripheral contacts to one of said central terminals on said interposer, said central terminals being movable with respect to said contacts so as to compensate for thermal expansion of said chip.",
+      "doc_id": "US5148265",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is [central; movable]. Reasoning: The assembly includes a flexible sheetlike dielectric interposer that overlies the central region of the chip front surface (not the peripheral region). This interposer has central terminals disposed on it facing away from the chip for interconnection to a substrate. Peripheral contact leads connect the peripheral contacts on the chip (which are located in the peripheral region) to the central terminals on the interposer. The central terminals are movable with respect to the peripheral contacts, which allows compensation for thermal expansion of the chip, accommodating relative movement between the contacts and terminals without stress or failure.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_5",
+  "generation_metadata": {
+    "generation_id": 1080,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 5,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T07:58:50.331409",
+    "semiconductor_analysis": {
+      "technical_density": 0.001234424061657119,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 150,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 23,
+        "processes": 23,
+        "testing": 17,
+        "applications": 19,
+        "parameters": 20
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_007.json"
+}

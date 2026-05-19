@@ -1,0 +1,73 @@
+{
+  "test_id": "MULTI_032",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "How does the novel approach to integrated circuit fabrication described in Section 2 enable higher component density and improved circuit miniaturization compared to traditional methods, and what are the key design and processing techniques that facilitate the integration of active and passive components into a single semiconductor wafer?",
+  "gold_context_sources": [
+    {
+      "section_title": "J. S. KILBY - Patented June 23, 1964",
+      "evidence": "According to the principles of this invention, all components of an entire electronic circuit are fabricated within the body so charac- terized by adapting the novel techniques to be described in detail hereinafter. It is to be noted that all compo- nents of the circuit are integrated into the body of semi- conductor material and constitute portions thereof. ... It is, therefore, a principal object of this invention to provide a novel miniaturized electronic circuit fabricated from a body of semiconductor material containing a dif- fused p-n junction wherein all components of the elec- tronic circuit are completely integrated into the body of semiconductor material. ... Because all of the circuit designs described above can be formed from a single material, a semiconductor, it is possible by physical and electrical shaping to integrate all of them into a single crystal semiconductor wafer containing a diffused p-n junction, or junctions, and to process the wafer to provide the proper circuit and the correct passive circuit component is an elongated resistot region, and said semiconductor material immediately underlying said thin layers of the active component defines the col- lector region of the junction transistor.",
+      "doc_id": "US3138743",
+      "has_image": false
+    },
+    {
+      "section_title": "J. S. KILBY - Patented June 23, 1964",
+      "evidence": "Resistors according to FIG- URE la may be formed as separate circuit elements or components. Capacitor designs may be obtained by utilizing the capacitance of a p-n junction, as shown in FIGURE 2, wherein a semiconductor wafer 15 of p-type conductivity js shown containing an n-type diffused layer 16. Ohmic contacts 17 are made to opposite faces of the wafer 15. ... Capacitors formed in the manner described in connection with FIG- URE 24 have been found.to exhibit much more stable characteristics than pure junction capacitors, that is, p-n junction capacitors, and, of course, may be fabricated as separate elements or components. ... Other configurations of this general type are also possible.",
+      "doc_id": "US3138743",
+      "has_image": false
+    },
+    {
+      "section_title": "J. S. KILBY - Patented June 23, 1964",
+      "evidence": "A specific illustration of an electronic circuit embody- ing the principles of the invention is shown in FIGURE 6a. As shown, a thin wafer of single crystal semicon- ductor material containing a diffused p-n junction has been processed and shaped to include a complete and integrated multivibrator electronic circuit formed essen- tially in one surface of the wafer. ... The wafer was then coated with a photosensitive resist or lacquer, such as Eastman Photo Resist, supplied by Eastman Kodak Company, and exposed through a nega- tive to a light. The lacquer image remaining after development was used as a resist for etching the wafer to the proper shape. In particular, this etching forms a slot through the wafer to provide isolation between Ry and Ry and the rest of the circuit and also shapes all of the resistor areas to the previously calculated configura- tion. Either chemical etching or electrolytic etching may be used, although electrolytic etching appears to be pref- erable.",
+      "doc_id": "US3138743",
+      "has_image": false
+    },
+    {
+      "section_title": "J. S. KILBY - Patented June 23, 1964",
+      "evidence": "Although all of the circuit elements have been de- scribed in terms of a single diffused layer, it is quite possible to use a double diffused structure. Thus, double diffusion may be employed to form both n-p-n and p-n-p structures. Moreover, any suitable substances can be used for the semiconductor materials, conductivity pro- ducing impurities, and contact materials; and suitable and known processing can be exploited in producing the above circuit designs. After testing, the circuit may be hermetically sealed, if required, for protection against contamination. The finished device was smaller by several orders of magni- tude than any others which have previously been pro- posed. Because the fabrication steps required are quite similar to those now used in manufacturing transistors and because of the relatively small number of steps re- quired, these devices are inherently inexpensive and re- liable, as well as compact.",
+      "doc_id": "US3138743",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The novel approach to integrated circuit fabrication described in Section 2, as exemplified in J. S. Kilby's 1964 patent, enables significantly higher component density and improved circuit miniaturization by integrating all electronic circuit components—both active and passive—directly into a single body of semiconductor material containing diffused p-n junctions. Unlike traditional methods that fabricate components separately and assemble them, this invention fabricates all components within or near one surface of a single crystal semiconductor wafer, thereby eliminating the need for separate terminations and complex assembly steps that limit miniaturization and reliability.\n\nKey design techniques include the concept of 'shaping' the semiconductor wafer physically and electrically to provide isolation between components and to define component areas. This shaping is achieved through methods such as selective etching (chemical or electrolytic), removal of semiconductor material portions, and selective impurity diffusion to create low-resistivity paths or convert conductivity types, thereby forming the necessary p-n junction barriers. These techniques confine current flow paths, allowing the fabrication of complex circuits within a planar wafer structure.\n\nActive components like junction transistors are formed by thin layers of semiconductor material of opposite conductivity types extending to one major face of the wafer, with p-n junctions extending fully to that face. Passive components such as resistors and capacitors are formed by discrete, elongated or surface-adjacent regions spaced apart on the wafer surface. For example, resistors are realized by elongated semiconductor regions with controlled doping and geometry, while capacitors may use the capacitance of p-n junctions or dielectric layers over semiconductor material.\n\nProcessing involves diffusing impurity layers, photolithographic patterning with photoresists, etching to isolate components and shape resistor areas, metal evaporation for contacts, and thermal bonding for connections. Double diffusion techniques can be employed to form complex transistor structures (n-p-n, p-n-p).\n\nThese integrated circuits, fabricated from a single material and processed with relatively few steps similar to transistor manufacturing, yield devices that are orders of magnitude smaller, more compact, less complex, and more reliable than prior art assemblies. The approach enables component densities exceeding thirty million per cubic foot, vastly surpassing previous limits, and offers versatility in circuit design, compactness, and cost-effectiveness.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_21",
+  "generation_metadata": {
+    "generation_id": 455,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 100,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T05:12:10.848493",
+    "semiconductor_analysis": {
+      "technical_density": 0.001126281099482125,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 155,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 27,
+        "processes": 20,
+        "testing": 17,
+        "applications": 22,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_032.json"
+}

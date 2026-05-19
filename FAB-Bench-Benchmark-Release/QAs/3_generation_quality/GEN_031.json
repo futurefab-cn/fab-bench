@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_031",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Fill] In the context of Through Glass Vias (TGVs) used in electronic packaging, the dielectric liner applied on the internal wall of a TGV must have a viscosity less than _____ Poise to ensure proper formation of a dielectric layer with tensile strength greater than about 8 MPa and low dielectric loss.",
+  "gold_context_sources": [
+    {
+      "section_title": "BACKGROUND",
+      "evidence": "The method may also include forming a coating of a curable polymer material on an internal wall of a TGV of the plurality of TGVs. A viscosity of the curable polymer material may be less than 30 Poise. The method may further include curing the coating of the curable polymer material to form a dielectric liner having a tensile strength greater than about 8 Mpa and a dielectric loss less than about 0.002.",
+      "doc_id": "patent_11",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is 30. Reasoning: According to the disclosed method for improving interfacial adhesion of a copper-glass interface in a Through Glass Via (TGV), the curable polymer material used as a dielectric liner coating on the internal wall of the TGV must have a viscosity less than 30 Poise. This ensures that the polymer can adequately coat the internal surface to form a dielectric liner with the required tensile strength (>8 MPa) and low dielectric loss (<0.002), critical for the electrical and mechanical reliability of the TGV.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_53",
+  "generation_metadata": {
+    "generation_id": 187,
+    "attempt": 1,
+    "temperature_used": 0.6900000000000002,
+    "top_p_used": 0.9,
+    "max_tokens_used": 4096,
+    "similarity_failures": 1,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T13:00:15.724653",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011238195905587157,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 159,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 25,
+        "processes": 27,
+        "testing": 17,
+        "applications": 20,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_031.json"
+}

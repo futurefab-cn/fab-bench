@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_073",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "How does the application of a reducing gas treatment in the FinFET gate formation process improve the etch back performance of the metal gate, and what are the considerations regarding redox potentials to avoid damage to the metal gate material?",
+  "gold_context_sources": [
+    {
+      "section_title": "DETAILED DESCRIPTION (Source: US20240387678A1)",
+      "evidence": "The treatment includes applying a reduction gas to the metal gate 244, which can react with the diffused suspensions in the metal gate 244. The reducing gas transfers electrons to the diffused suspensions, reducing them and preventing etch back failure caused by diffusion of slurry suspensions during CMP. The reducing gas is chosen to have a redox potential greater than that of the oxidized suspensions but less than that of the metal gate material to avoid oxidizing the metal gate itself. For example, hydrogen gas diluted with inert gases is used at temperatures between 200° C. and 400° C.",
+      "doc_id": "US20240387678A1",
+      "has_image": false
+    },
+    {
+      "section_title": "DETAILED DESCRIPTION (Source: US20240387678A1)",
+      "evidence": "The metal gate includes a conductive material having a first redox potential and suspensions diffused in the conductive material having a second redox potential when oxidized, which is less than the first redox potential. The reducing gas must have a third redox potential greater than the second but less than the first to selectively reduce the suspensions without oxidizing the metal gate.",
+      "doc_id": "US20240387678A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The application of a reducing gas treatment during the FinFET metal gate formation process addresses the problem of etch back failure caused by suspensions diffused into the metal gate during chemical mechanical polishing (CMP). These diffused suspensions, such as organic compounds or chlorine-containing species, can oxidize and interfere with subsequent etching steps. By exposing the metal gate to a reducing gas—typically hydrogen diluted with inert gases like nitrogen, argon, or helium—at elevated temperatures (200° C. to 400° C.), the diffused oxidized suspensions are chemically reduced. This reduction process effectively removes or neutralizes these impurities, enabling successful etch back of the metal gate without defects. A critical consideration is the selection of the reducing gas based on its redox potential: it must be sufficiently strong to reduce the oxidized suspensions (i.e., have a redox potential greater than that of the oxidized species) but not so strong as to oxidize the metal gate material itself (which has a higher redox potential). For metal gates composed of materials such as aluminum, tungsten, cobalt, or copper, the reducing gas's redox potential is carefully controlled to lie between the redox potentials of the diffused suspensions and the metal gate. This selective reduction preserves the integrity and performance of the metal gate while improving process yield and reliability.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_14",
+  "generation_metadata": {
+    "generation_id": 34,
+    "attempt": 1,
+    "temperature_used": 0.6,
+    "top_p_used": 0.9,
+    "max_tokens_used": 3993,
+    "similarity_failures": 0,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:12:02.376087",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010862364585768813,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 157,
+      "categories_found": {
+        "manufacturing": 25,
+        "materials": 23,
+        "devices": 26,
+        "processes": 26,
+        "testing": 17,
+        "applications": 18,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_073.json"
+}

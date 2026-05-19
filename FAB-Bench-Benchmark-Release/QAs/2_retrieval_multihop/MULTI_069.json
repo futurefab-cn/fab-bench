@@ -1,0 +1,73 @@
+{
+  "test_id": "MULTI_069",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Fill] In the pulsed atomic layer etching (ALE) process described, the optimal argon bias voltage window for ruthenium removal is between _____ V and _____ V, and this optimal window differs from the continuous ALE process by requiring _____ bias voltages. This difference is due to the pulsed ALE providing _____ etch rates and _____ synergy compared to continuous ALE.",
+  "gold_context_sources": [
+    {
+      "section_title": "Specific Embodiments",
+      "evidence": "The bias pulsing was performed using a 10% duty cycle at about 900 V. The resulting substrate after subtractively etching ruthenium using pulsed ALE is depicted in FIG. 13A in a side cross-sectional view, FIG. 13B from a top angled bird’s-eye view, and in FIG. 13C from a top view. The results indicate smooth sidewalls and clearly defined patterned ruthenium remaining on the substrate.",
+      "doc_id": "patent_6",
+      "has_image": false
+    },
+    {
+      "section_title": "Specific Embodiments",
+      "evidence": "Ruthenium was etched using pulsed ALE (with pulsing Ar bias) and an “ALE window” for various bias voltages used during removal was obtained. FIG. 14B shows a graph depicting the etch per cycle of argon sputtering only (labeled Ar sputter), oxygen exposure only (labeled O, only), and ALE using alternating exposures of oxygen and pulsed inert argon plasma using a duty cycle of 10% (labeled ALE). The optimal window achieved is between 600 V and 1200 V.",
+      "doc_id": "patent_6",
+      "has_image": false
+    },
+    {
+      "section_title": "Specific Embodiments",
+      "evidence": "Ruthenium was etched using O₂/Ar ALE with continuous Ar bias, and an “ALE window” for various bias voltages used during removal was obtained. FIG. 14A shows a graph depicting the etch per cycle of argon sputtering only (labeled Ar sputter), oxygen exposure only (labeled O, only), and ALE using alternating exposures of oxygen and inert argon plasma (labeled ALE). The optimal window achieved is between 60V and 100V.",
+      "doc_id": "patent_6",
+      "has_image": false
+    },
+    {
+      "section_title": "Specific Embodiments",
+      "evidence": "The ALE synergy was increased to 75% (compared to about 60% synergy with continuous ALE). Pulsed ALE can also result in faster etch rates such that the etch rate is about 5-6 Å per cycle compared to 2-3 Å per cycle in continuous ALE.",
+      "doc_id": "patent_6",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is 600 and 1200. Reasoning: According to the detailed description in the Specific Embodiments section, ruthenium etched using pulsed ALE with a pulsed argon bias shows an optimal bias voltage window between 600 V and 1200 V. This differs from continuous ALE where the optimal window is between 60 V and 100 V, indicating pulsed ALE requires significantly higher bias voltages. The pulsed ALE process provides faster etch rates (about 5-6 Å per cycle compared to 2-3 Å per cycle in continuous ALE) and increased ALE synergy (75% compared to about 60% in continuous ALE), which explains the difference in the optimal bias voltage windows and improved performance characteristics.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_1",
+  "generation_metadata": {
+    "generation_id": 21,
+    "attempt": 1,
+    "temperature_used": 0.44000000000000006,
+    "top_p_used": 0.9,
+    "max_tokens_used": 3993,
+    "similarity_failures": 0,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:07:56.703178",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011122942255682668,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 158,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 25,
+        "processes": 23,
+        "testing": 19,
+        "applications": 21,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_069.json"
+}

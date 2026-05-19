@@ -1,0 +1,61 @@
+{
+  "test_id": "GEN_010",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Judge] In semiconductor chip assemblies using a flexible dielectric interposer with compliant layers under central terminals, the compliant layer allows displacement of the terminals to compensate for thermal expansion and facilitates probe contact during testing (True/False). Conversely, the presence of rigid, noncompliant bonding masses between central terminals and substrate contact pads eliminates the need for terminal displacement during operation (True/False). (True/False)",
+  "gold_context_sources": [
+    {
+      "section_title": "DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS",
+      "evidence": "A chip assembly as claimed in claim 1 wherein said interposer includes a compliant layer of a low modulus material, said compliant layer being disposed beneath said central terminals, said compliant layer allowing each said central terminal to be displaced downwardly toward said front surface of said chip. ... Because the test probe set may make simultaneous connections with all terminals in the subassembly ... Because the bottom layer 40 of the interposer is compliant, each central terminal 48 is displaceable towards and away from the front surface 22 of the chip 20. Thus, the bottom layer can be compressed by the tips 64 of the probe set 62. This greatly facilitates making good electrical contact between a plurality of probes and a plurality of central terminals at once, and hence greatly facilitates electrical testing of the chip and the other components of the assembly.",
+      "doc_id": "US5148265",
+      "has_image": false
+    },
+    {
+      "section_title": "DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS",
+      "evidence": "Masses of an electrically conductive bonding material 70 such as a solder or an electrically conducted adhesive may be disposed between the central terminals and the contact pads of the substrate. These masses may then be caused to flow and to bond with the central terminals 48 and the contact pads 68 thereby forming mechanical and electrical connections between the central terminals and the contact pads. ... Inasmuch as the central terminals 48 of the interposer are bonded to the contact pads by relatively stiff noncompliant conductive masses, the central terminals will tend to move with the contact pads. However, such movement is readily accommodated and does not result in substantial stresses at the bonds between the central terminals and contact pads.",
+      "doc_id": "US5148265",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is [True, False]. \nReasoning:The statement is incorrect because it contains two assertions, the second of which is factually wrong according to the patent document.\n\n1.  **Analysis of the First Statement:** \"...the compliant layer allows displacement of the terminals to compensate for thermal expansion and facilitates probe contact during testing.\"\n    * This part is **True**. The patent explicitly states that the compliant layer allows for vertical displacement which \"greatly facilitates temporary engagement of the central terminals by test equipment\" [cite: 5984-5986, 5990]. [cite_start]It also states that the assembly is designed so that the \"central terminals being movable with respect to said contacts so as to compensate for thermal expansion\" [cite: 6447-6448].\n\n2.  **Analysis of the Second Statement:** \"...the presence of rigid, noncompliant bonding masses between central terminals and substrate contact pads eliminates the need for terminal displacement during operation.\"\n    * This part is **False**. [cite_start]The patent describes these bonding masses (e.g., solder) as \"relatively stiff noncompliant conductive masses\" [cite: 7751-7752, 7756-7757]. However, it *does not* state this eliminates displacement. [cite_start]On the contrary, it explains that during differential thermal expansion, these stiff bonds *cause* the central terminals to move along with the substrate's contact pads [cite: 7751-7752]. [cite_start]This displacement is then accommodated by the **flexibility** of the leads and the interposer, which prevents stress from breaking the connections [cite: 7734-7735, 7740-7745, 7753].\n\nSince the second statement is false, the entire proposition is False.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_7",
+  "generation_metadata": {
+    "generation_id": 1153,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 36,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T08:19:57.558789",
+    "semiconductor_analysis": {
+      "technical_density": 0.001025596473740521,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 158,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 27,
+        "processes": 24,
+        "testing": 18,
+        "applications": 17,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_010.json"
+}

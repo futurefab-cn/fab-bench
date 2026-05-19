@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_048",
+  "test_type": "robustness",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "Explain the methodology used to generate random cross-linked polymer networks in the study of statistical properties of random cross-linked rubbers, including how cross-links are placed and the considerations taken to avoid artificial coupling along the polymer chains.",
+  "gold_context_sources": [
+    {
+      "section_title": "statistical-properties-of-random-cross-linked-rubbers: Introduction I.",
+      "evidence": "In order to investigate the statistical properties of random cross-linking, we cross-linked our polymeric melts as follows. For each melt configuration, pM cross-links were placed at random in the system. For each cross-link we located the monomer that was the closest to it. This can be thought of as “activated”. A second monomer monomer within a distance rx = 1.3 of the first was then chosen at random. We chose this value of rx since it equaled the persistence length of our chains, though the results are not sensitive to the precise choice of rx. This then was considered to be connected to second monomer In order to prevent an artificial strong coupling the first. 1 or 2 chemical units away from along the chain, monomers the first monomer were excluded from forming a con- nection. This cross-linking procedure was repeated until the desired number of cross-links were added to the system.",
+      "doc_id": "statistical-properties-of-random-cross-linked-rubbers",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The methodology to generate random cross-linked polymer networks involved placing a number of cross-links, pM, at random positions within equilibrated polymer melt configurations. For each cross-link, the nearest monomer was identified and considered as an “activated” site. Subsequently, a second monomer within a set distance rx = 1.3 (equal to the persistence length of the polymer chains) from the first monomer was selected at random to form a connection, i.e., a cross-link. To avoid artificial strong coupling along the polymer chain, monomers that were 1 or 2 chemical units away along the chain from the first monomer were excluded from forming a connection. This procedure was repeated until the target number of cross-links was achieved in the system. This method ensured that cross-linking reflected realistic polymer connectivity while avoiding non-physical local coupling effects.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_70",
+  "generation_metadata": {
+    "generation_id": 72,
+    "attempt": 1,
+    "temperature_used": 0.6900000000000002,
+    "top_p_used": 0.9,
+    "max_tokens_used": 3072,
+    "similarity_failures": 1,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T11:18:19.485377",
+    "semiconductor_analysis": {
+      "technical_density": 0.001195418908863459,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 156,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 23,
+        "devices": 24,
+        "processes": 25,
+        "testing": 16,
+        "applications": 19,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_048.json"
+}

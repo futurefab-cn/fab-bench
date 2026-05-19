@@ -1,0 +1,67 @@
+{
+  "test_id": "ROB_008",
+  "test_type": "robustness",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "Analyze how the application of sonic energy enables direct hybrid bonding between heterogeneous semiconductor devices with mismatched coefficients of thermal expansion (CTEs), and explain why this method allows bonding at significantly lower temperatures compared to traditional thermal annealing processes. Discuss the physical mechanisms involved, the challenges addressed by this technique, and the benefits it provides in the context of bonding devices with differing substrate materials.",
+  "gold_context_sources": [
+    {
+      "section_title": "DETAILED DESCRIPTION (Source: US20240222316A1)",
+      "evidence": "Generally, the methods include forming direct bonds between dielectric surfaces of at least two devices to form a workpiece and directing sonic energy toward the workpiece to form direct hybrid bonds between the at least two devices. The application of sonic energy to the workpiece enables the formation of the direct hybrid bonds at significantly lower processing temperatures than used typically used for hybrid bonding... Without intending to be bound by theory, it is believed that the application of sonic energy “acoustically softens” the bond pad material to lower the yield point and cause a corresponding shift in the contact force required to induce plastic deformation... The lowered contact force needed to induce plastic deformation can be achieved with smaller changes in the bond pad material volume and thus lower anneal temperatures than used in the method described in relation to FIGS. 1-2.",
+      "doc_id": "US20240222316A1",
+      "has_image": false
+    },
+    {
+      "section_title": "DETAILED DESCRIPTION (Source: US20240222316A1)",
+      "evidence": "Typically, the bonded devices are heated to a processing temperature of about 150° C. or more so that the aligned metal bond pads expand in the Z-direction at a greater rate than the bonded surrounding dielectric materials, which creates a contact force at the bond pad interface. It is believed that metallurgical bonds are formed at the bond pad interface when the contact force between bond pads is severe enough to cause plastic deformation of the bond pad material... When the bonded devices are heated to form the direct hybrid bonds, the different rates of expansion between the sapphire and silicon substrates in the X-Y plane at temperatures greater than about 80 C can combine to cause significant distortion of the respective substrates. Unfortunately, this distortion may cause stress-induced failure of the direct bond joint at the dielectric material interface before metallurgical bonds between the bond pads can be formed.",
+      "doc_id": "US20240222316A1",
+      "has_image": false
+    },
+    {
+      "section_title": "DETAILED DESCRIPTION (Source: US20240222316A1)",
+      "evidence": "The method generally includes heating a workpiece to a processing temperature between about 40 C and 150 C and directing sonic energy towards the heated workpiece to form the direct metal bonds... In some embodiments, the first and second substrates are formed of CTE mismatched materials such that the CTE of the first substrate is 2x or greater than a CTE of the second substrate... The method is commonly used to form 3D-IC devices where the to-be-bonded devices are substantially similar, such as a memory device stack, or the bulk substrate materials of the to-be-bonded devices have substantially similar or “matched” CTEs in the desired processing temperature range.",
+      "doc_id": "US20240222316A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The application of sonic energy in direct hybrid bonding enables the formation of strong metallurgical bonds between devices at significantly lower temperatures than conventional thermal annealing methods. Traditionally, direct hybrid bonding involves heating bonded semiconductor devices to temperatures around or above 150°C to induce thermal expansion of metal bond pads, generating sufficient contact force to cause plastic deformation and metallurgical bonding. However, when devices have mismatched coefficients of thermal expansion (CTEs), such as silicon bonded to sapphire, differing expansion rates during heating lead to substrate distortion and stress-induced failure at the dielectric interface before bonding can be reliably formed. The sonic energy method addresses these challenges by acoustically softening the bond pad materials. This 'acoustic softening' effectively lowers the yield point of the metal bond pads, reducing the contact force required for plastic deformation. Consequently, metallurgical bonds can be formed at lower anneal temperatures, sometimes as low as 40°C to 150°C, avoiding the thermal mismatch problems and substrate distortions inherent in higher temperature processes. The method typically involves heating the workpiece to a moderate temperature within this range and simultaneously applying focused ultrasonic vibrations via transducer arrays. These vibrations propagate through a wave-transmitting medium (liquid or solid) to the bonding interface, enabling plastic deformation and bond formation without relying solely on thermal expansion. This approach allows bonding of heterogeneous devices with substantially different substrate materials and CTEs, including non-silicon semiconductors, compound semiconductors, or dielectric substrates with epitaxial layers, by mitigating thermal stresses that would otherwise cause bond failure. Additionally, this technique facilitates bonding with smaller bond pad dimensions and higher bond pad densities by reducing the need for excessive thermal budgets, making it highly suitable for advanced 3D integrated circuits and heterogeneous device stacking. In summary, sonic energy-assisted direct hybrid bonding lowers processing temperatures by inducing plastic deformation through ultrasonic acoustic softening, effectively overcoming CTE mismatch challenges and enabling robust, high-density heterogeneous device integration.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_15",
+  "generation_metadata": {
+    "generation_id": 60,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 3,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T00:47:50.464066",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011321413827050687,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 152,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 23,
+        "devices": 25,
+        "processes": 22,
+        "testing": 18,
+        "applications": 19,
+        "parameters": 19
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_008.json"
+}

@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_018",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Choice] Which combination of processes and material properties is essential for forming the punch-through stop layer in the FinFET fabrication method described? A) Forming trenches in isolation structures, doping sidewall spacers with higher doping concentration than fins, and thermal annealing at 800° C.-1000° C. B) Forming oxide layer on fins, removing oxide layer to remove vertex angles, and polishing by CMP process C) Using phase-shifting masks in photolithography to improve resolution by 40% and increasing partial coherence D) Forming doping sidewall spacers with lower doping concentration than fins and etching by wet chemical etching",
+  "gold_context_sources": [
+    {
+      "section_title": "BRIEF SUMMARY OF THE DISCLOSURE",
+      "evidence": "The method also includes forming isolation structures between adjacent fins; forming doping sidewall spacers in top portions of the isolation structures near the fins; forming a punch-through stop layer at the bottom of each of the fins by thermal annealing of the doping sidewall spacers; and forming a high-K metal gate on each of the fins. The doping sidewall spacers may be formed by etching the doping sidewall spacer material layer using an etch back process... A doping concentration of the doping sidewall spacers may be greater than a doping concentration of the fins. The punch-through stop layers may be formed by a thermal annealing process. The thermal annealing process may cause the doping ions in the doping sidewall spacers to diffuse into the fins along the bottom of the fins. A temperature of the thermal annealing process may be in a range of approximately 800° C.-1000° C.",
+      "doc_id": "US20140239355A1",
+      "has_image": false
+    },
+    {
+      "section_title": "EXFOSURE AND PROCESSING",
+      "evidence": "The phase-shifting mask has been demonstrated to improve the resolution for fine line photolithography with available 1OX step and repeat exposure tools by about 40 percent. The exposure/processing window is also widened noticeably. The partial coherence of illumination in these devices is sufficient to realize a significant improvement in contrast at high resolution.",
+      "doc_id": "Improving_resolution_in_photolithography_with_a_phase-shifting_mask",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is A. Reasoning: The FinFET fabrication method described in the BRIEF SUMMARY OF THE DISCLOSURE section clearly states that the punch-through stop layer is formed by first creating trenches in the top portions of isolation structures near the fins, then forming doping sidewall spacers with a doping concentration greater than that of the fins, followed by a thermal annealing process in the range of approximately 800° C. to 1000° C. This thermal annealing causes doping ions to diffuse into the fins, forming the punch-through stop layer. Option B describes processes related to surface defect removal and polishing but not directly related to the punch-through stop layer formation. Option C relates to photolithography resolution improvement with phase-shifting masks, which is unrelated to FinFET punch-through stop layer formation. Option D incorrectly states that doping sidewall spacers have lower doping concentration than fins, which contradicts the described process. Therefore, only option A correctly combines the necessary processes and material properties for forming the punch-through stop layer in the FinFET method.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_24",
+  "generation_metadata": {
+    "generation_id": 307,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 29,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T04:33:34.855788",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010898427578563319,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 166,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 28,
+        "processes": 28,
+        "testing": 18,
+        "applications": 19,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_018.json"
+}

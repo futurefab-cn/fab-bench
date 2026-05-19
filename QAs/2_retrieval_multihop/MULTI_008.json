@@ -1,0 +1,67 @@
+{
+  "test_id": "MULTI_008",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Choice] Which sequence of fabrication steps accurately describes the formation of punch-through stop layers in a FinFET device according to the disclosed method? A) Forming isolation structures, doping sidewall spacers at fins, thermal annealing to diffuse doping ions, and then forming a high-K metal gate B) Forming fins on the substrate, forming a dummy gate, forming sidewall spacers, then forming punch-through stop layers by ion implantation C) Forming doping sidewall spacers first, followed by forming trenches in isolation structures, and then forming source/drain regions D) Removing the dummy gate, forming a gate dielectric layer, then forming doping sidewall spacers and finally thermal annealing",
+  "gold_context_sources": [
+    {
+      "section_title": "BRIEF SUMMARY OF THE DISCLOSURE",
+      "evidence": "The method includes forming isolation structures between adjacent fins; forming doping sidewall spacers in top portions of the isolation structures near the fins; forming a punch-through stop layer at the bottom of each of the fins by thermal annealing of the doping sidewall spacers; and forming a high-K metal gate on each of the fins.",
+      "doc_id": "US20140239355A1",
+      "has_image": false
+    },
+    {
+      "section_title": "BRIEF SUMMARY OF THE DISCLOSURE",
+      "evidence": "The punch-through stop layers 207 may be formed by a thermal annealing process. The thermal annealing process may cause the doping ions in the doping sidewall spacers 206 to diffuse into the fins 201 along the bottom of the fins 201.",
+      "doc_id": "US20140239355A1",
+      "has_image": false
+    },
+    {
+      "section_title": "BRIEF SUMMARY OF THE DISCLOSURE",
+      "evidence": "The doping sidewall spacers 206 are formed by etching the doping sidewall spacer material layer 205 using an etch back process. A etching process for the etch back process may include a plasma etching process, a reactive ion etching (RIE) process, an ion beam etching process, or a wet chemical etching process, etc.",
+      "doc_id": "US20140239355A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is A. Reasoning: According to the disclosed method in the BRIEF SUMMARY OF THE DISCLOSURE, first isolation structures are formed between adjacent fins. Then, doping sidewall spacers are formed at the top portions of these isolation structures near the fins by first forming trenches and depositing a doping sidewall spacer material layer followed by an etch back process. Next, a thermal annealing process is performed causing doping ions in the doping sidewall spacers to diffuse into the bottom of the fins, thus forming the punch-through stop layers. Finally, a high-K metal gate is formed on each fin. This sequence is accurately captured in option A. The other options describe steps out of order or omit key process details as per the provided evidence.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_24",
+  "generation_metadata": {
+    "generation_id": 243,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 5,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T04:15:33.497327",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010898427578563319,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 166,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 28,
+        "processes": 28,
+        "testing": 18,
+        "applications": 19,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_008.json"
+}

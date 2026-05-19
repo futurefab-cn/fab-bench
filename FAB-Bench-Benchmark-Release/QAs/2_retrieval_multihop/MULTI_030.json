@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_030",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "How does the wafer orientation affect the hole mobility and NBTI degradation in p-MOSFETs, and what are the implications for FinFET fabrication on (100) wafers with different channel directions? Explain the measurement challenges and methods to characterize NBTI degradation without introducing dead time.",
+  "gold_context_sources": [
+    {
+      "section_title": "9. Wafer orientation",
+      "evidence": "Most ICs are fabricated on (100) oriented Si wafers. However, it has been known since 1968 that hole mobility is higher for p-MOSFETs on (110) oriented wafers with the channel in the (110) direction. Along with the higher hole mobility, however, is a higher interface trap density. Dy has been reported as D;(100)=7.7x 10\" and Dy(110)=14x10\"cm2eV™'. Hence one would expect more severe NBTI degradation on (110) oriented wafers, as indeed has been observed. For certain three-dimensional devices, e.g., FinFETs, when fabricated on (100) wafers with the channel in the conventional (110) direction, the vertical sidewalls are (110) oriented, leading to NBTI problems. However, forming FinFETs on (100) wafers with the channel in the (100) direction leads to (100) vertical sidewalls.",
+      "doc_id": "schroder2007",
+      "has_image": false
+    },
+    {
+      "section_title": "9. Wafer orientation",
+      "evidence": "Traditionally NBTI has been characterized by stressing a device, then interrupting the stress to measure a device parameter, e.g., VT, ID, leff, Dit, Not, stress again, measure, etc. Usually source, drain and substrate are grounded during the stress period. The “dead” time between “stress” and “measure” varied and was frequently not given. When it was discovered that time was important, techniques were developed to minimize and eliminate the “dead” time. Rangan et al. use VD = 50 mV and monitor the drain current during stress and recovery. Huard et al. in their “on the fly” method apply a low drain voltage pulse of ~50 mV and record the drain current at the end of the stress period without interrupting the stress. In a modification, small gate voltage pulses are superimposed on the dc gate stress voltage, and the drain current is pulsed and measured at three different gate voltages, allowing transconductance to be determined.",
+      "doc_id": "schroder2007",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The wafer orientation has a significant impact on hole mobility and Negative Bias Temperature Instability (NBTI) degradation in p-MOSFETs. Specifically, (110) oriented silicon wafers with the channel aligned in the (110) direction exhibit higher hole mobility compared to the commonly used (100) oriented wafers. However, this advantage comes at the cost of increased interface trap density, with reported Dy values approximately twice as high for (110) wafers relative to (100) wafers. This increased trap density leads to more severe NBTI degradation observed in devices fabricated on (110) wafers. For three-dimensional FinFET devices fabricated on (100) wafers, the channel direction determines the orientation of the vertical sidewalls: conventional channel direction (110) results in (110) oriented sidewalls that are susceptible to NBTI issues, whereas orienting the channel along (100) leads to (100) vertical sidewalls, mitigating some NBTI problems. Regarding the characterization of NBTI degradation, traditional methods involve stressing the device and then interrupting the stress to measure parameters such as threshold voltage (VT), drain current (ID), effective channel length (leff), interface trap density (Dit), and oxide trap density (Not). However, these methods introduced a “dead” time between stress and measurement, which affects the accuracy of degradation assessment. To address this, newer techniques minimize or eliminate dead time: Rangan et al. used a low drain voltage (50 mV) to continuously monitor drain current during stress and recovery without interruption, while Huard et al. developed an “on the fly” method applying a low drain voltage pulse and recording drain current at the stress period’s end without stopping stress. Further modifications include superimposing small gate voltage pulses on the dc gate stress voltage and pulsing the drain current at multiple gate voltages to determine transconductance. These methods enable more accurate and real-time characterization of NBTI degradation by avoiding measurement-induced recovery effects during dead times.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_13",
+  "generation_metadata": {
+    "generation_id": 438,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 91,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T05:07:58.067396",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010504211939934048,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 153,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 27,
+        "processes": 17,
+        "testing": 16,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_030.json"
+}

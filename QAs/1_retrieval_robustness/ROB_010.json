@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_010",
+  "test_type": "robustness",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "How does the grain size and orientation at the top surface of copper through-silicon vias (TSVs) influence via extrusion during thermal cycling, and what mechanisms have been proposed to explain this phenomenon?",
+  "gold_context_sources": [
+    {
+      "section_title": "Via extrusion [IMAGE AVAILABLE]",
+      "evidence": "The smallest 20% via extrusion seemed to be dominated by (111) grains with large grain (1/3 of the via diameter or larger) size, while the largest 20% extrusion was dominated by (200) and (110) grains with small grain size (1/4 of the via diameter or smaller). For vias containing three grains or more at the top surface, via extrusion was about twice that of vias containing only one large grain (not counting twin boundaries). The results suggest that a single grain at the top of the via would be effective in mitigating via extrusion, which was found to reduce the via extrusion substantially. Interfacial sliding and Cu plasticity have been suggested as two possible mechanisms for via extrusion. Interfacial delamination and subsequent sliding could result in via extrusion at high temperatures but very little extrusion after cooling back to room temperature if no plastic deformation exists in the Cu via. On the other hand, even without interfacial delamination, via extrusion was observed after thermal cycling, which was attributed to local plastic deformation.",
+      "doc_id": "MRS2015",
+      "has_image": true
+    }
+  ],
+  "ground_truth_answer": "The grain size and orientation at the top surface of copper through-silicon vias (TSVs) significantly influence the extent of via extrusion during thermal cycling. Smaller via extrusions are associated with (111) grains that are large in size (approximately one-third of the via diameter or larger). In contrast, larger extrusions correlate with (200) and (110) grains that are smaller (about one-fourth of the via diameter or smaller). Furthermore, vias with three or more grains at the top surface exhibit roughly twice the extrusion compared to vias with a single large grain. This suggests that having a single large grain at the via top surface effectively mitigates via extrusion. The proposed mechanisms explaining via extrusion include interfacial sliding and copper plasticity. Interfacial sliding involves delamination at the via/Si interface leading to extrusion at elevated temperatures but minimal residual extrusion after cooling if plastic deformation does not occur. Conversely, via extrusion can also occur without interfacial delamination, attributed to local plastic deformation within the copper via during thermal cycling, resulting in a permanent residual extrusion.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_18",
+  "generation_metadata": {
+    "generation_id": 63,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 3,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T00:48:18.660222",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011948753930511127,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 163,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 25,
+        "processes": 25,
+        "testing": 20,
+        "applications": 22,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_010.json"
+}

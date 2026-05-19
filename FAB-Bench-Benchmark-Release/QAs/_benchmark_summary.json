@@ -1,0 +1,1634 @@
+{
+  "generation_metadata": {
+    "total_cases": 200,
+    "timestamp": "2026-03-22T23:44:21.600182",
+    "source": "Manual selection from original 1400 questions",
+    "selection_method": "Human review and quality filtering",
+    "reformatted": true,
+    "reformatted_date": "2026-03-22T23:44:21.600182",
+    "note": "Removed 1 near-duplicate (original ROB_041, similarity 0.967 with ROB_019)"
+  },
+  "statistics": {
+    "by_test_type": {
+      "robustness": {
+        "total": 59,
+        "objective": 33,
+        "subjective": 26
+      },
+      "multi_hop": {
+        "total": 90,
+        "objective": 49,
+        "subjective": 41
+      },
+      "generation_quality": {
+        "total": 51,
+        "objective": 36,
+        "subjective": 15
+      }
+    },
+    "total_objective": 118,
+    "total_subjective": 82
+  },
+  "cases": [
+    {
+      "test_id": "ROB_001",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_17",
+      "question": "[Judge] In the context of the chemical mechanical polishing (CMP) model described, the steady-state metal recess (dishin...",
+      "file_path": "1_retrieval_robustness\\ROB_001.json"
+    },
+    {
+      "test_id": "ROB_002",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_21",
+      "question": "[Choice] According to the detailed description of atomic layer etching (ALE) processes, what role does the inhibitor che...",
+      "file_path": "1_retrieval_robustness\\ROB_002.json"
+    },
+    {
+      "test_id": "ROB_003",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_23",
+      "question": "How does the field-effect behavior of a transistor with a single, two-dimensional MoS2 channel demonstrate dominance of ...",
+      "file_path": "1_retrieval_robustness\\ROB_003.json"
+    },
+    {
+      "test_id": "ROB_004",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_2",
+      "question": "[Fill] In the context of the disclosed techniques for chemical mechanical polishing (CMP) for hybrid bonding, the first ...",
+      "file_path": "1_retrieval_robustness\\ROB_004.json"
+    },
+    {
+      "test_id": "ROB_005",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_8",
+      "question": "How does the polarization-rotating design of the first-layer structure in an overlay target enable independent imaging o...",
+      "file_path": "1_retrieval_robustness\\ROB_005.json"
+    },
+    {
+      "test_id": "ROB_006",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_9",
+      "question": "[Fill] In the semiconductor wafer bonding process described, a pair of substrates are determined to have a good profile ...",
+      "file_path": "1_retrieval_robustness\\ROB_006.json"
+    },
+    {
+      "test_id": "ROB_007",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_14",
+      "question": "[Choice] According to the detailed description of the preferred embodiments of the clean water production system using m...",
+      "file_path": "1_retrieval_robustness\\ROB_007.json"
+    },
+    {
+      "test_id": "ROB_008",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_15",
+      "question": "Analyze how the application of sonic energy enables direct hybrid bonding between heterogeneous semiconductor devices wi...",
+      "file_path": "1_retrieval_robustness\\ROB_008.json"
+    },
+    {
+      "test_id": "ROB_009",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_16",
+      "question": "[Fill] In the semiconductor device assembly described, the thickness of the functional element substrate after chemical ...",
+      "file_path": "1_retrieval_robustness\\ROB_009.json"
+    },
+    {
+      "test_id": "ROB_010",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_18",
+      "question": "How does the grain size and orientation at the top surface of copper through-silicon vias (TSVs) influence via extrusion...",
+      "file_path": "1_retrieval_robustness\\ROB_010.json"
+    },
+    {
+      "test_id": "ROB_011",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_12",
+      "question": "[Calculation] Given a 3D water block cooling a heat source with circulating liquid flow rate Q = 0.1 L/s and inlet liqui...",
+      "file_path": "1_retrieval_robustness\\ROB_011.json"
+    },
+    {
+      "test_id": "ROB_012",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_18",
+      "question": "Analyze how the grain structure and interfacial properties of copper through-silicon vias (TSVs) affect via extrusion du...",
+      "file_path": "1_retrieval_robustness\\ROB_012.json"
+    },
+    {
+      "test_id": "ROB_013",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_3",
+      "question": "Explain the process and key parameters involved in selectively depositing a cobalt capping layer on copper surfaces duri...",
+      "file_path": "1_retrieval_robustness\\ROB_013.json"
+    },
+    {
+      "test_id": "ROB_014",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_5",
+      "question": "How does the Multibeam Corporation’s Multicolumn Electron Beam Lithography (MEBL) system overcome the limitations impose...",
+      "file_path": "1_retrieval_robustness\\ROB_014.json"
+    },
+    {
+      "test_id": "ROB_015",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_16",
+      "question": "[Fill] In the manufacturing method of the semiconductor device described in the first embodiment, the first implantation...",
+      "file_path": "1_retrieval_robustness\\ROB_015.json"
+    },
+    {
+      "test_id": "ROB_016",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_24",
+      "question": "[Judge] The inhibitor chemical used in atomic layer etching (ALE) must always be introduced in a saturation regime to en...",
+      "file_path": "1_retrieval_robustness\\ROB_016.json"
+    },
+    {
+      "test_id": "ROB_017",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_35",
+      "question": "Analyze how the Multibeam Corporation’s Multicolumn Electron Beam Lithography (MEBL) system overcomes the limitations im...",
+      "file_path": "1_retrieval_robustness\\ROB_017.json"
+    },
+    {
+      "test_id": "ROB_018",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_2",
+      "question": "[Fill] In the integrated circuit structure described, the backside structure includes _____ blank capacitors that are de...",
+      "file_path": "1_retrieval_robustness\\ROB_018.json"
+    },
+    {
+      "test_id": "ROB_019",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_9",
+      "question": "[Fill] The record-high hole mobility achieved in Ge (110)/<110> GAA nanosheet p-FETs, normalized by footprint to account...",
+      "file_path": "1_retrieval_robustness\\ROB_019.json"
+    },
+    {
+      "test_id": "ROB_020",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_10",
+      "question": "Explain how the system described in GB2627014_GB2627014A manages character recognition on damaged or fragmented characte...",
+      "file_path": "1_retrieval_robustness\\ROB_020.json"
+    },
+    {
+      "test_id": "ROB_021",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_18",
+      "question": "Explain how the annealing process in the BEOL copper interconnect integration for advanced technology nodes contributes ...",
+      "file_path": "1_retrieval_robustness\\ROB_021.json"
+    },
+    {
+      "test_id": "ROB_022",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_23",
+      "question": "How does the confined storage nitride (confined-SN) 3D-NAND cell architecture with WL airgap improve program time and re...",
+      "file_path": "1_retrieval_robustness\\ROB_022.json"
+    },
+    {
+      "test_id": "ROB_023",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_29",
+      "question": "[Fill] The tensile strength of the dielectric liner formed by curing the coating of the curable polymer material in a Th...",
+      "file_path": "1_retrieval_robustness\\ROB_023.json"
+    },
+    {
+      "test_id": "ROB_024",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_39",
+      "question": "[Judge] The newly developed SQ-1 multifunctional self-assembled monolayer (MF-SAM) used for Cu passivation does not poss...",
+      "file_path": "1_retrieval_robustness\\ROB_024.json"
+    },
+    {
+      "test_id": "ROB_025",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_7",
+      "question": "[Calculation] Given the standard formula for equivalent oxide thickness (t_ox) as t_ox = t / k_rel where t is the physic...",
+      "file_path": "1_retrieval_robustness\\ROB_025.json"
+    },
+    {
+      "test_id": "ROB_026",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_8",
+      "question": "How does the yield model incorporating fault clustering differ from the classical Poisson-based yield model for integrat...",
+      "file_path": "1_retrieval_robustness\\ROB_026.json"
+    },
+    {
+      "test_id": "ROB_027",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_9",
+      "question": "[Fill] The exact phrase describing the excitation signal used for the negative resistance clamped silicon controlled rec...",
+      "file_path": "1_retrieval_robustness\\ROB_027.json"
+    },
+    {
+      "test_id": "ROB_028",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_10",
+      "question": "How does the co-optimization process of mask images for multiple layers, as described in WO2025043234A9, enhance the man...",
+      "file_path": "1_retrieval_robustness\\ROB_028.json"
+    },
+    {
+      "test_id": "ROB_029",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_16",
+      "question": "[Fill] In the context of the method for manufacturing an electrical device involving a molding tool with a slider elemen...",
+      "file_path": "1_retrieval_robustness\\ROB_029.json"
+    },
+    {
+      "test_id": "ROB_030",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_18",
+      "question": "Analyze how the annealing process in the back-end-of-line (BEOL) copper interconnect integration at the 3nm technology n...",
+      "file_path": "1_retrieval_robustness\\ROB_030.json"
+    },
+    {
+      "test_id": "ROB_031",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_28",
+      "question": "Analyze how the fluidic assembly process and mass transfer stamping system overcome limitations of conventional microLED...",
+      "file_path": "1_retrieval_robustness\\ROB_031.json"
+    },
+    {
+      "test_id": "ROB_032",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_32",
+      "question": "[Judge] The doping concentration of the doping sidewall spacers in a FinFET fabrication process is always less than the ...",
+      "file_path": "1_retrieval_robustness\\ROB_032.json"
+    },
+    {
+      "test_id": "ROB_033",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_38",
+      "question": "Analyze how the integration of a dielectric feature composed of high-k and low-k materials between the bottommost channe...",
+      "file_path": "1_retrieval_robustness\\ROB_033.json"
+    },
+    {
+      "test_id": "ROB_034",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_0",
+      "question": "[Fill] In the patented lithography source-mask optimization method, the initial stage of iteration maximizes the _____ w...",
+      "file_path": "1_retrieval_robustness\\ROB_034.json"
+    },
+    {
+      "test_id": "ROB_035",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_4",
+      "question": "[Judge] A high Pixel-zu-Pixel Überlapp (pixel-to-pixel overlap) of at least 95% must be present for at least 50% of the ...",
+      "file_path": "1_retrieval_robustness\\ROB_035.json"
+    },
+    {
+      "test_id": "ROB_036",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_17",
+      "question": "[Judge] The composite material for consumer electronics covers described in the document must have a thermal conductivit...",
+      "file_path": "1_retrieval_robustness\\ROB_036.json"
+    },
+    {
+      "test_id": "ROB_037",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_18",
+      "question": "Explain the underlying physical mechanisms and defect types responsible for Bias Temperature Instability (BTI) in CMOS t...",
+      "file_path": "1_retrieval_robustness\\ROB_037.json"
+    },
+    {
+      "test_id": "ROB_038",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_22",
+      "question": "[Fill] The deposition process described in US6802944 involves a multistep high density plasma process for depositing die...",
+      "file_path": "1_retrieval_robustness\\ROB_038.json"
+    },
+    {
+      "test_id": "ROB_039",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_29",
+      "question": "[Fill] The threshold voltage shift caused by gate bias stress at gate voltages less than _____ is basically the same at ...",
+      "file_path": "1_retrieval_robustness\\ROB_039.json"
+    },
+    {
+      "test_id": "ROB_040",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_34",
+      "question": "[Choice] According to the detailed description of the preferred embodiments in US20020173225A1, what optical signal inte...",
+      "file_path": "1_retrieval_robustness\\ROB_040.json"
+    },
+    {
+      "test_id": "ROB_041",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_39",
+      "question": "[Judge] The phase-shifting mask (also called a @-mask) always requires less spatial bandwidth than the transmission mask...",
+      "file_path": "1_retrieval_robustness\\ROB_041.json"
+    },
+    {
+      "test_id": "ROB_042",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_47",
+      "question": "[Calculation] Given a semiconductor substrate with a layered structure where the second material layer thickness varies ...",
+      "file_path": "1_retrieval_robustness\\ROB_042.json"
+    },
+    {
+      "test_id": "ROB_043",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_49",
+      "question": "[Fill] The test enable control signals provided to different clock gates in a circuit to minimize simultaneous switching...",
+      "file_path": "1_retrieval_robustness\\ROB_043.json"
+    },
+    {
+      "test_id": "ROB_044",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_56",
+      "question": "[Fill] The self-aligned silicide process forms the first metal silicide layer by a rapid thermal process that makes the ...",
+      "file_path": "1_retrieval_robustness\\ROB_044.json"
+    },
+    {
+      "test_id": "ROB_045",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_62",
+      "question": "[Fill] In the preparation method for an etchant for semiconductor material processing, the surfactant includes _____ bla...",
+      "file_path": "1_retrieval_robustness\\ROB_045.json"
+    },
+    {
+      "test_id": "ROB_046",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_65",
+      "question": "Explain the atomic layer etching (ALE) process for selectively etching metallic ruthenium features in semiconductor fabr...",
+      "file_path": "1_retrieval_robustness\\ROB_046.json"
+    },
+    {
+      "test_id": "ROB_047",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_69",
+      "question": "[Calculation] Given a 100 mm diameter MOCVD GaN wafer used for microLED fabrication, a 14 mm x 14 mm rectangular transfe...",
+      "file_path": "1_retrieval_robustness\\ROB_047.json"
+    },
+    {
+      "test_id": "ROB_048",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_70",
+      "question": "Explain the methodology used to generate random cross-linked polymer networks in the study of statistical properties of ...",
+      "file_path": "1_retrieval_robustness\\ROB_048.json"
+    },
+    {
+      "test_id": "ROB_049",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_0",
+      "question": "[Fill] In the context of statistical static timing analysis (SSTA), the timing graph is defined as a directed graph havi...",
+      "file_path": "1_retrieval_robustness\\ROB_049.json"
+    },
+    {
+      "test_id": "ROB_050",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_1",
+      "question": "Explain the methodology and advantages of combining die-to-database (DB) and die-to-die (DD) inspection flows for defect...",
+      "file_path": "1_retrieval_robustness\\ROB_050.json"
+    },
+    {
+      "test_id": "ROB_051",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_12",
+      "question": "How does the application of sonic energy during the direct hybrid bonding process enable bonding between devices with mi...",
+      "file_path": "1_retrieval_robustness\\ROB_051.json"
+    },
+    {
+      "test_id": "ROB_052",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_19",
+      "question": "[Fill] The optical signals generated by the monitoring device in the CMP apparatus are sent through an optically transpa...",
+      "file_path": "1_retrieval_robustness\\ROB_052.json"
+    },
+    {
+      "test_id": "ROB_053",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_20",
+      "question": "Analyze how the warpage control was optimized in the asymmetric multi-chip FO-PLP package structure for wearable applica...",
+      "file_path": "1_retrieval_robustness\\ROB_053.json"
+    },
+    {
+      "test_id": "ROB_054",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_32",
+      "question": "Analyze the techniques and mechanisms described for detecting and monitoring pellicle conditions in lithographic apparat...",
+      "file_path": "1_retrieval_robustness\\ROB_054.json"
+    },
+    {
+      "test_id": "ROB_055",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_33",
+      "question": "[Choice] In the heterogeneous 3D monolithic CFETs studied, what is the primary reason that the Ge (110)/<110> GAA nanosh...",
+      "file_path": "1_retrieval_robustness\\ROB_055.json"
+    },
+    {
+      "test_id": "ROB_056",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_2",
+      "question": "Explain the design and functional advantages of the compliant dielectric interposer in semiconductor chip assemblies as ...",
+      "file_path": "1_retrieval_robustness\\ROB_056.json"
+    },
+    {
+      "test_id": "ROB_057",
+      "test_type": "robustness",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "robustness_3",
+      "question": "[Calculation] Given a FinFET device metal gate structure formed in a trench of an interlayer dielectric (ILD) layer on a...",
+      "file_path": "1_retrieval_robustness\\ROB_057.json"
+    },
+    {
+      "test_id": "ROB_058",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_6",
+      "question": "Explain the principle and advantages of the in-situ endpoint detection method for chemical mechanical polishing (CMP) pr...",
+      "file_path": "1_retrieval_robustness\\ROB_058.json"
+    },
+    {
+      "test_id": "ROB_059",
+      "test_type": "robustness",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "robustness_10",
+      "question": "Analyze the mechanism by which the anomalous random telegraph signals (RTS) observed in small-area silicon MOSFETs arise...",
+      "file_path": "1_retrieval_robustness\\ROB_059.json"
+    },
+    {
+      "test_id": "MULTI_001",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_9",
+      "question": "[Judge] Atomic layer etching (ALE) processes for SiO2 that use trimethylaluminum (TMA) exposures followed by fluorinatio...",
+      "file_path": "2_retrieval_multihop\\MULTI_001.json"
+    },
+    {
+      "test_id": "MULTI_002",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_13",
+      "question": "How does the profile matching criterion of metal pad recess depths influence the quality and robustness of hybrid bondin...",
+      "file_path": "2_retrieval_multihop\\MULTI_002.json"
+    },
+    {
+      "test_id": "MULTI_003",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_25",
+      "question": "[Fill] In the context of wafer-level hybrid bonding for achieving fine pitch interconnects below 0.5 μm, _____ blank mat...",
+      "file_path": "2_retrieval_multihop\\MULTI_003.json"
+    },
+    {
+      "test_id": "MULTI_004",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_0",
+      "question": "[Fill] The _____ in the 600mm x 600mm Fan-Out Panel Level Package (FOPLP) technology eliminates the need for both leadfr...",
+      "file_path": "2_retrieval_multihop\\MULTI_004.json"
+    },
+    {
+      "test_id": "MULTI_005",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_5",
+      "question": "[Fill] In the Chemical–Mechanical Polishing (CMP) model, the steady-state dishing of metal lines increases linearly with...",
+      "file_path": "2_retrieval_multihop\\MULTI_005.json"
+    },
+    {
+      "test_id": "MULTI_006",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_12",
+      "question": "[Fill] The pellicle membrane for a photomask is made of nanocrystalline graphene that includes _____ blank, which contri...",
+      "file_path": "2_retrieval_multihop\\MULTI_006.json"
+    },
+    {
+      "test_id": "MULTI_007",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_16",
+      "question": "Analyze how the hydrophilic direct bonding process of niobium pads at fine pitches enables high-quality electrical inter...",
+      "file_path": "2_retrieval_multihop\\MULTI_007.json"
+    },
+    {
+      "test_id": "MULTI_008",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_24",
+      "question": "[Choice] Which sequence of fabrication steps accurately describes the formation of punch-through stop layers in a FinFET...",
+      "file_path": "2_retrieval_multihop\\MULTI_008.json"
+    },
+    {
+      "test_id": "MULTI_009",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_25",
+      "question": "[Fill] In the design of a complementary insulated gate field-effect transistor (FET) inverter circuit, the P-type insula...",
+      "file_path": "2_retrieval_multihop\\MULTI_009.json"
+    },
+    {
+      "test_id": "MULTI_010",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_29",
+      "question": "[Calculation] Given a synchronous circuit modeled as a graph with vertex propagation delays d(v), edge register counts w...",
+      "file_path": "2_retrieval_multihop\\MULTI_010.json"
+    },
+    {
+      "test_id": "MULTI_011",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_35",
+      "question": "[Judge] The protection pattern formed in the perimeter region of a packaged semiconductor device is electrically connect...",
+      "file_path": "2_retrieval_multihop\\MULTI_011.json"
+    },
+    {
+      "test_id": "MULTI_012",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_1",
+      "question": "Explain how the as-grown electron traps (AETs) and generated electron traps contribute differently to Positive Bias Temp...",
+      "file_path": "2_retrieval_multihop\\MULTI_012.json"
+    },
+    {
+      "test_id": "MULTI_013",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_3",
+      "question": "How do grain size and interfacial properties influence via extrusion in 3D integration TSVs, and what are the implicatio...",
+      "file_path": "2_retrieval_multihop\\MULTI_013.json"
+    },
+    {
+      "test_id": "MULTI_014",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_5",
+      "question": "[Fill] The _____ blank in the chemical–mechanical polishing (CMP) process model depends on both the pad compliance and t...",
+      "file_path": "2_retrieval_multihop\\MULTI_014.json"
+    },
+    {
+      "test_id": "MULTI_015",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_17",
+      "question": "[Choice] Which combination of design improvements and material considerations contribute to enhanced performance and rel...",
+      "file_path": "2_retrieval_multihop\\MULTI_015.json"
+    },
+    {
+      "test_id": "MULTI_016",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_19",
+      "question": "[Fill] In fan-out wafer-level packaging (FOWLP), chips with _____ blank on the front side are embedded face-up in an epo...",
+      "file_path": "2_retrieval_multihop\\MULTI_016.json"
+    },
+    {
+      "test_id": "MULTI_017",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_20",
+      "question": "[Judge] If the power dissipation value Pdiss of boost converter circuitry exceeds a threshold, the controller will reduc...",
+      "file_path": "2_retrieval_multihop\\MULTI_017.json"
+    },
+    {
+      "test_id": "MULTI_018",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_24",
+      "question": "[Choice] Which combination of processes and material properties is essential for forming the punch-through stop layer in...",
+      "file_path": "2_retrieval_multihop\\MULTI_018.json"
+    },
+    {
+      "test_id": "MULTI_019",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_25",
+      "question": "[Calculation] Given a multi-chip Fan-Out Panel-Level-Package (FO-PLP) structure where the warpage control requires incre...",
+      "file_path": "2_retrieval_multihop\\MULTI_019.json"
+    },
+    {
+      "test_id": "MULTI_020",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_27",
+      "question": "[Fill] According to the chemical–mechanical polishing (CMP) model based on contact mechanics, the steady-state dishing o...",
+      "file_path": "2_retrieval_multihop\\MULTI_020.json"
+    },
+    {
+      "test_id": "MULTI_021",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_32",
+      "question": "[Fill] In the novel 90-nm logic technology featuring strained silicon, uniaxial tensile stress is introduced into the nM...",
+      "file_path": "2_retrieval_multihop\\MULTI_021.json"
+    },
+    {
+      "test_id": "MULTI_022",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_5",
+      "question": "[Fill] In the Chemical–Mechanical Polishing (CMP) model, the steady-state metal line recess (dishing) is influenced by b...",
+      "file_path": "2_retrieval_multihop\\MULTI_022.json"
+    },
+    {
+      "test_id": "MULTI_023",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_7",
+      "question": "[Judge] The method of forming a multi-gate transistor with a backside power rail involves recessing the source epitaxial...",
+      "file_path": "2_retrieval_multihop\\MULTI_023.json"
+    },
+    {
+      "test_id": "MULTI_024",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_12",
+      "question": "[Fill] In the context of optimizing clock skew in CMOS VLSI circuits, the CMOS-LP-SAFETY program improves robustness aga...",
+      "file_path": "2_retrieval_multihop\\MULTI_024.json"
+    },
+    {
+      "test_id": "MULTI_025",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_20",
+      "question": "[Fill] The system described in Section 22 dynamically adjusts the input current limit of the boost converter circuitry b...",
+      "file_path": "2_retrieval_multihop\\MULTI_025.json"
+    },
+    {
+      "test_id": "MULTI_026",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_25",
+      "question": "[Fill] In the design of a pellicle for a photomask used in EUV lithography, the pellicle membrane includes nanocrystalli...",
+      "file_path": "2_retrieval_multihop\\MULTI_026.json"
+    },
+    {
+      "test_id": "MULTI_027",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_32",
+      "question": "[Fill] In the novel uniaxial strained-Silicon process flow introduced for 90-nm logic technology, strain is introduced f...",
+      "file_path": "2_retrieval_multihop\\MULTI_027.json"
+    },
+    {
+      "test_id": "MULTI_028",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_36",
+      "question": "How does the selective raised CVD process for titanium silicide formation in the self-aligned silicide process improve t...",
+      "file_path": "2_retrieval_multihop\\MULTI_028.json"
+    },
+    {
+      "test_id": "MULTI_029",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_8",
+      "question": "How does the reduction in minimum feature size impact the manufacturing cost per transistor, and what are the critical f...",
+      "file_path": "2_retrieval_multihop\\MULTI_029.json"
+    },
+    {
+      "test_id": "MULTI_030",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_13",
+      "question": "How does the wafer orientation affect the hole mobility and NBTI degradation in p-MOSFETs, and what are the implications...",
+      "file_path": "2_retrieval_multihop\\MULTI_030.json"
+    },
+    {
+      "test_id": "MULTI_031",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_15",
+      "question": "[Judge] The interfacial strength of the Al-Si interface increases with longer Ar plasma pre-treatment times, which conse...",
+      "file_path": "2_retrieval_multihop\\MULTI_031.json"
+    },
+    {
+      "test_id": "MULTI_032",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_21",
+      "question": "How does the novel approach to integrated circuit fabrication described in Section 2 enable higher component density and...",
+      "file_path": "2_retrieval_multihop\\MULTI_032.json"
+    },
+    {
+      "test_id": "MULTI_033",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_25",
+      "question": "[Fill] In the design of a complementary inverter circuit using N-type and P-type insulated gate field-effect semiconduct...",
+      "file_path": "2_retrieval_multihop\\MULTI_033.json"
+    },
+    {
+      "test_id": "MULTI_034",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_28",
+      "question": "How does the statistical modeling of random cross-linked polymer networks contribute to understanding their microscopic ...",
+      "file_path": "2_retrieval_multihop\\MULTI_034.json"
+    },
+    {
+      "test_id": "MULTI_035",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_13",
+      "question": "Considering the challenges associated with bias-temperature instability (NBTI) in p-MOSFETs on (110) oriented silicon wa...",
+      "file_path": "2_retrieval_multihop\\MULTI_035.json"
+    },
+    {
+      "test_id": "MULTI_036",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_16",
+      "question": "Explain the key factors influencing the electrical yield in direct die-to-wafer hybrid bonding with plasma diced dies, p...",
+      "file_path": "2_retrieval_multihop\\MULTI_036.json"
+    },
+    {
+      "test_id": "MULTI_037",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_26",
+      "question": "How do the thermal oxidation mechanisms involved in metal atomic layer etching (ALE) influence the etch rate and process...",
+      "file_path": "2_retrieval_multihop\\MULTI_037.json"
+    },
+    {
+      "test_id": "MULTI_038",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_29",
+      "question": "[Calculation] Given a synchronous circuit with propagation delays d(v) for vertices (functional elements), register coun...",
+      "file_path": "2_retrieval_multihop\\MULTI_038.json"
+    },
+    {
+      "test_id": "MULTI_039",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_33",
+      "question": "Explain the working principle of the three-electrode semiconductor amplifier device described in US2524035, including ho...",
+      "file_path": "2_retrieval_multihop\\MULTI_039.json"
+    },
+    {
+      "test_id": "MULTI_040",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_11",
+      "question": "Explain how the design and material considerations of a cryogenic electromagnetic linear stage enable it to achieve fric...",
+      "file_path": "2_retrieval_multihop\\MULTI_040.json"
+    },
+    {
+      "test_id": "MULTI_041",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_13",
+      "question": "Explain how the choice of wafer orientation impacts hole mobility and Negative Bias Temperature Instability (NBTI) degra...",
+      "file_path": "2_retrieval_multihop\\MULTI_041.json"
+    },
+    {
+      "test_id": "MULTI_042",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_16",
+      "question": "Explain the technical and process challenges involved in achieving high-quality, fine-pitch direct bonding of niobium pa...",
+      "file_path": "2_retrieval_multihop\\MULTI_042.json"
+    },
+    {
+      "test_id": "MULTI_043",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_29",
+      "question": "[Calculation] Given the formula to compute the expected cost C of an optimal testing tree in synchronous circuit design ...",
+      "file_path": "2_retrieval_multihop\\MULTI_043.json"
+    },
+    {
+      "test_id": "MULTI_044",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_32",
+      "question": "[Calculation] Given a multi-hop test setup for semiconductor device evaluation, calculate the corrected operating voltag...",
+      "file_path": "2_retrieval_multihop\\MULTI_044.json"
+    },
+    {
+      "test_id": "MULTI_045",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_38",
+      "question": "Explain how the contact mechanics-based model of chemical–mechanical polishing (CMP) accounts for pad roughness and aspe...",
+      "file_path": "2_retrieval_multihop\\MULTI_045.json"
+    },
+    {
+      "test_id": "MULTI_046",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_0",
+      "question": "[Judge] According to SEMI E109-0305 specification, manual pod transfer completion confirmation requires operator input o...",
+      "file_path": "2_retrieval_multihop\\MULTI_046.json"
+    },
+    {
+      "test_id": "MULTI_047",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_1",
+      "question": "How do the formation and characteristics of as-grown electron traps (AETs) and generated defects in high-k/SiON gate sta...",
+      "file_path": "2_retrieval_multihop\\MULTI_047.json"
+    },
+    {
+      "test_id": "MULTI_048",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_5",
+      "question": "[Fill] The amount of metal recess in the steady state during chemical-mechanical polishing increases linearly with both ...",
+      "file_path": "2_retrieval_multihop\\MULTI_048.json"
+    },
+    {
+      "test_id": "MULTI_049",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_11",
+      "question": "Explain how the use of phase-shifting masks improves the resolution and contrast in photolithography compared to convent...",
+      "file_path": "2_retrieval_multihop\\MULTI_049.json"
+    },
+    {
+      "test_id": "MULTI_050",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_13",
+      "question": "How does wafer orientation affect NBTI degradation in p-MOSFETs, and what measurement techniques can be used to characte...",
+      "file_path": "2_retrieval_multihop\\MULTI_050.json"
+    },
+    {
+      "test_id": "MULTI_051",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_14",
+      "question": "[Judge] If the suppression of shallow as-grown electron traps in high-k layers reduces PBTI significantly, then PBTI is ...",
+      "file_path": "2_retrieval_multihop\\MULTI_051.json"
+    },
+    {
+      "test_id": "MULTI_052",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_19",
+      "question": "[Fill] In the fan-out wafer-level packaging (FOWLP) process described in Section 1, chips are embedded in _____ and have...",
+      "file_path": "2_retrieval_multihop\\MULTI_052.json"
+    },
+    {
+      "test_id": "MULTI_053",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_24",
+      "question": "[Choice] In the fabrication process of a fin field-effect transistor (FinFET), which combination of materials and proces...",
+      "file_path": "2_retrieval_multihop\\MULTI_053.json"
+    },
+    {
+      "test_id": "MULTI_054",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_39",
+      "question": "[Fill] The selective cobalt capping layer on copper surfaces is deposited after removing contaminants via _____ plasma p...",
+      "file_path": "2_retrieval_multihop\\MULTI_054.json"
+    },
+    {
+      "test_id": "MULTI_055",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_3",
+      "question": "How do grain size and interfacial properties of copper vias influence via extrusion during thermal cycling in 3D integra...",
+      "file_path": "2_retrieval_multihop\\MULTI_055.json"
+    },
+    {
+      "test_id": "MULTI_056",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_5",
+      "question": "[Fill] The _____ blank in the CMP model describing the wafer surface evolution is influenced by both the polishing pad c...",
+      "file_path": "2_retrieval_multihop\\MULTI_056.json"
+    },
+    {
+      "test_id": "MULTI_057",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_11",
+      "question": "Explain how the design and material choices in an optically transparent polishing belt used for chemical mechanical poli...",
+      "file_path": "2_retrieval_multihop\\MULTI_057.json"
+    },
+    {
+      "test_id": "MULTI_058",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_13",
+      "question": "Explain how wafer orientation affects hole mobility and Negative Bias Temperature Instability (NBTI) degradation in p-MO...",
+      "file_path": "2_retrieval_multihop\\MULTI_058.json"
+    },
+    {
+      "test_id": "MULTI_059",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_14",
+      "question": "[Judge] Positive Bias Temperature Instability (PBTI) mainly affects nMOSFETs and does not create interface states in the...",
+      "file_path": "2_retrieval_multihop\\MULTI_059.json"
+    },
+    {
+      "test_id": "MULTI_060",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_32",
+      "question": "[Fill] In the context of integrating uniaxial strained-Silicon process flow for 90-nm logic technology and the isotropic...",
+      "file_path": "2_retrieval_multihop\\MULTI_060.json"
+    },
+    {
+      "test_id": "MULTI_061",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_3",
+      "question": "Explain how the interplay of grain size, interfacial adhesion, and thermal cycling conditions affects via extrusion in 3...",
+      "file_path": "2_retrieval_multihop\\MULTI_061.json"
+    },
+    {
+      "test_id": "MULTI_062",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_6",
+      "question": "How does the inclusion of surfactants and additives in the preparation of semiconductor etchants improve etching efficie...",
+      "file_path": "2_retrieval_multihop\\MULTI_062.json"
+    },
+    {
+      "test_id": "MULTI_063",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_13",
+      "question": "Explain how the choice of silicon wafer orientation influences the hole mobility and Negative Bias Temperature Instabili...",
+      "file_path": "2_retrieval_multihop\\MULTI_063.json"
+    },
+    {
+      "test_id": "MULTI_064",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_16",
+      "question": "Analyze the impact of bond pad pitch scaling on electrical yield in direct die-to-wafer hybrid bonding processes using p...",
+      "file_path": "2_retrieval_multihop\\MULTI_064.json"
+    },
+    {
+      "test_id": "MULTI_065",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_27",
+      "question": "[Judge] According to the contact mechanics-based CMP model, if the polishing pad roughness parameter (σ) is very large a...",
+      "file_path": "2_retrieval_multihop\\MULTI_065.json"
+    },
+    {
+      "test_id": "MULTI_066",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_29",
+      "question": "[Calculation] Given the constants for multi_hop testing in section A: formula constant k = 0.85, in section B: operating...",
+      "file_path": "2_retrieval_multihop\\MULTI_066.json"
+    },
+    {
+      "test_id": "MULTI_067",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_30",
+      "question": "[Choice] How do the structural design and material choices in double-gate a-IGZO TFTs and FinFET devices contribute to t...",
+      "file_path": "2_retrieval_multihop\\MULTI_067.json"
+    },
+    {
+      "test_id": "MULTI_068",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_36",
+      "question": "How do the selective chemical vapor deposition (CVD) process and subsequent rapid thermal processing in the self-aligned...",
+      "file_path": "2_retrieval_multihop\\MULTI_068.json"
+    },
+    {
+      "test_id": "MULTI_069",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_1",
+      "question": "[Fill] In the pulsed atomic layer etching (ALE) process described, the optimal argon bias voltage window for ruthenium r...",
+      "file_path": "2_retrieval_multihop\\MULTI_069.json"
+    },
+    {
+      "test_id": "MULTI_070",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_4",
+      "question": "How does the Vertical Fan-Out (VFO) package technology improve mechanical, electrical, and reliability performance compa...",
+      "file_path": "2_retrieval_multihop\\MULTI_070.json"
+    },
+    {
+      "test_id": "MULTI_071",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_8",
+      "question": "Explain how controlling the polishing parameters and pad layouts during chemical mechanical planarization (CMP) can mini...",
+      "file_path": "2_retrieval_multihop\\MULTI_071.json"
+    },
+    {
+      "test_id": "MULTI_072",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_9",
+      "question": "[Fill] In the advanced GaN-based integrated circuit structures described, the backside structure includes _____ blank ca...",
+      "file_path": "2_retrieval_multihop\\MULTI_072.json"
+    },
+    {
+      "test_id": "MULTI_073",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_14",
+      "question": "How does the application of a reducing gas treatment in the FinFET gate formation process improve the etch back performa...",
+      "file_path": "2_retrieval_multihop\\MULTI_073.json"
+    },
+    {
+      "test_id": "MULTI_074",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_18",
+      "question": "How do the integrated circuit structures with backside high voltage metal-insulator-metal (MIM) capacitors for front sid...",
+      "file_path": "2_retrieval_multihop\\MULTI_074.json"
+    },
+    {
+      "test_id": "MULTI_075",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_30",
+      "question": "How does the design and processing of the RDL based LGA with 600mm x 600mm Fan-Out Panel Level Package (FOPLP) influence...",
+      "file_path": "2_retrieval_multihop\\MULTI_075.json"
+    },
+    {
+      "test_id": "MULTI_076",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_41",
+      "question": "[Fill] The _____ blank in the HfAlO gate dielectric film's atomic layer deposition process is controlled by alternating ...",
+      "file_path": "2_retrieval_multihop\\MULTI_076.json"
+    },
+    {
+      "test_id": "MULTI_077",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_46",
+      "question": "Explain how the multi-metal contact structure described in the semiconductor device (Source: US10515913) improves electr...",
+      "file_path": "2_retrieval_multihop\\MULTI_077.json"
+    },
+    {
+      "test_id": "MULTI_078",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_49",
+      "question": "[Fill] In the fan-out embedded bridge package solution for large chip modules, Thermal Compression Bonding (TCB) is pref...",
+      "file_path": "2_retrieval_multihop\\MULTI_078.json"
+    },
+    {
+      "test_id": "MULTI_079",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_61",
+      "question": "[Calculation] Given a Pillar-Suspended Bridge (PSB) module for chiplet integration with a daisy-chain circuit formed by ...",
+      "file_path": "2_retrieval_multihop\\MULTI_079.json"
+    },
+    {
+      "test_id": "MULTI_080",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_62",
+      "question": "How does the novel hierarchical consistency regularized mean teacher framework enhance 3D defect detection and metrology...",
+      "file_path": "2_retrieval_multihop\\MULTI_080.json"
+    },
+    {
+      "test_id": "MULTI_081",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_66",
+      "question": "How do the surface characteristics and plasma treatment conditions of SiCN films influence the bond strength in low temp...",
+      "file_path": "2_retrieval_multihop\\MULTI_081.json"
+    },
+    {
+      "test_id": "MULTI_082",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_71",
+      "question": "[Calculation] In the context of multi-hop reliability testing of semiconductor lasers, given the acceleration factor for...",
+      "file_path": "2_retrieval_multihop\\MULTI_082.json"
+    },
+    {
+      "test_id": "MULTI_083",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_72",
+      "question": "Explain how the advanced Fan-Out Panel-Level-Package (FO-PLP) technology addresses the challenges of warpage control and...",
+      "file_path": "2_retrieval_multihop\\MULTI_083.json"
+    },
+    {
+      "test_id": "MULTI_084",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_75",
+      "question": "[Judge] In the context of semiconductor integrated circuit timing analysis, assuming that all gate delays are fully corr...",
+      "file_path": "2_retrieval_multihop\\MULTI_084.json"
+    },
+    {
+      "test_id": "MULTI_085",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_81",
+      "question": "[Fill] In the Optical Proximity Correction (OPC) method for semiconductor lithography, when the substrate has a layered ...",
+      "file_path": "2_retrieval_multihop\\MULTI_085.json"
+    },
+    {
+      "test_id": "MULTI_086",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_88",
+      "question": "Explain how the negative resistance clamped silicon controlled rectifier memristor device structure achieves continuous ...",
+      "file_path": "2_retrieval_multihop\\MULTI_086.json"
+    },
+    {
+      "test_id": "MULTI_087",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_90",
+      "question": "How does the Argon plasma pre-treatment affect the interfacial strength of the Al-Si interface as measured by the laser ...",
+      "file_path": "2_retrieval_multihop\\MULTI_087.json"
+    },
+    {
+      "test_id": "MULTI_088",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_96",
+      "question": "Explain how the novel mask inspection system combines die-to-database (DB) and die-to-die (DD) detection flows to maximi...",
+      "file_path": "2_retrieval_multihop\\MULTI_088.json"
+    },
+    {
+      "test_id": "MULTI_089",
+      "test_type": "multi_hop",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "multi_hop_97",
+      "question": "[Fill] In integrated circuit structures having front side GaN-based devices, the backside structure includes one or more...",
+      "file_path": "2_retrieval_multihop\\MULTI_089.json"
+    },
+    {
+      "test_id": "MULTI_090",
+      "test_type": "multi_hop",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "multi_hop_98",
+      "question": "Explain how the deposition and post-treatment processes of cobalt capping layers on copper surfaces in semiconductor sub...",
+      "file_path": "2_retrieval_multihop\\MULTI_090.json"
+    },
+    {
+      "test_id": "GEN_001",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_12",
+      "question": "[Fill] In the selective barrier CuBS technology described for 3nm node BEOL interconnects, the primary mechanism leading...",
+      "file_path": "3_generation_quality\\GEN_001.json"
+    },
+    {
+      "test_id": "GEN_002",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_13",
+      "question": "Explain the role of deposition temperature, precursor pulse duration, and plasma pretreatment time in optimizing the EPA...",
+      "file_path": "3_generation_quality\\GEN_002.json"
+    },
+    {
+      "test_id": "GEN_003",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_19",
+      "question": "[Fill] In the heterogeneous 3D monolithic CFETs described, the top-tier p-FET uses a Ge (_____) GAA nanosheet channel to...",
+      "file_path": "3_generation_quality\\GEN_003.json"
+    },
+    {
+      "test_id": "GEN_004",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_29",
+      "question": "[Calculation] Given a metal-ferroelectric-metal (MFM) capacitor structure with a 7 nm thick Hf0.5Zr0.5O2 (HZO) ferroelec...",
+      "file_path": "3_generation_quality\\GEN_004.json"
+    },
+    {
+      "test_id": "GEN_005",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_0",
+      "question": "[Fill] In the mask defect detection system described, the die reference image for a first die is generated by applying o...",
+      "file_path": "3_generation_quality\\GEN_005.json"
+    },
+    {
+      "test_id": "GEN_006",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_2",
+      "question": "[Judge] In the context of hydrophilic direct bonding of niobium pads, annealing at 400°C for 2 hours is necessary to rem...",
+      "file_path": "3_generation_quality\\GEN_006.json"
+    },
+    {
+      "test_id": "GEN_007",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_5",
+      "question": "[Fill] In the semiconductor chip assembly described, the flexible sheetlike dielectric interposer overlies the _____ bla...",
+      "file_path": "3_generation_quality\\GEN_007.json"
+    },
+    {
+      "test_id": "GEN_008",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_26",
+      "question": "Explain the key challenges and historical development steps that delayed the practical implementation of full-chip Inver...",
+      "file_path": "3_generation_quality\\GEN_008.json"
+    },
+    {
+      "test_id": "GEN_009",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_34",
+      "question": "[Fill] In the atomic layer etching (ALE) process described, the use of an inhibitor chemical during etching of a high as...",
+      "file_path": "3_generation_quality\\GEN_009.json"
+    },
+    {
+      "test_id": "GEN_010",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_7",
+      "question": "[Judge] In semiconductor chip assemblies using a flexible dielectric interposer with compliant layers under central term...",
+      "file_path": "3_generation_quality\\GEN_010.json"
+    },
+    {
+      "test_id": "GEN_011",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_13",
+      "question": "Explain the key process parameters optimized in the EPALS-assisted ALD deposition of HfO2 on highly oriented pyrolytic g...",
+      "file_path": "3_generation_quality\\GEN_011.json"
+    },
+    {
+      "test_id": "GEN_012",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_19",
+      "question": "[Fill] In heterogeneous 3D monolithic CFETs, the top-tier p-FETs employ a Ge (_____) /<110> gate-all-around nanosheet ch...",
+      "file_path": "3_generation_quality\\GEN_012.json"
+    },
+    {
+      "test_id": "GEN_013",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_32",
+      "question": "[Fill] In the method to improve interfacial adhesion of copper-glass interfaces in Through Glass Vias (TGVs), the curabl...",
+      "file_path": "3_generation_quality\\GEN_013.json"
+    },
+    {
+      "test_id": "GEN_014",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_37",
+      "question": "[Calculation] Given a semiconductor device with backside vias connecting source/drain (S/D) features to backside power r...",
+      "file_path": "3_generation_quality\\GEN_014.json"
+    },
+    {
+      "test_id": "GEN_015",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_7",
+      "question": "[Judge] In chemical-mechanical polishing (CMP), the local removal rate is directly proportional to the contact pressure ...",
+      "file_path": "3_generation_quality\\GEN_015.json"
+    },
+    {
+      "test_id": "GEN_016",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_15",
+      "question": "[Calculation] Given an EUV resist film with a thickness of 30 nm and a resist absorptivity of 0.63, estimate the minimum...",
+      "file_path": "3_generation_quality\\GEN_016.json"
+    },
+    {
+      "test_id": "GEN_017",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_33",
+      "question": "Analyze the advantages and potential challenges of using a pellicle membrane with in-plane variation in composition, as ...",
+      "file_path": "3_generation_quality\\GEN_017.json"
+    },
+    {
+      "test_id": "GEN_018",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_15",
+      "question": "[Judge] In the context of the pellicle membrane design described in US20230333462A1, embedding a high-emissivity materia...",
+      "file_path": "3_generation_quality\\GEN_018.json"
+    },
+    {
+      "test_id": "GEN_019",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_19",
+      "question": "[Fill] In the heterogeneous 3D monolithic CFETs demonstrated using Ge (110)/<110> GAA nanosheet p-FETs on Si (100)/<110>...",
+      "file_path": "3_generation_quality\\GEN_019.json"
+    },
+    {
+      "test_id": "GEN_020",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_2",
+      "question": "[Calculation] Given the physical constraints of electromigration (EM) induced resistance degradation in on-chip BEOL Cu ...",
+      "file_path": "3_generation_quality\\GEN_020.json"
+    },
+    {
+      "test_id": "GEN_021",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_12",
+      "question": "[Fill] In the mathematical model of superfilling during damascene copper plating, the primary mechanism that leads to hi...",
+      "file_path": "3_generation_quality\\GEN_021.json"
+    },
+    {
+      "test_id": "GEN_022",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_17",
+      "question": "[Calculation] Given a copper interconnect line segment with width W = 32 nm, thickness H = 63 nm, and length Lline, oper...",
+      "file_path": "3_generation_quality\\GEN_022.json"
+    },
+    {
+      "test_id": "GEN_023",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_18",
+      "question": "Explain the fluidic assembly mass transfer process for microLEDs as described in the patent_15 section. How does the sys...",
+      "file_path": "3_generation_quality\\GEN_023.json"
+    },
+    {
+      "test_id": "GEN_024",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_22",
+      "question": "[Calculation] Given the PIM system fabricated in a 5nm FinFET process which achieves a stepping resolution of 14.3 ps yi...",
+      "file_path": "3_generation_quality\\GEN_024.json"
+    },
+    {
+      "test_id": "GEN_025",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_27",
+      "question": "[Judge] In hydrophilic direct bonding of patterned niobium (Nb) pads for semiconductor integration, the presence of a th...",
+      "file_path": "3_generation_quality\\GEN_025.json"
+    },
+    {
+      "test_id": "GEN_026",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_14",
+      "question": "Explain the operating principles and underlying physical mechanisms of the three-electrode semiconductor amplifier devic...",
+      "file_path": "3_generation_quality\\GEN_026.json"
+    },
+    {
+      "test_id": "GEN_027",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_15",
+      "question": "[Judge] In a dual damascene semiconductor fabrication process, the use of an amorphous fluorocarbon (a-FC) low-k etch st...",
+      "file_path": "3_generation_quality\\GEN_027.json"
+    },
+    {
+      "test_id": "GEN_028",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_19",
+      "question": "[Calculation] Given a semiconductor wafer with a diffused p-n junction forming an integrated circuit, the capacitance C ...",
+      "file_path": "3_generation_quality\\GEN_028.json"
+    },
+    {
+      "test_id": "GEN_029",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_29",
+      "question": "[Fill] In the transistor device structure described, the epitaxial source and drain extensions are _____ blank from the ...",
+      "file_path": "3_generation_quality\\GEN_029.json"
+    },
+    {
+      "test_id": "GEN_030",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_35",
+      "question": "[Choice] In hybrid bonding of semiconductor wafers, which combination of metal pad recess depth conditions most effectiv...",
+      "file_path": "3_generation_quality\\GEN_030.json"
+    },
+    {
+      "test_id": "GEN_031",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_53",
+      "question": "[Fill] In the context of Through Glass Vias (TGVs) used in electronic packaging, the dielectric liner applied on the int...",
+      "file_path": "3_generation_quality\\GEN_031.json"
+    },
+    {
+      "test_id": "GEN_032",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_55",
+      "question": "[Judge] The introduction of leveling bars with widths approximately one-fifth of the minimum feature dimension and place...",
+      "file_path": "3_generation_quality\\GEN_032.json"
+    },
+    {
+      "test_id": "GEN_033",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_67",
+      "question": "[Choice] In the context of Chemical Mechanical Planarization (CMP) modeling, which combination of polishing pad characte...",
+      "file_path": "3_generation_quality\\GEN_033.json"
+    },
+    {
+      "test_id": "GEN_034",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_82",
+      "question": "Explain how the Metal Dual Work Function Gate (MDWG) technology improves the scaling of DRAM cell transistors compared t...",
+      "file_path": "3_generation_quality\\GEN_034.json"
+    },
+    {
+      "test_id": "GEN_035",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_83",
+      "question": "[Choice] Considering the atomic layer etching (ALE) process for SiO2 described using sequential exposures of trimethylal...",
+      "file_path": "3_generation_quality\\GEN_035.json"
+    },
+    {
+      "test_id": "GEN_036",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_86",
+      "question": "Explain how the in-plane compositional variation of materials in the pellicle membrane, as described in US20230333462A1,...",
+      "file_path": "3_generation_quality\\GEN_036.json"
+    },
+    {
+      "test_id": "GEN_037",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_97",
+      "question": "[Choice] Considering the anisotropic plasma etching of silicon as described in US5501893, which of the following stateme...",
+      "file_path": "3_generation_quality\\GEN_037.json"
+    },
+    {
+      "test_id": "GEN_038",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_101",
+      "question": "[Fill] In the megasonic cleaning apparatus described, the distance to the far-field region Z_f is proportional to the sq...",
+      "file_path": "3_generation_quality\\GEN_038.json"
+    },
+    {
+      "test_id": "GEN_039",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_109",
+      "question": "[Fill] In an overlay metrology system using polarization-based imaging, the first-layer structure of the overlay target ...",
+      "file_path": "3_generation_quality\\GEN_039.json"
+    },
+    {
+      "test_id": "GEN_040",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_114",
+      "question": "Analyze the design and operational principles of the Pillar-Suspended Bridge (PSB) architecture in chiplet integration t...",
+      "file_path": "3_generation_quality\\GEN_040.json"
+    },
+    {
+      "test_id": "GEN_041",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_116",
+      "question": "Explain the mechanisms responsible for the quasi-saturation behavior observed in Negative Bias Temperature Instability (...",
+      "file_path": "3_generation_quality\\GEN_041.json"
+    },
+    {
+      "test_id": "GEN_042",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_119",
+      "question": "[Judge] The negative resistance effect in the rectifying memristor device described in patent_3 arises solely from the i...",
+      "file_path": "3_generation_quality\\GEN_042.json"
+    },
+    {
+      "test_id": "GEN_043",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_122",
+      "question": "Explain how the Atomic Layer Etching (ALE) process described for SiO2 films achieves surface smoothing while maintaining...",
+      "file_path": "3_generation_quality\\GEN_043.json"
+    },
+    {
+      "test_id": "GEN_044",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_124",
+      "question": "Explain how the scaling of HfZrO (HZO) ferroelectric film thickness affects the endurance characteristics of metal-ferro...",
+      "file_path": "3_generation_quality\\GEN_044.json"
+    },
+    {
+      "test_id": "GEN_045",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_127",
+      "question": "[Fill] In the design of a semiconductor die with backside power delivery, the _____ transistors that implement the power...",
+      "file_path": "3_generation_quality\\GEN_045.json"
+    },
+    {
+      "test_id": "GEN_046",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_128",
+      "question": "Explain how the ordering of input variables affects the size and efficiency of graph representations of Boolean function...",
+      "file_path": "3_generation_quality\\GEN_046.json"
+    },
+    {
+      "test_id": "GEN_047",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_129",
+      "question": "[Judge] In the described method for forming a dual damascene structure, using an a-FC low k etch stop layer deposited fr...",
+      "file_path": "3_generation_quality\\GEN_047.json"
+    },
+    {
+      "test_id": "GEN_048",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_130",
+      "question": "Explain how the image exposure apparatus described in Section 1 (Source: US7123417) utilizes the rotation of the digital...",
+      "file_path": "3_generation_quality\\GEN_048.json"
+    },
+    {
+      "test_id": "GEN_049",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_141",
+      "question": "[Fill] In the design of an x-ray lithography mask to reduce deleterious diffraction effects, the attenuator material and...",
+      "file_path": "3_generation_quality\\GEN_049.json"
+    },
+    {
+      "test_id": "GEN_050",
+      "test_type": "generation_quality",
+      "question_format": "SUBJECTIVE",
+      "source_chapter": "generation_quality_156",
+      "question": "Explain the principles and technical advantages of the in-situ optical endpoint detection method for chemical mechanical...",
+      "file_path": "3_generation_quality\\GEN_050.json"
+    },
+    {
+      "test_id": "GEN_051",
+      "test_type": "generation_quality",
+      "question_format": "OBJECTIVE",
+      "source_chapter": "generation_quality_157",
+      "question": "[Fill] In electromigration phenomena within metallic interconnects, the net atomic flux in the direction of electron flo...",
+      "file_path": "3_generation_quality\\GEN_051.json"
+    }
+  ]
+}

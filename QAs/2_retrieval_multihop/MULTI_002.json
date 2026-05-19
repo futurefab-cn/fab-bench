@@ -1,0 +1,67 @@
+{
+  "test_id": "MULTI_002",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "How does the profile matching criterion of metal pad recess depths influence the quality and robustness of hybrid bonding between semiconductor wafers, and what process steps and parameters are critical to achieve a seamless bond at relatively low annealing temperatures?",
+  "gold_context_sources": [
+    {
+      "section_title": "US8802538: BRIEF DESCRIPTION OF THE DRAWINGS",
+      "evidence": "The profile matching of the embodiments provides excellent metal pad to metal pad bonds when the metal pads are well matched. ... The top depth TD is the distance from the surface of the metal pad to the dielectric surface of the top substrate 200, the bottom depth BD is the distance from the surface of the dielectric on the bottom substrate 300 to the surface of the metal pad 305. In one method embodiment, the substrates are determined to have a good profile match for forming a pad-to-pad bond if the top depth TD in Angstroms, +20, is less than the bottom depth BD in Angstroms, as shown in FIG. 7. ... By using matched profiles in the top bottom substrates, the hybrid bonding process forms robust bonds without mechanical and at low temperatures.",
+      "doc_id": "US8802538",
+      "has_image": false
+    },
+    {
+      "section_title": "US8802538: BRIEF DESCRIPTION OF THE DRAWINGS",
+      "evidence": "After the conductors of metal 101 are formed, a chemical mechanical polishing (CMP) process is used to remove any overburden metal that remains after the electroplating process, and the CMP also polishes the surface of the dielectric 103 to form a bonding surface. ... A controlled oxidation process is performed to oxidize the metal pads to a certain depth. ... A controlled etch is performed to remove the metal oxide leaving a uniform surface on the metal pads recessed below the dielectric surface. ... The anneal temperature can vary between about 100 and about 400 degrees C. The time of the anneal can vary from a few seconds, to minutes to several hours, the bond strengths obtained will increase with additional anneal time.",
+      "doc_id": "US8802538",
+      "has_image": false
+    },
+    {
+      "section_title": "Novel_three-layer_stacking_process_with_face-to-back_CoW_6_m-pitch_hybrid_bonding",
+      "evidence": "The size of the top chips for evaluation was 17 x 24 mm, with a thickness of 0.15 mm. The bowing (peak to the bottom of the chip along the long side) of the top chips was varied between +40 pm (tensile) and -60 pm (compressive). Fig. 7 shows the scanning acoustic microscopy (SAM) image of the CoW hybrid bonding in a 200 mm wafer before annealing. ... For the chip bowing between -50 pm and -60 pm (compressive), voids were identified around the corner of the chip after CoW. ... The contact resistance of Kelvin connection through a three-layer vertically stacked structure result is shown in Fig. 12. ... The bonding between the dielectric layers will continue or bond strength will continue to increase during the anneal.",
+      "doc_id": "Novel_three-layer_stacking_process_with_face-to-back_CoW_6_m-pitch_hybrid_bonding",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The profile matching criterion for metal pad recess depths critically influences the quality and robustness of hybrid bonding between semiconductor wafers. Specifically, the criterion requires that the top substrate's metal pad recess depth (TD), measured in Angstroms and increased by 20, must be less than the bottom substrate's recess depth (BD). This ensures that the copper pad surfaces are well matched in their profiles and recesses, enabling robust metal pad-to-metal pad bonding. The process steps critical to achieving this seamless bond include performing chemical mechanical polishing (CMP) to planarize and expose the metal pads, followed by a controlled oxidation process to form metal oxide layers of precise depth on the metal pads. Subsequently, a controlled etch removes the metal oxide, creating uniform, recessed metal pad surfaces beneath the dielectric surface. The wafers are then aligned and physically contacted face-to-face at their bonding surfaces. A relatively low-temperature anneal, typically ranging from about 100°C to 400°C and lasting from seconds to several hours, is applied to form the metal-to-metal and dielectric-to-dielectric bonds. This low-temperature anneal reduces stresses related to thermal expansion mismatch and prevents damage or delamination. Furthermore, chip bowing due to size and thickness variations can impact bonding yield; maintaining chip bowing within a range of approximately +40 µm (tensile) to -40 µm (compressive) is important to avoid void formation and ensure high bonding quality and electrical yield. Overall, the combined control of recess depths, oxidation/etch processing, alignment, annealing conditions, and mechanical flatness (chip bowing) enables the formation of seamless, robust hybrid bonds at relatively low temperatures with high electrical and mechanical integrity.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_13",
+  "generation_metadata": {
+    "generation_id": 185,
+    "attempt": 1,
+    "temperature_used": 0.68,
+    "top_p_used": 0.9,
+    "max_tokens_used": 3993,
+    "similarity_failures": 0,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T03:54:42.192554",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010504211939934048,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 153,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 27,
+        "processes": 17,
+        "testing": 16,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_002.json"
+}

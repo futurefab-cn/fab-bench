@@ -1,0 +1,61 @@
+{
+  "test_id": "ROB_005",
+  "test_type": "robustness",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "How does the polarization-rotating design of the first-layer structure in an overlay target enable independent imaging of features on different sample layers, and what are the key design principles that suppress cross-talk between these layers in overlay metrology?",
+  "gold_context_sources": [
+    {
+      "section_title": "DETAILED DESCRIPTION (Source: US20250110412A1)",
+      "evidence": "The overlay target comprises a first-layer structure with a first set of periodic features and a second set of periodic features oriented at 90 degrees to each other, arranged to rotate polarization of certain diffraction orders by 90 degrees relative to zero-order diffraction. This polarization rotation allows isolation of first-layer features by cross-polarized imaging. The second-layer structure maintains the polarization of the incident illumination, enabling separate imaging with parallel polarizers. Cross-talk is further reduced by minimizing physical overlap between the first- and second-layer structures, for example by placing the second-layer structure within spaces or edges of the first-layer zones.",
+      "doc_id": "US20250110412A1",
+      "has_image": false
+    },
+    {
+      "section_title": "High Precision and Productivity Bridge-die-last Bonding Process and Its Reliability for Pillar- Suspended Bridge (PSB) Architecture",
+      "evidence": "The paper discusses the importance of precise alignment and bonding in chiplet integration, emphasizing the role of CTE matching and structural design to achieve reliable fine pitch connections, which is relevant to overlay target fabrication and metrology precision.",
+      "doc_id": "High_Precision_and_Productivity_Bridge-die-last_Bonding_Process_and_Its_Reliability_for_Pillar-_Suspended_Bridge_PSB_Architecture",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The polarization-rotating design of the first-layer structure in an overlay target enables independent imaging of features on different sample layers by exploiting polarization properties of diffracted light. The first-layer structure is composed of two sets of periodic features oriented at 90 degrees to each other, arranged so that non-zero diffraction orders rotate the polarization of incident light by 90 degrees relative to the zero-order diffraction, which maintains the original polarization. When the overlay target is illuminated with polarized light at a 45-degree angle to these features, the first-layer features produce rotated polarization in the first-order diffraction, while the second-layer features maintain the incident polarization. By placing a collection polarizer orthogonal to the illumination polarization, the imaging system isolates the first-layer structure's rotated diffraction orders, effectively excluding second-layer features. Conversely, using a collection polarizer parallel to the illumination polarization isolates the second-layer structure's image. This polarization-based contrast mechanism allows generation of two isolated images corresponding to different layers without cross-talk. Furthermore, to suppress cross-talk arising from double diffraction or overlap of features, the second-layer structure is designed to have minimal physical overlap with the first-layer structure, for example by placing its features within gaps or edges of the first-layer zones. The first-layer structure's fine pitch features are generally below the resolution limit, but the larger coarse pitch zones are resolvable and provide measurable contrast. This design approach enables small overlay targets suitable for in-die placement (3 micrometers or less) with enhanced measurement accuracy by mitigating interference between layers. Overall, the key design principles involve engineering polarization rotation via feature orientation and periodicity, controlling physical feature placement to minimize overlap, and employing orthogonal polarizer configurations in illumination and imaging sub-systems to achieve independent, high-contrast imaging of each layer's features, thus enhancing overlay metrology accuracy and reducing cross-talk.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_8",
+  "generation_metadata": {
+    "generation_id": 53,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 3,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T00:45:50.802765",
+    "semiconductor_analysis": {
+      "technical_density": 0.0009434669985128675,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 152,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 25,
+        "processes": 19,
+        "testing": 18,
+        "applications": 20,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_005.json"
+}

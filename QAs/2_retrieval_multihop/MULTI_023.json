@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_023",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Judge] The method of forming a multi-gate transistor with a backside power rail involves recessing the source epitaxial feature from the backside and forming a silicide layer on it, which reduces the gate-drain capacitance and improves device performance. (True/False)",
+  "gold_context_sources": [
+    {
+      "section_title": "US11222892: BRIEF DESCRIPTION OF THE DRAWINGS",
+      "evidence": "The drain epitaxial feature is recessed from the backside to reduce the gate-drain capacitance. The source epitaxial feature is accessed by the backside source contact formed after recessing and silicidation. The MBC transistor according to the present disclosure has improved performance due to reduced gate-drain capacitance and backside power rail access.",
+      "doc_id": "US11222892",
+      "has_image": false
+    },
+    {
+      "section_title": "US11222892: BRIEF DESCRIPTION OF THE DRAWINGS",
+      "evidence": "A silicide layer is formed on the recessed source epitaxial feature and a metal fill layer is deposited to form the backside source contact. The silicide layer reduces contact resistance and enables efficient backside contact.",
+      "doc_id": "US11222892",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is True. Reasoning: According to the detailed description in the US11222892 section, the method includes selectively recessing the source epitaxial feature from the backside, forming a silicide layer on it, and depositing a metal fill to create the backside source contact. Additionally, the drain epitaxial feature is recessed to reduce gate-drain capacitance. This combined structure improves device performance by reducing parasitic capacitance and enabling backside power rail access, confirming the statement as true.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_7",
+  "generation_metadata": {
+    "generation_id": 350,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 49,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T04:45:59.222537",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011171769610254234,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 163,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 28,
+        "processes": 24,
+        "testing": 17,
+        "applications": 23,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_023.json"
+}

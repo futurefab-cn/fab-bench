@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_077",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "Explain how the multi-metal contact structure described in the semiconductor device (Source: US10515913) improves electrical performance and reduces dishing during chemical mechanical polishing (CMP), and discuss how the choice and arrangement of different conductive materials contribute to these improvements.",
+  "gold_context_sources": [
+    {
+      "section_title": "Example Embodiments of Multi-Metal Contact Structures for Semiconductor Devices",
+      "evidence": "The multi-metal structure 302 can be comprised of two or more conductive materials, such as metals for example. A first conductive material can be used to form the mesh 304, similar to the metallic grid 202. The first conductive material may comprise copper, a copper alloy, or the like. The second conductive material of the fill 306 can be harder than the first conductive material of the mesh 304, to reduce the dishing of the contact area. For example, the second conductive material may comprise nickel, a nickel alloy, or the like. The combination of the mesh 304 and the fill 306 forms the multi-metal structure 302, which includes an electrical contact structure comprising a pattern of vertical layers of two or more conductive materials, extending normal to the plane of the substrate 104. The use of multiple conductive materials (metals, for example) to form the multi-metal structure 302 increases the overall performance of the contact area, by increasing the electrically conductive area of contact and reducing the resistance. Dishing may also be reduced with the multi-metal structure 302 (to about 2-10 nm) as compared to the large conductive contact pad 102 (>10-60 nm). One of the conductive materials can be selected to have a lower coefficient of thermal expansion (CTE) compared to the other, allowing the first conductive material to expand more under thermal conditions during bonding and fill gaps in the metal-to-metal bond.",
+      "doc_id": "US10515913",
+      "has_image": false
+    },
+    {
+      "section_title": "Detailed Process of Forming and Bonding Multi-Metal Contact Structures",
+      "evidence": "The process includes forming the mesh 304 of the first conductive material (e.g., copper) on the substrate surface, removing portions of the substrate to form vacancies, and depositing the second conductive material (e.g., nickel) into these vacancies forming the fill 306. The mesh 304 and fill 306 are then planarized using CMP, which can result in some minimal dishing due to differences in material hardness, with greater dishing on the mesh 304 than the fill 306. To facilitate bonding, a flash layer of the first conductive material (e.g., copper) may be applied to the exposed surface of the fill 306 areas. The multi-metal structures can be bonded using annealing or direct bond interconnect (DBI) techniques without intervening solder, where the different coefficients of thermal expansion help fill gaps and improve bond quality.",
+      "doc_id": "US10515913",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The multi-metal contact structure improves electrical performance and reduces dishing during CMP by using a combination of two or more conductive materials arranged in a mesh and fill pattern. The mesh, typically made of a softer conductive material like copper, forms a grid providing electrical conduction. The fill, made of a harder conductive material such as nickel, occupies the spaces between the mesh traces. This arrangement increases the effective conductive contact area and reduces the electrical resistance of the contact. During CMP, differences in material hardness cause dishing, with softer materials tending to polish faster. By having a harder fill material surrounding the softer mesh, dishing depth is minimized to about 2-10 nm, much less than that of large single-metal pads (10-60 nm). Additionally, the use of materials with different coefficients of thermal expansion (CTE) enables the softer metal (e.g., copper) to expand more during bonding processes, filling gaps between metals and enhancing bond integrity. A flash layer of the first conductive material is applied to exposed fill surfaces to promote bonding at the same annealing temperature as the mesh. The planarization and bonding processes, combined with the careful selection and spatial arrangement of conductive materials, yield a contact structure that provides improved electrical conductivity, reduced mechanical deformation during polishing, and robust bonding without the need for solder or reflow materials.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_46",
+  "generation_metadata": {
+    "generation_id": 70,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 4,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:22:07.233080",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011789612395564956,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 155,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 25,
+        "processes": 21,
+        "testing": 18,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_077.json"
+}

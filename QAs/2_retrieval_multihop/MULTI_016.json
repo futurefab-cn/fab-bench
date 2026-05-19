@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_016",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Fill] In fan-out wafer-level packaging (FOWLP), chips with _____ blank on the front side are embedded face-up in an epoxy molding compound (EMC), followed by the build-up of multiple redistribution layers (RDLs) using electrochemical Cu deposition. Meanwhile, in direct-bonded microLED array fabrication, the LED structure is prepared with an ultra-flat bonding interface comprising coplanar metal contacts and dielectric regions, enabling direct bonding to silicon driver chips. Fill in the blank with the correct material used on the chip front side that facilitates RDL formation in FOWLP and relate how the direct bonding process in LED array fabrication ensures electrical connectivity similar to RDLs.",
+  "gold_context_sources": [
+    {
+      "section_title": "Fan-OutWafer-Level Packaging(FOWLP)of LargeChipwith Multiple Redistribution Layers (RDLs)",
+      "evidence": "The uniqueness of this process is to fabricate Cu contact-pads on the device wafer. These Cu contact-pads are for building the RDLs after post-mold cure (PMC) of the EMC and backgrinding of the EMC [21]. Three RDLs are built. The conductor layer of the RDLs is fabricated by electrochemical Cu deposition (ECD).",
+      "doc_id": "imaps_522798",
+      "has_image": false
+    },
+    {
+      "section_title": "DESCRIPTION of Direct-bonded LED arrays and applications",
+      "evidence": "The example LED structure 200 provides an ultra-flat bonding interface 202, made flat by chemical-mechanical polishing (CMP) for example, with both n contact 108 and p contact 110 surrounded by an insulator 204, such as a silicon oxide, and exposed on the ultra-flat bonding interface 202 with respective coplanar conductive footprints 206 & 208 on the ultra-flat bonding interface 202. The metal contact pads of the respective wafers 502 & 504 form a metal-to-metal bond during higher-than-room-temperature annealing, as with a DBI® brand direct-bonding process.",
+      "doc_id": "US20250105234A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is Cu contact-pads. Reasoning: In FOWLP, copper (Cu) contact-pads are fabricated on the device wafer front side, which serve as the foundation for building redistribution layers (RDLs) by electrochemical Cu deposition after molding and backgrinding of the epoxy molding compound (EMC). These Cu contact-pads enable electrical connectivity and routing in the package. In parallel, the direct-bonded microLED array fabrication process creates an ultra-flat bonding interface exposing n and p metal contacts surrounded by dielectric layers. This interface enables direct metal-to-metal bonding to silicon driver chips, establishing electrical connections analogous to RDLs. Both methods rely on precisely fabricated metal contact pads to ensure robust electrical connectivity between device elements and external circuitry, illustrating a cross-technology principle of using metal contact pads (Cu in FOWLP, metal contacts in LED arrays) for interconnection.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_19",
+  "generation_metadata": {
+    "generation_id": 297,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 24,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T04:30:54.822213",
+    "semiconductor_analysis": {
+      "technical_density": 0.0009176162145810201,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 149,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 25,
+        "processes": 21,
+        "testing": 18,
+        "applications": 19,
+        "parameters": 18
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_016.json"
+}

@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_011",
+  "test_type": "robustness",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "[Calculation] Given a 3D water block cooling a heat source with circulating liquid flow rate Q = 0.1 L/s and inlet liquid temperature T_in = 20°C, the heat source generates power P = 100 W. The heat exchange efficiency factor between the heat pipe structure and circulating liquid is given as 0.8 (i.e., only 80% of the heat is transferred to the liquid due to low-voltage adjustment). Calculate the outlet liquid temperature T_out. Use the formula Q × ρ × C_p × (T_out - T_in) = Efficiency × P, where ρ = 1000 kg/m³ and C_p = 4184 J/kg·°C. What is T_out?",
+  "gold_context_sources": [
+    {
+      "section_title": "DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENT",
+      "evidence": "It is noted that a heat exchange between the base plate 101 and the circulating liquid only takes place at a top surface of the base plate 101/101a, where some micro channels 103/103a as shown in FIG. 1 and FIG. 1A are usually added to enhance the heat exchange rate between them. However, regardless of any pattern of micro channels, the heat exchange rate in a traditional water block is limited to a low efficiency because the heat exchange only takes place on a top surface of the base plate 101/101a. Due to the fact that the heat exchange only takes place on a top surface of the base plate for a traditional water block, this prior art design will be called a 2D (2-dimensional) water block herein. In contrast, a 3D (3-dimensional) water block is disclosed in the present invention (which can also called a cold block in contrast to a traditional cold plate of prior arts), wherein a heat pipe or vapor chamber structure is introduced into the 3D water block so that a 3D heat exchange is achieved... it is believed that the application of sonic energy “acoustically softens” of the bond pad material to lower the yield point and cause a corresponding shift in the contact force required to induce plastic deformation, such as illustrated in FIG. 3. The lowered contact force needed to induce plastic deformation can be achieved with smaller changes in the bond pad material volume and thus lower anneal temperatures than used in the method described in relation to FIGS. 1-2.",
+      "doc_id": "patent_9",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is 20.19°C. Reasoning: First, convert flow rate Q = 0.1 L/s = 1e-4 m³/s. Using the formula Q × ρ × C_p × (T_out - T_in) = Efficiency × P, substitute known values: 1e-4 × 1000 × 4184 × (T_out - 20) = 0.8 × 100. Simplify left side: 418.4 × (T_out - 20) = 80. Divide both sides by 418.4: T_out - 20 = 80 / 418.4 ≈ 0.1913. Therefore, T_out = 20 + 0.1913 ≈ 20.19°C. However, the question expects the temperature rise due to the 80% heat transfer efficiency, so the outlet temperature is approximately 20.19°C, slightly higher than the inlet. This shows that without accounting for the efficiency factor (0.8), the outlet temperature would be overestimated by 25%, demonstrating the importance of the efficiency factor in calculations.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_12",
+  "generation_metadata": {
+    "generation_id": 108,
+    "attempt": 1,
+    "temperature_used": 0.7700000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 14,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T00:58:43.642383",
+    "semiconductor_analysis": {
+      "technical_density": 0.0009713114754098334,
+      "precision_level": "high",
+      "dominant_category": "parameters",
+      "total_tech_terms": 150,
+      "categories_found": {
+        "manufacturing": 25,
+        "materials": 21,
+        "devices": 25,
+        "processes": 22,
+        "testing": 18,
+        "applications": 16,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_011.json"
+}

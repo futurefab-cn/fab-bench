@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_053",
+  "test_type": "robustness",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "Analyze how the warpage control was optimized in the asymmetric multi-chip FO-PLP package structure for wearable applications, detailing the role of die thickness and redistribution layers (RDL) in the vertical stack-up zones and the resulting impact on warpage and reliability.",
+  "gold_context_sources": [
+    {
+      "section_title": "I. INTRODUCTION - II. DEVELOPMENT DIRECTION",
+      "evidence": "In this study, it was investigated the optimized methodology for warpage control and evaluated the reliability performance for the package-level reliability (PLR) in those challengeable structure of asymmetry of advanced FO-PLP with multi-chip for wearable devices. For product-level development, it should be defined the vertical stack-up firstly, especially on the die thickness effect considering for the optimizing the warpage in high temperature. In order to predict those phenomena, warpage level was estimated by the mechanical modeling and simulation. Next step is to estimate the reliability risk-level by comparison of strain energy density comparison to validate optimized structure. Short-loop test vehicle also was made to define the stack-up condition to check process capability. Final step is to verify the results of the warpage measurement, the reliability in JEDEC conditions. Before the first step of defining the vertical stack-up, it was selected as a developing model as 46% increased multi-die area ratio and 37% increased package aspect ratio compared with reference model to ensure flexibility in the asymmetric structure of the multi-chip package. Those asymmetric structure and high aspect ratio would be led to high risk for warpage control, so it was estimated the high temperature warpage shapes by the mechanical modeling and simulation tools. It was necessary to increase 40% of die thickness in zone B with balancing zone A and Zone C for the improved warpage. Fabrication was done in vertical structure of 3-layer of front RDL (zone A) and 1-layer of back-side RDL (zone C) with optimized die thickness (Zone B).",
+      "doc_id": "Advanced_FO-PLP_with_Multi-chip_for_Wearable_Application",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The warpage control in the asymmetric multi-chip FO-PLP package structure for wearable applications was optimized by carefully defining the vertical stack-up, focusing on the die thickness effect and redistribution layers (RDL) arrangement in three zones: Zone A (front-side RDL interfacing multi dies), Zone B (die thickness control with ETS core), and Zone C (back-side RDL). Due to the asymmetry and increased package aspect ratio, warpage risk was high, with simulations showing a 52% increase in high temperature warpage compared to the reference model. To mitigate this, the die thickness in Zone B was increased by 40%, which balanced the effects from Zone A and Zone C, resulting in a more uniform and reduced warpage shape. The structure comprised a vertical stack of three layers of front-side RDL (Zone A) and one layer of back-side RDL (Zone C) with the optimized thicker die in Zone B. This optimized stack-up not only controlled warpage effectively but also maintained package height and process stability. The resulting warpage was under 40 µm, and package-level reliability met JEDEC TC-B criteria, demonstrating the success of this optimization in addressing warpage and reliability challenges in asymmetric multi-chip FO-PLP wearable device packages.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_20",
+  "generation_metadata": {
+    "generation_id": 23,
+    "attempt": 1,
+    "temperature_used": 0.8400000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 2,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T11:36:30.780906",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010244970650771412,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 160,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 27,
+        "processes": 22,
+        "testing": 18,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_053.json"
+}

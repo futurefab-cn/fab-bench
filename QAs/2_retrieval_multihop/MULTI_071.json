@@ -1,0 +1,67 @@
+{
+  "test_id": "MULTI_071",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "Explain how controlling the polishing parameters and pad layouts during chemical mechanical planarization (CMP) can minimize conductive structure dishing and dielectric erosion in hybrid bonding wafer preparation, and discuss the impact of pad metal density and arrangement on the uniformity of the bonding surface.",
+  "gold_context_sources": [
+    {
+      "section_title": "ADDITIONAL EXAMPLE EMBODIMENTS",
+      "evidence": "The polishing rates of the dielectric layer, the barrier layer, and the conductive structure may be configured such that a steady state removal of each may be achieved. It is to be appreciated that polishing of the dielectric layer 702 would not occur until a portion of the conductive layer 706 is removed. In a steady-state process, a recess of the conductive structure 708 may be held constant over the process time. Additionally, in another embodiment, the polishing pressure may be used to control dishing and dielectric erosion (such as rounding of the dielectric surface). The higher the applied polishing pressure the higher the removal rate of both the conductive layer 706, the barrier layer 704 and the dielectric layer 702. Thus, the higher polishing pressures produces higher dishing in the conductive layer and higher erosion in the dielectric layer. Similarly, lower pressure produces the opposite effect with the accompanying penalty of lower thru-put. In one embodiment, the applied pressure may be graded. For example, the starting pressure for the conductive layer may be 4 psi for appropriate amount of times. Then, an intermediate polishing pressure may be 2.5 psi for the appropriate amount of times. The final polishing pressure to remove the conductive layer over the surface of the barrier layer may vary between 2 to 1.5 psi and stop on the barrier surface. Similarly, the polishing pressure for the removal of the barrier layer may be graded. As an example, the barrier layer removal pressure may vary between 2.5 to 0.5 psi The initial starting pressure may be 2 psi and the polishing pressure at the end of the barrier step maybe 0.7 psi.",
+      "doc_id": "US20230268308A1",
+      "has_image": false
+    },
+    {
+      "section_title": "ADDITIONAL EXAMPLE EMBODIMENTS",
+      "evidence": "Pads may be formed and arranged on a die or wafer surface using various pad layouts, arrangements, or patterns, which may be regular, irregular, cyclic, quasi-random, or the like. Such variation of pad size and layout within a single design is attractive to circuit designers as it reduces or eliminates the need for dummy pads, which would otherwise be required to achieve necessary planarity. The present techniques allow designers more flexibility in layout to avoid this undesirable situation. Other advantages include reduced metal layers and reduced cost associated with stacking. Combining a TSV structure with the ability to control the planarity and dielectric erosion for a quality bond surface allows stacking of wafers or die TSV to TSV, TSV to pad, and/or pad to pad connections across the bonding interface. The variation in the contact structures in these arrangements may be less than 10 nm and preferably less than 6 nm after the barrier polishing step. This enables intimate good bonding at lower temperatures typically below 250° C. and preferably below 200° C.",
+      "doc_id": "US20230268308A1",
+      "has_image": false
+    },
+    {
+      "section_title": "ADDITIONAL EXAMPLE EMBODIMENTS",
+      "evidence": "The polishing methods may be applied to substrates containing metal pads and trenches with varying metal pattern densities, varying widths (within reasonable limits) and varying depths to produce a planar dielectric surface with minimal dielectric erosion and appropriate recess within the trenches configured to enhance properties of the substrate other than electrical, for example to improve the heat transfer capability of the dielectric layer or to provide microelectromechanical systems (MEMS) and the like. The pad metal density is significantly affected by the pad spacing (pitch). Increasing the pad spacing reduces the pad metal density and affects the uniformity of the polishing.",
+      "doc_id": "US20230268308A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "Controlling polishing parameters such as polishing pressure, slurry flow, table and carrier speeds, and pad conditioning is critical to minimizing conductive structure dishing and dielectric erosion during chemical mechanical planarization (CMP) in hybrid bonding wafer preparation. Higher polishing pressures increase the removal rates of the conductive layer, barrier layer, and dielectric, which leads to greater dishing of the conductive structures and higher erosion of the dielectric surfaces. Conversely, lower polishing pressures reduce dishing and erosion but may reduce throughput. A graded pressure approach, starting with higher pressure for conductive layer removal and gradually lowering pressure during barrier removal, helps achieve a steady-state removal rate where the recess of the conductive structures remains constant and dielectric erosion is minimized. \n\nPad layouts and arrangements also significantly impact polishing uniformity. Using various pad patterns—regular, irregular, cyclic, or quasi-random—allows flexibility in design and reduces the need for dummy pads, which are undesirable due to potential coupling losses. Adjusting pad size and pitch affects the metal density on the wafer surface; increasing the pad pitch decreases metal density, which influences polishing rates and uniformity. Well-designed pad arrangements can limit variation in conductive structure recess to less than 10 nm, often below 6 nm, enabling intimate bonding at lower annealing temperatures (below 250°C, preferably below 200°C). This uniformity reduces the need for excessive thermal treatment and improves bonding quality. \n\nTherefore, by carefully balancing polishing parameters and intelligently designing pad layouts, it is possible to achieve planar bonding surfaces with minimal conductive structure dishing and dielectric erosion, enhancing the reliability and performance of hybrid bonded wafers.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_8",
+  "generation_metadata": {
+    "generation_id": 28,
+    "attempt": 1,
+    "temperature_used": 0.5800000000000001,
+    "top_p_used": 0.9,
+    "max_tokens_used": 3993,
+    "similarity_failures": 0,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:10:19.617205",
+    "semiconductor_analysis": {
+      "technical_density": 0.0009153084336279233,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 146,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 25,
+        "processes": 19,
+        "testing": 17,
+        "applications": 16,
+        "parameters": 19
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_071.json"
+}

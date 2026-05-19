@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_081",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "How do the surface characteristics and plasma treatment conditions of SiCN films influence the bond strength in low temperature wafer-level hybrid bonding, and what role does water content and chemical bonding at the interface play in this context?",
+  "gold_context_sources": [
+    {
+      "section_title": "Low Temperature Wafer Level Hybrid Bonding Enabled by Advanced SiCN and Surface Activation - I. INTRODUCTION - III. RESULTS AND DISCUSSION",
+      "evidence": "The SiCN films were deposited on 300 mm Si wafers using full-auto CVD tool. The surface roughness of SiCN after CMP is below Rq 0.15 nm. The surface activation plasma and bonding were performed using TEL SynapseTM Si system. Thermal desorption spectroscopy (TDS) was used to assess gases released from the films. The bond strength measurement was performed by using double cantilever beam (DCB) method in an anhydrous environment to avoid water stress corrosion. The true bonding strength of SiCN with sufficiently high annealing temperature is above 3.0 J/m², higher than that of TEOS based SiO₂ (2.5 J/m²). Plasma conditions, especially plasma power and gas type (O₂ vs N₂), significantly affect bond strength. High-power N₂ plasma degrades bond strength due to formation of C-N bonds acting as bonding inhibitors and potential Cu contamination from resputtering. Low-power N₂ plasma treatment with SiCN-B film shows superior bond strength at low annealing temperatures (below 250 °C), suggesting synergy between film and plasma gas. TDS measurements reveal higher water outgassing from SiCN-B than SiCN-A, correlating with lower refractive index and implying water presence within the film contributes to bond strength. XPS and EELS analyses show that plasma activation transforms the surface chemistry, converting much of the surface to SiO₂ with N₂ plasma leaving more Si-N on the surface, and that the bonding interface is a multilayer sandwich of SiCO in SiO. Presence of carbonate (CO₃²⁻) at the surface is hypothesized as crucial for high bond strength at low temperature. High plasma power transforms CO to CN, lowering bond strength.",
+      "doc_id": "semi_docs_045",
+      "has_image": false
+    },
+    {
+      "section_title": "Fundamental understanding of NBTI degradation mechanism in IGZO channel devices - I. INTRODUCTION",
+      "evidence": "Electrical stress experiments (both for PBTI and NBTI) are carried out by the so-called extended Measure-Stress-Measure (eMSM) methodology, to record stress and relaxation data during one measurement. The device operational stability under heightened bias conditions, including extra degradation of mobility or subthreshold characteristics, is closely monitored. The devices with 20nm IGZO exhibit the most negative Vth0 and the poorest subthreshold slope (SS), while 10nm-IGZO devices show superior mobility performance. The lack of SS degradation during a large range of Vth degradation confirms that NBTI induces mainly a rigid shift of the IV curve, unlike Si technology.",
+      "doc_id": "Fundamental_understanding_of_NBTI_degradation_mechanism_in_IGZO_channel_devices",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The bond strength in low temperature wafer-level hybrid bonding of SiCN films is significantly influenced by both the surface characteristics of the films and the plasma treatment conditions applied during surface activation. SiCN films polished to low surface roughness (Rq < 0.15 nm) provide a suitable interface for bonding. Plasma treatment alters the surface chemistry, with the choice of plasma gas and power level playing a critical role. Low-power N₂ plasma treatment promotes the formation of a surface chemistry rich in carbonate species (CO₃²⁻) and retains more Si-N bonds, which are beneficial for bonding strength at lower annealing temperatures (below 250 °C). In contrast, high-power N₂ plasma leads to the formation of C-N bonds that inhibit bonding, and can cause Cu contamination due to resputtering, resulting in reduced bond strength. O₂ plasma generally converts the surface largely to SiO₂ but shows less favorable bonding at low temperatures compared to N₂ plasma. Water content within the SiCN films, as evidenced by higher outgassing measured by thermal desorption spectroscopy (TDS) and correlated with lower refractive index from ellipsometry, is a key factor enhancing bond strength. The presence of water likely facilitates the formation of a multilayer interfacial structure comprising SiCO and SiO, which contributes to strong bonding. XPS and EELS analyses confirm that the bonding interface is a sandwich-like multilayer within approximately 10 nm thickness, with chemical species consistent with these compounds. The synergy between film composition, residual water, and plasma-induced surface chemistry (particularly carbonate presence) enables enhanced bonding strength at lower annealing temperatures. Thus, controlling plasma parameters to avoid formation of bonding inhibitors (C-N bonds) and maintaining sufficient water content in the film are crucial for achieving robust low temperature SiCN-SiCN wafer bonding.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_66",
+  "generation_metadata": {
+    "generation_id": 93,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 7,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:28:16.956760",
+    "semiconductor_analysis": {
+      "technical_density": 0.0009432401845564527,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 154,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 26,
+        "processes": 23,
+        "testing": 18,
+        "applications": 19,
+        "parameters": 18
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_081.json"
+}

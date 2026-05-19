@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_045",
+  "test_type": "robustness",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "[Fill] In the preparation method for an etchant for semiconductor material processing, the surfactant includes _____ blank fatty acid salt, alkylphenol ether, sodium dodecyl sulfate, sodium dodecylbenzene sulfonate, polyethylene glycol, fatty alcohol polyoxyethylene ether sulfate, alkanolamide, and fatty acid methyl ester ethoxylates.",
+  "gold_context_sources": [
+    {
+      "section_title": "Summary of the Invention",
+      "evidence": "The surfactant includes fatty acid salt, alkylphenol ether, sodium dodecyl sulfate, sodium dodecylbenzene sulfonate, polyethylene glycol, fatty alcohol polyoxyethylene ether sulfate, alkanolamide, and fatty acid methyl ester ethoxylates.",
+      "doc_id": "patent_5",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is fatty acid salt. Reasoning: The exact phrase listing the surfactant components in the preparation method explicitly states that the surfactant includes 'fatty acid salt' along with other specified chemicals. This phrase must be extracted exactly as given, not replaced by synonyms or related terms.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_62",
+  "generation_metadata": {
+    "generation_id": 64,
+    "attempt": 1,
+    "temperature_used": 0.6900000000000002,
+    "top_p_used": 0.9,
+    "max_tokens_used": 3072,
+    "similarity_failures": 1,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T11:16:11.891627",
+    "semiconductor_analysis": {
+      "technical_density": 0.001079228803024445,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 163,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 27,
+        "processes": 26,
+        "testing": 18,
+        "applications": 19,
+        "parameters": 24
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_045.json"
+}

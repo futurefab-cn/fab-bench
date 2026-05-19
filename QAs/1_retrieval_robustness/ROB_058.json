@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_058",
+  "test_type": "robustness",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "Explain the principle and advantages of the in-situ endpoint detection method for chemical mechanical polishing (CMP) processes as described in the invention, and discuss how the use of an optically transparent polishing belt and the configuration of the monitoring device contribute to the accuracy and effectiveness of endpoint detection.",
+  "gold_context_sources": [
+    {
+      "section_title": "DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS",
+      "evidence": "The present invention provides a method and a system for an in-situ endpoint detection for material removal processes such as CMP. An optically transparent polishing belt is used to polish the surface of the workpiece, with an optical endpoint monitoring device placed below the belt. The device sends outgoing optical signals through the belt to the wafer surface and receives reflected signals back through the belt. Changes in the intensity of the reflected signal indicate the exposure of different layers (e.g., copper overburden, barrier layer, oxide layer), allowing precise detection of the polishing endpoint. The belt's transparency eliminates the need for an extra window, and its composite structure with a transparent abrasive layer and backing supports signal transmission. The monitoring device may be positioned within a cavity in the platen and can be moved to scan across the wafer radius, enabling detection across center, middle, and edge areas. The use of specific wavelengths (600-900 nm, preferably 675 nm) and optical filters enhances signal detection. This configuration enables accurate, real-time endpoint detection, improving process control and preventing over-polishing.",
+      "doc_id": "US20020173225A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The in-situ endpoint detection method for CMP processes described in the invention relies on an optically transparent polishing belt through which optical signals are transmitted to and from the wafer surface. This method enables real-time monitoring of the polishing process by detecting changes in the intensity of reflected light, which correspond to the exposure of different material layers such as the copper overburden, the barrier layer (e.g., tantalum), and the underlying oxide layer. The use of an optically transparent polishing belt is crucial because it allows the outgoing light beam from the monitoring device, placed below the belt, to pass through to the wafer surface and the reflected light to return through the belt to the detector without requiring an additional optical window, thereby simplifying the apparatus and reducing potential signal loss or distortion. The belt typically comprises a composite structure with a transparent abrasive layer containing fine abrasive particles distributed in a transparent binder matrix, and a transparent backing material, which together maintain the necessary mechanical polishing properties while allowing optical transmission. The monitoring device is positioned within a cavity in the platen beneath the belt and can be moved along the cavity to scan across different radial positions of the wafer, enabling detection of endpoint signals from the center to the edge of the wafer. This scanning capability ensures comprehensive monitoring of the wafer surface. Additionally, the system uses light in the wavelength range of 600-900 nanometers, preferably at 675 nanometers, combined with optical filters to enhance the detection of reflected signals and improve signal-to-noise ratio. The endpoint is determined by abrupt changes in reflected light intensity, signaling the exposure of specific layers and allowing precise halting of the CMP process to avoid over-polishing. Overall, this configuration provides accurate, efficient, and non-invasive endpoint detection, improving process control, reducing waste, and enhancing yield in semiconductor manufacturing.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_6",
+  "generation_metadata": {
+    "generation_id": 7,
+    "attempt": 1,
+    "temperature_used": 0.44,
+    "top_p_used": 0.9,
+    "max_tokens_used": 3072,
+    "similarity_failures": 0,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:01:02.870139",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010868634187659978,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 162,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 27,
+        "processes": 26,
+        "testing": 19,
+        "applications": 21,
+        "parameters": 20
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_058.json"
+}

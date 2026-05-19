@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_067",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Choice] How do the structural design and material choices in double-gate a-IGZO TFTs and FinFET devices contribute to their improved electrical performance and reliability? A) The double-gate a-IGZO TFTs improve carrier mobility and stability by forming two parallel channels and reducing interface scattering, while FinFETs suppress short channel effects through self-aligned double-gate structures and SiGe gates B) Both devices rely primarily on reducing parasitic resistance via raised source/drain contacts and do not significantly alter channel design C) Double-gate a-IGZO TFTs focus on gate work function control using metal gates, whereas FinFET devices improve stability by increasing channel impurity concentration D) FinFET devices improve subthreshold swing by increasing the gate length, and double-gate a-IGZO TFTs achieve stability by using single-channel layers",
+  "gold_context_sources": [
+    {
+      "section_title": "Double_Gated_a-InGaZnO_TFT_Properties_Based_on_Quantitative_Defect_Analysis_and_Computational_Modeling",
+      "evidence": "The double gate (DG) a–IGZO TFT has attracted attention for its remarkable advantages, such as excellent low turn-on voltage (VON) control and improved turn-on current, as two channels are formed by the voltage applied simultaneously to the upper and lower gate electrodes. This results in a significant improvement in drain current due to the formation of parallel channel layers, compared to single channel layers in the single gate (SG) a–IGZO TFT devices. Moreover, by modulating the carrier transport path as well as the channel layer position and area, the interface carrier capture influence in DG TFT and the carrier surface scattering effect at the insulator–channel layer interface can be dramatically reduced. As a result, the carrier mobility and subthreshold swing (SS) can be improved. ... Based on the results of quantitative defect analysis, the electron density distribution of the channel is simulated to improve accuracy, and the origin of enhancement in stability of the DG device can be understood based on the improved simulation.",
+      "doc_id": "Double_Gated_a-InGaZnO_TFT_Properties_Based_on_Quantitative_Defect_Analysis_and_Computational_Modeling",
+      "has_image": false
+    },
+    {
+      "section_title": "FinFET-a_self-aligned_double-gate_MOSFET_scalable_to_20_nm",
+      "evidence": "The self-aligned double-gate effectively suppresses short channel effects, even with 17-nm gate length. SiGe gate provides a proper threshold voltage for ultrathin body MOSFET. The gate is self-aligned to the S/D, which is raised to reduce the parasitic resistance. This structure uses a S/D first, gate last process flow that may be needed for future high- gate dielectric and metal gate. FinFET can be suitable integration of Si-ULSIs. ... The channel width of the devices is twice the height of the Si-fins or approximately 100 nm. ... The device used the elevated S/D process first applied on DELTA. The poly-Si film greatly reduces the S/D series resistance and provide a convenient means for local interconnect and making connections to the metal.",
+      "doc_id": "FinFET-a_self-aligned_double-gate_MOSFET_scalable_to_20_nm",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is A. Reasoning: From the double-gate a-IGZO TFTs section, we learn that the device forms two parallel channels by applying voltage simultaneously to upper and lower gates, which significantly improves drain current, reduces interface carrier capture, and improves carrier mobility and subthreshold swing. From the FinFET section, the self-aligned double-gate structure effectively suppresses short channel effects, and the use of SiGe gates allows proper threshold voltage control. The raised source/drain structure reduces parasitic resistance, contributing to improved device performance. Therefore, option A accurately synthesizes evidence from both sections about design and material choices leading to improved electrical performance and reliability. Options B, C, and D contradict these findings or misrepresent the mechanisms involved.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_30",
+  "generation_metadata": {
+    "generation_id": 1005,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 441,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T07:35:41.011598",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010396984011627878,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 162,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 26,
+        "processes": 26,
+        "testing": 19,
+        "applications": 20,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_067.json"
+}

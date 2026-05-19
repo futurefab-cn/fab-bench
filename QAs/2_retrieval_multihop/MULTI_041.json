@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_041",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "Explain how the choice of wafer orientation impacts hole mobility and Negative Bias Temperature Instability (NBTI) degradation in p-MOSFETs, and discuss how this relates to device fabrication challenges in three-dimensional FinFET structures, particularly considering (100) and (110) wafer orientations and channel directions.",
+  "gold_context_sources": [
+    {
+      "section_title": "9. Wafer orientation",
+      "evidence": "Most ICs are fabricated on (100) oriented Si wafers. However, it has been known since 1968 that hole mobility is higher for p-MOSFETs on (110) oriented wafers with the channel in the (110) direction [39,40]. Along with the higher hole mobility, however, is a higher interface trap density. Dy has been reported as D;(100)=7.7x 10\" and Dy(110)=14x10\"cm2eV™' [41]. Hence one would expect more severe NBTI degradation on (110) ori- ented wafers, as indeed has been observed, as shown in Fig. 11 [42,43]. This is a potential problem if (1 10) oriented wafers become important. For certain three-dimensional devices, e.g., FInFETs, when fabricated on (100) wafers with the channel in the conventional (110) direction, the vertical sidewalls are (110) oriented, leading to NBTI problems [42]. However, forming FinFETs on (100) wafers with the channel in the (100) direction, leads to (100) ver- tical sidewalls, illustrated in Fig. 12.",
+      "doc_id": "schroder2007",
+      "has_image": false
+    },
+    {
+      "section_title": "9. Wafer orientation",
+      "evidence": "For certain three-dimensional devices, e.g., FInFETs, when fabricated on (100) wafers with the channel in the conventional (110) direction, the vertical sidewalls are (110) oriented, leading to NBTI problems [42]. However, forming FinFETs on (100) wafers with the channel in the (100) direction, leads to (100) vertical sidewalls, illustrated in Fig. 12.",
+      "doc_id": "schroder2007",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The wafer orientation significantly influences both the hole mobility and the susceptibility to Negative Bias Temperature Instability (NBTI) degradation in p-MOSFET devices. Specifically, p-MOSFETs fabricated on (110) oriented silicon wafers with the channel aligned in the (110) direction exhibit higher hole mobility compared to those fabricated on the more common (100) oriented wafers. This improved mobility arises due to the crystallographic properties inherent to the (110) surface and channel orientation, which favor hole transport. However, this advantage comes at the cost of increased interface trap density (Dit), with measured values approximately twice as high on (110) wafers compared to (100) wafers (Dy(110) = 14x10^cm2eV vs Dy(100) = 7.7x10^cm2eV). The higher interface trap density correlates with more severe NBTI degradation, a reliability concern for device longevity and performance stability. Consequently, while (110) wafers can improve device speed via enhanced hole mobility, they also introduce greater reliability challenges. In three-dimensional device architectures such as FinFETs, these orientation effects become more complex. When FinFETs are fabricated on (100) wafers with the channel in the conventional (110) direction, the vertical sidewalls of the fins are (110) oriented. This sidewall orientation exposes the device to the elevated interface trap density and thus more pronounced NBTI degradation characteristic of the (110) surface. Conversely, if the FinFET channel is oriented along the (100) direction on (100) wafers, the vertical sidewalls also become (100) oriented, which is associated with lower interface trap densities and reduced NBTI issues. Therefore, careful selection of both wafer orientation and channel direction is critical in three-dimensional FinFET fabrication to balance mobility benefits and reliability concerns, especially considering that vertical sidewall orientations inherit the interface characteristics of the wafer surface orientation. This necessitates design and process strategies to optimize device performance while mitigating degradation mechanisms linked to wafer and channel orientations.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_13",
+  "generation_metadata": {
+    "generation_id": 593,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 166,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T05:46:38.127105",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010504211939934048,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 153,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 27,
+        "processes": 17,
+        "testing": 16,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_041.json"
+}

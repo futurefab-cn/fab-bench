@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_045",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "Explain how the contact mechanics-based model of chemical–mechanical polishing (CMP) accounts for pad roughness and asperity interactions to predict metal dishing and dielectric erosion during the CMP process. How does the model incorporate the effects of pad compliance, pattern geometry, and selectivity on the evolution of the wafer surface profile, and how is the asperity shielding phenomenon addressed to prevent step formation at material boundaries?",
+  "gold_context_sources": [
+    {
+      "section_title": "A model for chemical–mechanical polishing of a material surface based on contact mechanics",
+      "evidence": "The model uses an analysis based on the work by Greenwood to evaluate the pressure distribution taking into account pad compliance and roughness. Elastic deformation of the pad due to the non-planar topography of the wafer is taken into account using a contact-mechanics analysis. The model determines the average pressure distribution between polishing pad and wafer at the feature scale, which is then used to determine the local removal rate. The roughness of the polishing pad is modeled using an approach first developed by Greenwood and coworkers. Preston's law relates removal rate linearly to pressure and relative velocity. The model shows that metal dishing increases with polish time and decreasing selectivity, and reaches a steady state where the ratio of pressures over dielectric and metal equals the selectivity. The pad compliance affects the surface profile; a more compliant pad results in more dishing since the pad deflects more easily into recessed wafer areas. Pad roughness enhances dishing significantly but has limited effect on dielectric erosion. The model predicts that steady-state dishing increases linearly with line width and pad roughness parameter.",
+      "doc_id": "1-s2.0-S0022509603001285-main",
+      "has_image": false
+    },
+    {
+      "section_title": "A model for chemical–mechanical polishing of a material surface based on contact mechanics",
+      "evidence": "To address asperity interactions with wafer pattern edges, a non-Hertzian contact model is proposed to prevent step formation at boundaries between materials with different wear coefficients. The pressure cannot be continuous across the boundary; instead, the ratio of average pressure on either side must equal the selectivity to ensure equal removal rates and prevent steps. The model calculates pressure distribution beneath asperities centered on discontinuities, showing shielding of recessed areas from asperity contact and zero local pressure there, thus eliminating step formation. This asperity shielding model can be coupled with the pad roughness model to describe the evolution of wafer surface profiles more accurately.",
+      "doc_id": "1-s2.0-S0022509603001285-main",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The contact mechanics-based CMP model incorporates pad roughness and compliance by using Greenwood's statistical approach to model pad asperity height distributions and elastic deformation of the pad surface due to wafer topography. This approach yields the average pressure distribution between the wafer and polishing pad at the feature scale. The model applies Preston's law, which relates the local material removal rate linearly to the product of contact pressure and relative velocity, modulated by a wear coefficient that depends on material type. Metal dishing and dielectric erosion evolve as a function of this pressure distribution and wear coefficients. Specifically, dishing increases with polishing time and decreases with higher selectivity (the ratio of wear coefficients between materials). Pad compliance influences the extent of dishing; a more compliant pad deflects more into recessed wafer areas, increasing dishing. Pad roughness enhances metal dishing significantly but only slightly affects dielectric erosion, as rough pads support load differently across features, accelerating polishing in recessed areas. The model predicts steady-state dishing that increases linearly with line width and pad roughness parameter. To accurately capture asperity interactions at material boundaries and prevent unrealistic step formation, the model integrates an asperity shielding mechanism via a non-Hertzian contact analysis. This analysis shows that asperities contacting a step profile develop a pressure distribution where recessed areas are shielded from contact, resulting in zero local pressure and removal rate there, thus precluding step formation. The model enforces that the ratio of average pressure across the boundary equals the selectivity, ensuring balanced removal rates and a smooth surface profile. By coupling this asperity shielding model with the pad roughness model, the combined framework provides a comprehensive physical insight into CMP processes, accounting for pad mechanical properties, wafer pattern geometry, and material differences to predict the evolving wafer surface during polishing accurately.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_38",
+  "generation_metadata": {
+    "generation_id": 668,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 216,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T06:05:53.912143",
+    "semiconductor_analysis": {
+      "technical_density": 0.0012129544421407396,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 155,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 27,
+        "processes": 21,
+        "testing": 17,
+        "applications": 19,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_045.json"
+}

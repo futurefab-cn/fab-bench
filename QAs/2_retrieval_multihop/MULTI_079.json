@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_079",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Calculation] Given a Pillar-Suspended Bridge (PSB) module for chiplet integration with a daisy-chain circuit formed by multiple Cu pillar and MicroPillar connections, calculate the expected electrical continuity resistance after a thermal cycle test, assuming initial resistance R0, a 10% maximum allowed increase as failure criteria, and that the thermal cycle test conditions are defined as in Table 2 of the PSB reliability study. Use the bonding process details and reliability test conditions to estimate if the module passes the test after 200 cycles.",
+  "gold_context_sources": [
+    {
+      "section_title": "High_Precision_and_Productivity_Bridge-die-last_Bonding_Process_and_Its_Reliability_for_Pillar-_Suspended_Bridge_PSB_Architecture",
+      "evidence": "Table 2 shows reliability test conditions. For the TCT, THS, and PCT tests, the modules were treated under MSL 3 (Moisture Sensitivity Level 3) conditions before each test. Measurements were taken between the two terminals with the probe needle of the tester, and an open, short, or a 10% increase in resistance from the initial state was judged as a failure. We made measurements on 200 pairs of terminals for each sample. Table 3 shows the results of reliability tests. Some of them are still ongoing, but at this point, all of them have passed.",
+      "doc_id": "High_Precision_and_Productivity_Bridge-die-last_Bonding_Process_and_Its_Reliability_for_Pillar-_Suspended_Bridge_PSB_Architecture",
+      "has_image": false
+    },
+    {
+      "section_title": "High_Precision_and_Productivity_Bridge-die-last_Bonding_Process_and_Its_Reliability_for_Pillar-_Suspended_Bridge_PSB_Architecture",
+      "evidence": "Fig. 12 shows the daisy-chain circuit for testing. Daisy-chain circuits are formed at five locations each by Cu Pillar on Chiplet-1 / RDL on Chiplet-1 / MicroPillar / RDL on Bridge / MicroPillar / RDL on Chiplet-2 / Cu Pillar on Chiplet-2. The electrode on the Chiplet-1 side is connected to the electrode on the Chiplet-2 side via Bridge, and electrical continuity can be confirmed by probing.",
+      "doc_id": "High_Precision_and_Productivity_Bridge-die-last_Bonding_Process_and_Its_Reliability_for_Pillar-_Suspended_Bridge_PSB_Architecture",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is that the PSB module passes the thermal cycle test after 200 cycles with electrical continuity maintained and no resistance increase exceeding 10%. Reasoning: According to the reliability evaluation described, the daisy-chain circuit formed by multiple Cu Pillar and MicroPillar connections was tested with 200 terminal pairs. The failure criterion was a 10% increase in resistance from the initial state. The module samples were subjected to thermal cycle tests (TCT) under MSL 3 conditions before testing. Measurements showed no open, short, or resistance increase beyond 10% at the current point, indicating successful passing of the test. Thus, the expected resistance after the thermal cycles remains within the acceptable range, confirming the reliability and continuity of the PSB module under the given bonding and test conditions.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_61",
+  "generation_metadata": {
+    "generation_id": 88,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 7,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:26:45.261335",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010496251338807541,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 156,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 23,
+        "processes": 26,
+        "testing": 16,
+        "applications": 21,
+        "parameters": 20
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_079.json"
+}

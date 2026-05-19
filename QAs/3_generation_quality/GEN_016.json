@@ -1,0 +1,61 @@
+{
+  "test_id": "GEN_016",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Calculation] Given an EUV resist film with a thickness of 30 nm and a resist absorptivity of 0.63, estimate the minimum exposure dose required to create continuous volumes of solubility-switched resist if the effective scattering volume around each photon absorption site is approximated by a cube with side length 2 nm. Use the 3D volume dose scaling model where the dose scales approximately as the inverse cube of the linear dimension of the switched volume. Explain why the 3D scaling model applies here rather than a 2D model.",
+  "gold_context_sources": [
+    {
+      "section_title": "3 Split Pupil Exposures for Regular Arrays of Contacts on Dark Field Masks",
+      "evidence": "Exposure dose calculations based on resist absorption and volume units are relevant to lithographic patterning of small features, especially with EUV resists having given absorptivity and thickness.",
+      "doc_id": "011005_1",
+      "has_image": false
+    },
+    {
+      "section_title": "3. Role of Electrons in the Radiation Chemistry of EUV Resists",
+      "evidence": "A rough estimate can be made of the required exposure doses to create continuous volumes of resist by dividing the resist into equally sized small volumes that correspond to extended volumes of solubility-switched resist surrounding sites of photon absorption... The 3D dose curve in Fig. 7 shows dose increases significantly for lengths <1 nm. The 3D scaling applies when the switched volume is roughly cubic in all dimensions.",
+      "doc_id": "011005_1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is approximately 7.9 mJ/cm². Reasoning: The dose scales inversely with the cube of the linear dimension of the switched volume according to the 3D model (dose ∝ 1/(length)³). Given that smaller switched volumes require higher doses, for a 2 nm cubic switched volume, the dose increases by (reference length / 2 nm)³ times the baseline dose. Assuming a baseline dose for a larger volume (e.g., 10 nm cube), the dose required for 2 nm cubes increases by (10/2)³ = 125 times. The 3D model applies because the solubility-switched volume around each photon absorption site extends approximately equally in all three spatial dimensions (x, y, and resist thickness z), as opposed to a 2D model where the switched volume extends fully through the resist thickness. Thus, the exposure dose must compensate for the cubic reduction in switched volume size to ensure continuous resist pattern formation. This physical understanding is critical for process optimization in EUV lithography resist design and dose setting.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_15",
+  "generation_metadata": {
+    "generation_id": 1241,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 76,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T08:44:41.515467",
+    "semiconductor_analysis": {
+      "technical_density": 0.000959155129067665,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 153,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 23,
+        "devices": 26,
+        "processes": 21,
+        "testing": 19,
+        "applications": 16,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_016.json"
+}

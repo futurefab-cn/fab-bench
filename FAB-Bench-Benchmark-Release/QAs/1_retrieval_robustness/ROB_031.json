@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_031",
+  "test_type": "robustness",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "Analyze how the fluidic assembly process and mass transfer stamping system overcome limitations of conventional microLED assembly techniques, and explain the roles of the keel structure, conjugated bio molecule pairs, and force generators in ensuring proper microLED orientation and secure attachment during the assembly and transfer steps.",
+  "gold_context_sources": [
+    {
+      "section_title": "2. Description of the Related Art - DETAILED DESCRIPTION",
+      "evidence": "The general process for making a microLED display using inorganic LEDs and fluidic assembly on a display backplane has been reported in U.S. Pat. Nos. 9,825,202 and 10,418,527, which are incorporated herein by reference. ... The stamping system described herein is compatible with a variety of microLED configurations, but the conventional LED structure shown in FIG. 2C does not work because it lacks a means of orienting the device during fluidic assembly so that electrodes are positioned correctly for bonding to the display substrate. The round disk shaped surface mount microLEDs described in U.S. Pat. No. 10,804,426 are designed to produce a range of solutions within the constraints on fluidic assembly described in U.S. Pat. No. 9,825,202 starting at Col. 12 In. 56 and shown in FIG. 16, so these devices are used to illustrate the stamping systems described herein. ... The microLED of FIG. 6 uses a keel structure, referred to as a securing mechanism below, on the bottom surface of the microLED to orient the microLED with the electrode in the bottom of the fluidic assembly trap sites. For the direct assembly process the electrodes must be oriented “up” in the stamp so the keel structure is fabricated on the microLED top surface as shown in FIG. 13A. Fluidic assembly is performed in the usual way to produce an array of microLEDs assembled in the trap sites with the keel and the electrode up. The material used for the keel structure is usually a photo patternable polyimide which can be removed by a solvent stripper or etched by an oxygen (O,) plasma. Following assembly and drying, the keels are removed (FIG. 13B) so that the electrodes can be bonded to the display substrate. ... Alternatively, as shown in FIGS. 13D and 13K, the securing mechanism may be an electrically conductive keel connected to the first electrode. ... Another mechanism for orienting and holding microLEDs in the transfer stamp uses the preferential attachment between conjugated pairs of bio molecules such as the streptavidin-biotin pair. The microLEDs are prepared for functionalization by depositing a thin SiO2 film on the back sides of the device after LLO. The surface is exposed to hydrogen plasma or alkaline chemistry, then silanized with amine-terminated molecules such as 3-aminepropyl-trimethoxysilane. Washing the surface with a streptavidin solution bonds streptavidin molecules to the amine termination, resulting in a streptavidin-functionalized microLED. The trapping sites of the transfer stamp may be treated prior to assembly in a similar manner with biotin-terminated ligands, or the well bottom may be a gold surface which is exposed to a thiol-biotin bifunctional molecule. Thus, the stamp substrate trap site bottom surface is coated with a first component of a conjugated bio molecule pair. The microLED securing mechanism is a second component of the conjugated bio molecule pair coating each microLED bottom surface. ... FIGS. 14A and 14B depict use of electrostatic and magnetic force generators as secondary mechanisms to aid in securing microLEDs in the fluidic assembly trap sites (with or without a keel). The holding mechanisms may be switchable for individual sites in the array so it is possible to use a sequence like inspection, energizing holding force for good microLEDs, rinsing to remove defective microLEDs, dispensing additional microLED suspension, and continuing assembly until 100% good microLEDs are obtained before bonding. Vacuum and adhesive holding methods are less practical due to cleaning and reuse difficulties. Magnetic or electrostatic forcing structures in the stamp are practical solutions, with electrostatic holding involving a dielectric film and powered electrodes, and magnetic holding involving magnetic materials in microLEDs and magnets in the stamp.",
+      "doc_id": "patent_15",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The fluidic assembly process combined with the mass transfer stamping system provides significant improvements over conventional microLED assembly techniques by enabling precise orientation and secure attachment of microLEDs during transfer to the display substrate. Conventional LED structures lack means for device orientation during fluidic assembly, resulting in incorrect electrode positioning for bonding. The system overcomes this by employing a keel structure, a protrusion formed on the microLED (usually on the bottom surface for surface mount LEDs or on the top surface for direct stamp assembly) that mechanically orients the microLED within fluidic assembly trap sites matching the microLED's shape and size. This keel ensures that each microLED is positioned with electrodes correctly aligned for bonding, preventing misorientation. \n\nFurthermore, a novel securing mechanism involves functionalizing both the microLED bottom surface and the stamp trap site bottom surface with conjugated bio molecule pairs such as streptavidin-biotin. The microLEDs are coated with one component (e.g., streptavidin) and the trap sites with the complementary component (e.g., biotin), enabling selective and strong biochemical binding that secures correctly oriented microLEDs in the trap sites while allowing easy removal of misoriented or defective devices by fluidic perturbation. This bio-conjugate approach enhances the precision and yield of assembly.\n\nTo augment mechanical and biochemical securing, electrostatic and magnetic force generators integrated into the stamp substrate serve as secondary holding forces. Electrostatic holding uses powered electrodes beneath a dielectric layer on the stamp to attract microLEDs with dielectric coatings, while magnetic holding employs microLEDs with magnetic materials and magnets embedded in the stamp. These forces are switchable per trap site and enable selective retention of good microLEDs after inspection, allowing defective ones to be rinsed away and additional microLED suspension to be dispensed, facilitating recycling and improved yield.\n\nOverall, the fluidic assembly combined with keel orientation, bio-conjugate securing, and switchable force generators produces a robust, high-yield mass transfer process that ensures 100% correctly oriented and securely attached microLED arrays on display substrates, while enabling cleaning and reuse of stamp substrates and recycling of microLEDs, overcoming key limitations of prior art methods.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_28",
+  "generation_metadata": {
+    "generation_id": 131,
+    "attempt": 4,
+    "temperature_used": 1.0,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 61,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T03:40:24.054664",
+    "semiconductor_analysis": {
+      "technical_density": 0.0009511162314162943,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 155,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 26,
+        "processes": 21,
+        "testing": 19,
+        "applications": 23,
+        "parameters": 18
+      }
+    },
+    "similarity_threshold_used": 0.5499999999999999,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_031.json"
+}

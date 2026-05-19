@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_024",
+  "test_type": "robustness",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "[Judge] The newly developed SQ-1 multifunctional self-assembled monolayer (MF-SAM) used for Cu passivation does not possess the capability to remove Cu-oxide during the hybrid bonding process, unlike commercial SAMs. (True/False)",
+  "gold_context_sources": [
+    {
+      "section_title": "Multi-Functional_Self-Assembled_Monolayer_for_Chip-to-Chip_and_Chip-to-Wafer_Hybrid_Bonding",
+      "evidence": "Most of the commercially available SAM reagents do not possess the oxide-removal capability, and hence they do not anchor well on the unetched Cu-oxide surface. Whereas our newly developed SQ-1 MF-SAM does possess the Cu-oxide removal capability. This is already evident from the Auger depth profile in Fig. 3 that the O conc. is very low for SQ-1 when compared to commercial SAM used for Cu protection.",
+      "doc_id": "semi_docs_068",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is False. Reasoning: The newly developed SQ-1 MF-SAM indeed possesses the capability to remove Cu-oxide during the hybrid bonding process, unlike commercial SAMs which lack this capability. This is evidenced by the lower oxygen concentration and better anchoring of SQ-1 on the Cu surface, as described in the provided context.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_39",
+  "generation_metadata": {
+    "generation_id": 42,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 1,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T03:19:10.066897",
+    "semiconductor_analysis": {
+      "technical_density": 0.0012620020914535564,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 150,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 22,
+        "processes": 22,
+        "testing": 20,
+        "applications": 16,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_024.json"
+}

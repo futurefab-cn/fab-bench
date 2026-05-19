@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_012",
+  "test_type": "robustness",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "Analyze how the grain structure and interfacial properties of copper through-silicon vias (TSVs) affect via extrusion during thermal cycling in 3D integration, and discuss the implications for TSV reliability and design strategies to mitigate extrusion.",
+  "gold_context_sources": [
+    {
+      "section_title": "Via extrusion [IMAGE AVAILABLE]",
+      "evidence": "Via extrusion has been a major concern for the yield and reliability of 3D integration. It manifests the non-recoverable plastic deformation near the top of the via during thermal cycles. In a recent study, via extrusion was observed with atomic force microscopy and was found to increase with maximum temperature in thermal cycles. The rough surface profile suggested microscopically stochastic behavior, which was found to follow the grain structure near the surface of the via, possibly due to grain boundary sliding. In a separate study, via extrusion, or Cu pumping was investigated as a function of the process temperature and for two via sizes of 5 µm × 50 µm and 10 µm × 100 µm. Large ensembles of vias were used to measure the stochastic behavior and search for an optimal post-plating anneal. Via extrusions were found to follow a lognormal distribution, where the median of the maximum via extrusion for the smaller TSVs was about half of that for larger TSVs. However, the largest extrusions at 99.9% of the lognormal distribution were found to be about the same for both sets of TSVs except at 300°C, independent of via size and post-plating anneal conditions. These results indicate that TSV reliability did not improve by reducing via diameter, since the reliability of 3D devices containing a large number of TSVs is determined by the largest extrusions (i.e., the weakest link) despite their small percentage of occurrence. In a subsequent study, the statistical spread in via extrusion correlated to the grain size and orientation near the top of the vias for two sets of vias fabricated using different electroplating chemistries. The smallest 20% via extrusion seemed to be dominated by (111) grains with large grain size, while the largest 20% extrusion was dominated by (200) and (110) grains with small grain size. For vias containing three grains or more at the top surface, via extrusion was about twice that of vias containing only one large grain. The results suggest that a single grain at the top of the via would be effective in mitigating via extrusion, which was found to reduce the via extrusion substantially. However, it is unclear how to fabricate such grain structures for all TSVs to completely eliminate the tail of the distribution representing the largest extrusions. The elastic and plastic properties of the Cu vias were studied by nanoindentation. The yield strength was found to be 250 MPa for small grain (SG) TSVs and 190 MPa for large grain (LG) TSVs, consistent with the Hall–Petch relation. The average via extrusion was 117 nm for SG TSVs and 147 nm for LG TSVs, indicating a correlation between the average grain size and the amount of via extrusion. These results suggest that TSVs with uniform small grains would be more favorable for reducing the average via extrusion, but not necessarily for improving the statistical distribution of the largest extrusion. Interfacial sliding and Cu plasticity have been suggested as two possible mechanisms for via extrusion. Interfacial delamination and subsequent sliding could result in via extrusion at high temperatures but very little extrusion after cooling if no plastic deformation exists in the Cu via. On the other hand, even without interfacial delamination, via extrusion was observed after thermal cycling, attributed to local plastic deformation. A simple analytical model assuming perfect plasticity in Cu and frictionless interfacial sliding predicts plastic yielding of Cu above a critical temperature and residual extrusion after cooling. The residual extrusion depends on the highest temperature during thermal cycling and the plastic yield strength of the Cu via. Increasing the yield strength of Cu increases the yield temperature and decreases residual extrusion for the same thermal load. Finite element analysis (FEA) simulations agree with this analytical model. Effects of interfacial properties show that a perfectly bonded interface reduces residual extrusion by about 3x compared to frictionless sliding. Effects of via dimensions show decreasing extrusion with smaller via diameter and depth, but it is unclear if reliability improves because the probability of the largest extrusion remains a concern.",
+      "doc_id": "MRS2015",
+      "has_image": true
+    }
+  ],
+  "ground_truth_answer": "Via extrusion in copper TSVs during thermal cycling is a critical reliability concern manifesting as non-recoverable plastic deformation near the top of the via. The grain structure near the via surface significantly affects extrusion behavior: vias dominated by a single large (111) grain exhibit lower extrusion, while those with multiple smaller grains of (200) and (110) orientations show larger extrusion. This correlation suggests that controlling grain size and orientation could mitigate average extrusion. However, TSVs with uniform small grains reduce average extrusion but do not necessarily improve the tail distribution representing the largest extrusions, which dominate reliability as the weakest links in 3D devices. Interfacial properties also play a major role: interfacial delamination and sliding can cause extrusion during heating, but if no plastic deformation occurs, extrusion may be minimal after cooling. Conversely, plastic deformation within the Cu via itself can cause residual extrusion even without interfacial sliding. Analytical models assuming perfect plasticity and frictionless interfacial sliding predict a critical temperature above which plastic yielding occurs, leading to residual extrusion proportional to the thermal load and inversely proportional to the Cu yield strength. Increasing yield strength raises this critical temperature and reduces extrusion. Finite element simulations confirm these predictions. Moreover, a perfectly bonded interface reduces residual extrusion by approximately three times compared to frictionless sliding. While smaller via diameters and depths generally reduce extrusion, reliability improvements are uncertain because the statistical likelihood of extreme extrusion events remains unchanged. Thus, design strategies to mitigate via extrusion should focus on engineering grain structure for larger grains at the via top, enhancing interfacial adhesion to minimize sliding, increasing Cu yield strength, and considering the trade-offs in via dimensions, acknowledging that eliminating the largest extrusion events remains challenging.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_18",
+  "generation_metadata": {
+    "generation_id": 119,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 19,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T01:01:06.020362",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011948753930511127,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 163,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 25,
+        "processes": 25,
+        "testing": 20,
+        "applications": 22,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_012.json"
+}

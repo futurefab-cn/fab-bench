@@ -1,0 +1,61 @@
+{
+  "test_id": "ROB_036",
+  "test_type": "robustness",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "[Judge] The composite material for consumer electronics covers described in the document must have a thermal conductivity coefficient higher than 1.0 W/(kelvin-meter) to achieve good thermal conductivity. (True/False)",
+  "gold_context_sources": [
+    {
+      "section_title": "US13005630B2 DETAILED DESCRIPTION",
+      "evidence": "To achieve good thermal conductivity, embodiments for the composite material can also possesses a thermal conductivity coefficient (lambda, A) higher than, e.g., 1.0 W/(kelvin-meter). These techniques present a scalable and low-cost fabrication method for consumer electronics.",
+      "doc_id": "US13005630B2",
+      "has_image": false
+    },
+    {
+      "section_title": "US13005630B2 DETAILED DESCRIPTION",
+      "evidence": "In the composite material, the final composite material possesses a thermal conductivity coefficient (A) surpassing 1.0 W/(Km). The enhanced thermal conductivity compared to normal polymer materials can greatly facilitate heat dissipation.",
+      "doc_id": "US13005630B2",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is True. Reasoning: The document explicitly states that to achieve good thermal conductivity, the composite material should possess a thermal conductivity coefficient higher than 1.0 W/(kelvin-meter). This threshold is given as a condition for effective heat dissipation in consumer electronics covers, making the statement true under the specified conditions within the same document.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_17",
+  "generation_metadata": {
+    "generation_id": 19,
+    "attempt": 2,
+    "temperature_used": 0.7700000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3379,
+    "similarity_failures": 1,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T11:02:50.328099",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010633320766543846,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 166,
+      "categories_found": {
+        "manufacturing": 25,
+        "materials": 22,
+        "devices": 28,
+        "processes": 26,
+        "testing": 19,
+        "applications": 23,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.6499999999999999,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_036.json"
+}

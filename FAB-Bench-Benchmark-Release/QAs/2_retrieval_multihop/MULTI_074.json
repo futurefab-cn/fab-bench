@@ -1,0 +1,73 @@
+{
+  "test_id": "MULTI_074",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "How do the integrated circuit structures with backside high voltage metal-insulator-metal (MIM) capacitors for front side GaN-based devices improve power delivery and device performance compared to traditional front side power delivery, and what fabrication techniques enable these improvements?",
+  "gold_context_sources": [
+    {
+      "section_title": "DESCRIPTION OF THE EMBODIMENTS",
+      "evidence": "[0028] One or more embodiments described herein are directed to GaN processes with integrated high density high voltage metal insulator metal (MIM) capacitors. One or more embodiments described herein are directed to integrated circuit structures having backside capacitors coupled to front side GaN-based devices. [...] [0031] In accordance with one or more embodiments of the present disclosure, the backside area of a GaN die is utilized to populate it with high voltage MIM solution. To achieve high capacitance density, embodiments can include stacking layers of the high voltage MIM, using through silicon vias (TSVs) to connect with the GaN power ICs fabricated on the front side. [...] [0033] Traditionally, power is delivered from a front side interconnect. At standard cell level, power can be delivered right on top of transistors or from a top and bottom cell boundary. Power delivered from a top and bottom cell boundary enables relatively shorter standard cell height with slightly higher power network resistance. However, a front side power network shares interconnect stack with signal routing and reduces signal routing tracks. In addition, for high performance design, top and bottom cell boundary power metal wires must be wide enough to reduce power network resistance and improve performance. This normally results in a cell height increase. In accordance with one or more embodiments of the present disclosure, delivering power from a wafer or substrate backside can be implemented to solve area and performance problems. At the cell level, wider metal 0 power at the top and bottom cell boundary may no longer be needed and, hence, cell height can be reduced. In addition, power network resistance can be significantly reduced resulting in performance improvement. At block and chip level, front side signal routing tracks are increased due to removed power routing and power network resistance is significantly reduced due to very wide wires, large vias and reduced interconnect layers.",
+      "doc_id": "US20240213140A1",
+      "has_image": false
+    },
+    {
+      "section_title": "DESCRIPTION OF THE EMBODIMENTS",
+      "evidence": "[0041] In accordance with one or more embodiments of the present disclosure, a fabrication process involves first fabricating GaN transistors and, possibly, heterogeneously integrated Si CMOS and ICs on the front side of wafer. The front side of the wafer is then protected and the wafer is flipped to expose the backside. The wafer is bonded to a carrier wafer. The silicon substrate is thinned to approximately or less than 100 microns. TSVs are fabricated to allow electrical connections between the backside and the front side of the wafer. High voltage multi-layer stacked MIM is then fabricated on the backside. Backside bumps are then formed. [0046] In other embodiments, hybrid bonding is used to fabricate structures such as those described herein. In one such embodiment, a fabrication technique, the GaN IC or GaN plus CMOS IC) is fabricated on a separate wafer, and the high-voltage MIM is fabricated on a separate wafer. In both cases, fabrication is performed on the front side of each wafer. Subsequently, both wafers are flipped, each bonded to a carrier wafer and each silicon substrate thinned. TSVs are then fabricated on both wafers. The carrier wafer with the high-voltage MIM is then flipped and hybrid bonded to the carrier wafer with the GaN ICs. At this point, the top-side carrier wafer (with the high-voltage MIM) is then grinded away to expose the metals. Backside bumps may then be fabricated.",
+      "doc_id": "US20240213140A1",
+      "has_image": false
+    },
+    {
+      "section_title": "DESCRIPTION OF THE EMBODIMENTS",
+      "evidence": "[0047] In accordance with one or more embodiments of the present disclosure, with respect to high voltage MIM fabrication, a multi-layer MIM is fabricated using less than four masks. As a comparison, state-of-the-art stacked MIMs are fabricated using at least the same number of masks as the number of layers of MIMs. For example, stacking 10 layers of MIMs (~10x higher MIM density) typically requires at least 10 masks. The cost scales with the number of masks. Consequently, stacking many layers of MIMs can become an untenably cost prohibitive. [0048] By contrast, in accordance with an embodiment of the present disclosure, any number of layers of MIM are fabricated using less than four masks. In an exemplary approach, two types of metal electrodes are used for the MIMs. The composition of the metals allows one to be etched selective to another. In one embodiment, the pair choices are Cr and TiN, or W and TiN, etc., with the appreciation that many such combinations are possible. [0049] In an embodiment, with reference again to FIG. 1B, the laterally recessed electrode 1 (178As) and electrode 2 (178Bs) are in two types of contact trenches through the MIM stack. In the first type of contact trench (ultimately filled with contact type 170A), electrode 2 is laterally recessed with respect to electrode 1 prior to electrode conductive fill. Whereas, in the second type of contact trench (ultimately filled with contact type 170B), electrode 1 is laterally recessed prior to electrode conductive fill. The recessed regions are subsequently filled with non-conductive dielectric prior to electrode conductive fill. In this way, when the trenches are filled with interconnect metal (e.g., Cu) to form contact types 170A and 170B, the contact trench type 170A contacts the electrode 1, while the contact trench type 170B contacts the electrode 2. In one embodiment, with a fixed number of masks (less than 4) needed to fabricate N layers of MIMs, the cost of the MIM can scale (cheaper by ~1/N) with the addition of additional layers of MIMs to increase its capacitive density.",
+      "doc_id": "US20240213140A1",
+      "has_image": false
+    },
+    {
+      "section_title": "DESCRIPTION OF THE EMBODIMENTS",
+      "evidence": "[0080] The interconnect stack 100 having front side power delivery includes a transistor 102 and signal and power delivery metallization 104. The transistor 102 includes a bulk substrate 106, semiconductor fins 108, a terminal 110, and a device contact 112. The signal and power delivery metallization 104 includes conductive vias 114, conductive lines 116, and a metal bump 118. [0037] Referring again to FIG. 1A, an interconnect stack 120 having backside power delivery includes a transistor 122, front side signal metallization 124A, and power delivery metallization 124B. The transistor 122 includes semiconductor nano-wires or nano-ribbons 128, a terminal 130, and a device contact 132, and a boundary deep via 133. The front side signal metallization 124A includes conductive vias 134A and conductive lines 136 A. The power delivery metallization 124B includes conductive vias 134B, conductive lines 136B, and a metal bump 138. [0038] To provide further context, one of the ultimate goals in Standard Cell design is to minimize the impact of the power delivery to the signal routing in terms of area, while maintaining a robust power delivery scheme which would have minimum voltage drop from the supply. With front side power delivery, commercialized Standard Cell architectures had to allocate routing tracks for power and ground from the top of the front side stack to the first metal routing layer, MO. This approach would exploit metal routing tracks. That means tighter metal pitches are required to deliver power while routing signals. Tighter metal pitches cause higher cap and resistance resulting in higher power consumption. Furthermore, due to the resistance greater voltage drop occurs from the top of the stack to the transistor source.",
+      "doc_id": "US20240213140A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "Integrated circuit structures incorporating backside high voltage metal-insulator-metal (MIM) capacitors for front side GaN-based devices improve power delivery and device performance primarily by enabling backside power delivery rather than traditional front side power delivery. Traditional front side power delivery involves routing power through metal layers that share space with signal routing, limiting routing tracks and requiring wider metal wires at the top and bottom cell boundaries to reduce power network resistance. This approach increases the cell height and voltage drop across the power network, negatively impacting performance and layout density.\n\nBy contrast, delivering power from the wafer or substrate backside, enabled by integrating high density high voltage MIM capacitors on the backside of GaN dies, significantly reduces power network resistance due to wider metal lines, large vias, and fewer interconnect layers. This reduction in resistance improves power delivery efficiency and performance. Additionally, backside power delivery removes the need for wide power metal wires on the front side, thereby increasing available routing tracks for signals and allowing for reduced cell height, which enhances standard cell layout density and placement flexibility.\n\nFabrication of these integrated structures involves initially fabricating GaN transistors and possibly heterogeneously integrated silicon CMOS devices on the front side of the wafer. The wafer is then protected, flipped, and bonded to a carrier wafer. The silicon substrate is thinned to approximately or less than 100 microns. Through silicon vias (TSVs) are fabricated to electrically connect the backside MIM capacitors with the front side devices. Subsequently, a high voltage multi-layer stacked MIM capacitor structure is fabricated on the backside. These MIM capacitors are constructed with a reduced mask count (less than four masks) despite multiple stacked layers by using pairs of metal electrodes that can be selectively etched, such as Cr and TiN or W and TiN. This selective etching allows laterally recessed alternating metal electrodes to be formed in contact trenches, which are then filled with interconnect metal to form electrical contacts.\n\nMoreover, alternative hybrid bonding techniques can be used where the GaN IC and the high voltage MIM capacitors are fabricated on separate wafers, bonded face-to-face after thinning and TSV formation, and the carrier wafer of the MIM wafer is then removed to expose the backside metal contacts. This approach enables high density, cost-effective, and scalable fabrication of backside power delivery structures integrated with front side GaN and silicon devices.\n\nThus, the combination of backside high voltage MIM capacitors with through silicon vias and advanced fabrication methods enables improved power delivery with lower resistance, higher cell layout efficiency, and enhanced device performance compared to conventional front side power delivery networks.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_18",
+  "generation_metadata": {
+    "generation_id": 39,
+    "attempt": 1,
+    "temperature_used": 0.6900000000000002,
+    "top_p_used": 0.9,
+    "max_tokens_used": 3993,
+    "similarity_failures": 1,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:13:40.360089",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010587463260439552,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 162,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 23,
+        "devices": 26,
+        "processes": 26,
+        "testing": 19,
+        "applications": 20,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_074.json"
+}

@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_034",
+  "test_type": "generation_quality",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "Explain how the Metal Dual Work Function Gate (MDWG) technology improves the scaling of DRAM cell transistors compared to conventional Poly Si Dual Work Function Gate (DWFG) technology, and discuss the role of Lanthanum diffusion in the device performance and reliability.",
+  "gold_context_sources": [
+    {
+      "section_title": "Abstract",
+      "evidence": "For the continuous scale-down of DRAM cell transistors, we have demonstrated, for the first time, a metal dual work function gate (MDWG) by replacing n+ Poly Si with an Oxide/La (Lanthanum) /TiN structure in a fully integrated 1z-nm 16Gb DRAM. We confirmed a 40% improvement in retention time without an increase in WL resistance compared to the cell transistors with a single work function. ... The TiN/LaO layer applied to the gate, which can shift the work function, has been reported by several groups. ... Fig. 9 and 10 display the cumulative distribution of refresh time and WL resistance for the fabricated single work function gate, Poly Si DWFG, MDWG A, and B. ... On the other hand, the MDWG proposed in this paper, while exhibiting a smaller improvement in tREF compared to the DWFG, demonstrate a 23% enhancement in tREF compare to the SWFG. Additionally, the WL resistance is improved by 40% compared to the DWFG, confirming its scalability. Moreover, especially for B, the improvement in tREF was not observed due to the diffusion of La into TiN, which hindered the proper formation of dipoles. Finally, the reliability issues related to La diffusion in the gate oxide of the proposed structures were examined. As depicted in Fig. 5, the B, where La diffused into both TiN and oxide, showed a decrease in lifetime voltage compared to the DWFG. Conversely, the A, which effectively suppressed the diffusion",
+      "doc_id": "A_Metal_Dual_Work-Function_Gate_MDWG_for_the_Continuous_Scaling_of_DRAM_Cell_Transistors",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The Metal Dual Work Function Gate (MDWG) technology addresses the scaling challenges faced by conventional Poly Si Dual Work Function Gate (DWFG) in DRAM cell transistors, especially the exponential increase in word line (WL) resistance as device dimensions shrink. By replacing the n+ Poly Si with a metal gate structure composed of an Oxide/La (Lanthanum)/TiN stack, MDWG achieves a significant reduction in WL resistance, improving it by approximately 40% compared to DWFG. This reduction in resistance enhances device scalability and overall performance. In terms of retention time (tREF), MDWG demonstrates a 23% improvement compared to single work function gates (SWFG), although this improvement is slightly less than that observed in DWFG. The key to the MDWG's improved performance is the effective formation of dipoles at the gate interface due to the presence of Lanthanum, which shifts the work function favorably. However, the diffusion of Lanthanum into the TiN layer and gate oxide can adversely affect device reliability and performance. In the MDWG variant labeled B, where Lanthanum diffusion was significant, no improvement in retention time was observed, and reliability was compromised, as indicated by a decrease in lifetime voltage. Conversely, in the MDWG variant A, where Lanthanum diffusion was effectively suppressed, the beneficial effects on retention time and WL resistance were maintained, confirming the importance of controlling Lanthanum diffusion for device reliability. Therefore, MDWG technology offers a scalable and more reliable alternative to DWFG for DRAM cell transistors, provided that Lanthanum diffusion is carefully managed to maintain the integrity of the gate oxide and the formation of the desired dipole layers.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_82",
+  "generation_metadata": {
+    "generation_id": 224,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 9,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T13:10:49.072924",
+    "semiconductor_analysis": {
+      "technical_density": 0.001229229229229226,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 153,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 27,
+        "processes": 19,
+        "testing": 18,
+        "applications": 20,
+        "parameters": 20
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_034.json"
+}

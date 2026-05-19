@@ -1,0 +1,55 @@
+{
+  "test_id": "GEN_025",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Judge] In hydrophilic direct bonding of patterned niobium (Nb) pads for semiconductor integration, the presence of a thin oxygen-enriched amorphous layer at the bonding interface is primarily caused by the prolonged time between chemical mechanical polishing (CMP) and bonding, as well as the resist stripping process just before bonding, which leads to Nb surface oxidation; this oxygen enrichment degrades the bonding quality significantly and makes subsequent annealing ineffective in improving the interface quality (True/False).",
+  "gold_context_sources": [
+    {
+      "section_title": "Double_Gated_a-InGaZnO_TFT_Properties_Based_on_Quantitative_Defect_Analysis_and_Computational_Modeling",
+      "evidence": "The bonding of metal pads in a pattern surrounded by air presents several technical challenges. ... The bonding must be done directly after stripping process and the remaining low particle contamination may cause defects at the bonding interface, as bonding processes are highly sensitive to any particles. ... The bonding interface is less reconstructed and present a thin amorphous zone. This 2 nm amorphous layer on either side of the interface may correspond to an oxygen-enriched region, although its nature is difficult to determine with confidence. ... The enrichment of oxygen, absent at the interface in full-sheet bonding, could be explained by the extended time between the Nb CMP and the bonding itself in the case of patterned integration. ... Another possible cause of oxygen enrichment at the interface could be the stripping process that occurs just before bonding. This surface treatment has the potential to oxidize the metal surface prior to bonding. However, the amorphous layer remains thin. It is noteworthy that a higher annealing temperature could help to remove the oxidized layer.",
+      "doc_id": "Double_Gated_a-InGaZnO_TFT_Properties_Based_on_Quantitative_Defect_Analysis_and_Computational_Modeling",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is False. Reasoning: While the oxygen-enriched amorphous layer at the bonding interface in patterned Nb pad hydrophilic direct bonding is indeed attributed primarily to the prolonged time between CMP and bonding and the resist stripping process prior to bonding, which both lead to surface oxidation of Nb, this oxygen enrichment does not significantly degrade the bonding quality to an extent that annealing becomes ineffective. The text explicitly states that the amorphous layer remains thin and that higher annealing temperatures could help remove the oxidized layer. Moreover, despite the presence of this oxygen-enriched layer, the bonding pads have successfully withstood grinding and thinning, indicating that the bonding quality remains sufficiently strong and dense. Therefore, the statement that oxygen enrichment degrades bonding quality significantly and makes subsequent annealing ineffective is incorrect.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_27",
+  "generation_metadata": {
+    "generation_id": 1685,
+    "attempt": 1,
+    "temperature_used": 0.8200000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 428,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T10:30:30.893748",
+    "semiconductor_analysis": {
+      "technical_density": 0.0009938868600933666,
+      "precision_level": "high",
+      "dominant_category": "devices",
+      "total_tech_terms": 158,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 28,
+        "processes": 22,
+        "testing": 17,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_025.json"
+}

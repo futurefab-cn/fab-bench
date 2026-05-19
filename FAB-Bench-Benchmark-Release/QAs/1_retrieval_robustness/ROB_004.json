@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_004",
+  "test_type": "robustness",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "[Fill] In the context of the disclosed techniques for chemical mechanical polishing (CMP) for hybrid bonding, the first predetermined amount of recess in the conductive structures formed after polishing the conductive layer to expose the barrier layer across the substrate is described as being _____ nm or less before removal of the barrier layer.",
+  "gold_context_sources": [
+    {
+      "section_title": "Overview",
+      "evidence": "In one embodiment, the first predetermined amount of recess may be uniform across the substrate and may be less than 60 nm before the removal of the barrier layer. In another embodiment, the first predetermined amount of recess may be less than 40 nm before the removal of the barrier layer.",
+      "doc_id": "US20230268308A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is \"less than 60\" nm. Reasoning: The passage explicitly states that the first predetermined amount of recess may be uniform across the substrate and may be less than 60 nm before removal of the barrier layer, and alternatively, may be less than 40 nm. The exact phrase \"less than 60 nm\" is the primary description of the first predetermined recess amount before barrier removal.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_2",
+  "generation_metadata": {
+    "generation_id": 45,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 1,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T00:44:22.381816",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010201505936590614,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 152,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 25,
+        "processes": 22,
+        "testing": 17,
+        "applications": 19,
+        "parameters": 19
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_004.json"
+}

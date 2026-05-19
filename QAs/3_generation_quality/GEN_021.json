@@ -1,0 +1,61 @@
+{
+  "test_id": "GEN_021",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Fill] In the mathematical model of superfilling during damascene copper plating, the primary mechanism that leads to higher deposition rates at the bottom of trenches compared to the sidewalls is the differential inhibition controlled by _____ blank, which is strongly influenced by the diffusion-controlled concentration gradient of an adsorbed additive inhibitor.",
+  "gold_context_sources": [
+    {
+      "section_title": "5 Conclusions and future perspectives",
+      "evidence": "The model of superfilling is based on differential inhibition by diffusion-controlled additives, where the surface concentration of the adsorbates responsible for retarding electrodeposition varies along the profile due to concentration gradients, leading to position-dependent deposition rates.",
+      "doc_id": "Andricacos1998",
+      "has_image": false
+    },
+    {
+      "section_title": "5 Conclusions and future perspectives",
+      "evidence": "The local rate of copper deposition is proportional to the local current density. The additive inhibitor concentration at the electrode surface is consumed under mass-transfer control and its flux varies significantly along the profile, causing strong position dependence of deposition rates that promotes void-free and seam-free filling.",
+      "doc_id": "Andricacos1998",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is \"the flux of inhibitor additive\". Reasoning: The superfilling model describes that the deposition rate differentiation arises from the differential inhibition caused by diffusion-controlled additives (inhibitors). These inhibitors adsorb on the electrode surface and retard electrodeposition; their surface concentration is controlled by the diffusion flux. The concentration gradient of the inhibitor along the trench profile leads to spatial variation in inhibition, resulting in higher deposition rates at trench bottoms (where inhibitor flux is lowest) compared to sidewalls. This mechanism enables superfilling with void-free and seam-free copper plating.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_12",
+  "generation_metadata": {
+    "generation_id": 1608,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 366,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T10:12:14.024490",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010257641771587334,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 149,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 25,
+        "processes": 20,
+        "testing": 17,
+        "applications": 20,
+        "parameters": 19
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_021.json"
+}

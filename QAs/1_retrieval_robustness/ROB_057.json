@@ -1,0 +1,61 @@
+{
+  "test_id": "ROB_057",
+  "test_type": "robustness",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "[Calculation] Given a FinFET device metal gate structure formed in a trench of an interlayer dielectric (ILD) layer on a substrate, the metal gate includes a conductive material with suspensions diffused into it during CMP. The reducing gas treatment is applied at 300°C to 400°C to reduce these suspensions before an etch back process. If the redox potential of the reducing gas is greater than that of the suspensions but less than that of the metal gate material, and the reducing gas includes hydrogen and nitrogen, what is the temperature range in Kelvin used for the reducing gas treatment? Provide the conversion from Celsius to Kelvin and calculate the range.",
+  "gold_context_sources": [
+    {
+      "section_title": "DETAILED DESCRIPTION",
+      "evidence": "The processing chamber and the substrate 200 are further heated. In some embodiments, the processing chamber can be heated by applying optical techniques ... The reducing gas 250 in the processing chamber is also heated and becomes high-temperature reducing gas 250, and the high-temperature reducing gas 250 is of a temperature in a range from about 200° C. to about 400° C.",
+      "doc_id": "US20240387678A1",
+      "has_image": false
+    },
+    {
+      "section_title": "DETAILED DESCRIPTION",
+      "evidence": "The reducing gas 250 is led into the processing chamber. The reducing gas 250 is in contact with the metal gate 244. The reducing gas 250 includes reducing gas, which can react with the diffused suspensions in the metal gate 244. The reducing gas 250 has the ability to reduce the diffused suspensions ... The reducing gas 250 is a gas including hydrogen with dilute gas, such as N2/Ar/He inert gas. The reducing gas can include H2N2.",
+      "doc_id": "US20240387678A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is [473 K to 673 K]. Reasoning: The reducing gas treatment temperature range is given as about 200°C to 400°C. To convert Celsius to Kelvin, add 273.15 to the Celsius temperature. Thus, 200°C + 273.15 = 473.15 K (approximately 473 K) and 400°C + 273.15 = 673.15 K (approximately 673 K). Therefore, the temperature range in Kelvin used for the reducing gas treatment is approximately 473 K to 673 K.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_3",
+  "generation_metadata": {
+    "generation_id": 4,
+    "attempt": 1,
+    "temperature_used": 0.38,
+    "top_p_used": 0.95,
+    "max_tokens_used": 3072,
+    "similarity_failures": 0,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T12:00:16.007229",
+    "semiconductor_analysis": {
+      "technical_density": 0.001073887958310066,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 163,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 28,
+        "processes": 26,
+        "testing": 17,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_057.json"
+}

@@ -1,0 +1,55 @@
+{
+  "test_id": "MULTI_038",
+  "test_type": "multi_hop",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "[Calculation] Given a synchronous circuit with propagation delays d(v) for vertices (functional elements), register counts w(e) for edges, and a clock period P, calculate the minimum feasible clock period O(G) that satisfies the constraints for correct operation. Assume the following constants from Section 15: minimum delay MIN-DEL, uncertainty constants a and o with 0 < a ≤ 1 ≤ o, setup time SETUP, hold time HOLD, and clock period P. Using the relationships for clock arrival times and data propagation times, and considering the linear programming constraints for avoiding zero and double clocking, compute the minimum clock period P_min for a circuit with given delays and register placements. Cross-reference the formalism of register counts and propagation delays from Section 20, and the timing constraints from Section 15. Provide the formula combining these parameters for multi-hop paths in the circuit.",
+  "gold_context_sources": [
+    {
+      "section_title": "15: Clock skew optimization",
+      "evidence": "1) FF; receives the central clock delayed xi by its own delay element. A later section will outline a method for delay line construction. Depending on the technology, there is some minimum delay MIN-DEL that can be generated: x; ≥ MIN-DEL. We will assume some uncertainty in the clock delays. There will be two constants, 0 < a ≤ 1 ≤ o, with the property that if the nominal clock delay is x;, then the actual clock delay x can vary from clock edge to clock edge, but must always fall in the interval axi ≤ x ≤ oxi. 2) In order for a FF to operate correctly when the clock edge arrives at time x, it is assumed that there are constants SETUP and HOLD such that correct input data must be present and stable during the time interval (x - SETUP, x + HOLD). 4) For 1 ≤ i, j ≤ L, we compute lower and upper bounds MIN(i, j) and MAX(i, j) for the time that is required for a signal edge to propagate from FFi to FFj. To avoid double-clocking between FFi and FFj, the data edge generated at FFi by a clock edge must arrive at FFj no sooner than a period of time HOLD after the latest possible arrival of the same clock edge. Hence, axi + MIN(i, j) ≥ oxj + HOLD. To avoid zero-clocking, the data edge generated at FFi by a clock edge must arrive at FFj no later than SETUP amount of time before the earliest arrival of the next clock edge. Hence, oxi + MAX(i, j) ≤ axj + P - SETUP.",
+      "doc_id": "Clock_skew_optimization",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is:$$P_{min} = \\max_{i,j} \\{\\beta x_i - \\alpha x_j + MAX(i, j) + SETUP\\}$$Reasoning:This formula is derived from the constraint to prevent 'zero-clocking' (a setup time violation), which is the key condition that determines the minimum feasible clock period ($P$) for the synchronous system 1111.Derivation of the Zero-Clocking (Setup Violation) Constraint:A synchronous circuit must guarantee that a data signal arrives at a destination flip-flop ($FF_j$) and is stable for a duration of $SETUP$ time before the next active clock edge arrives2222.The latest a signal can depart from the source flip-flop ($FF_i$) is at time $\\beta x_i$. This is because the nominal clock delay to $FF_i$ is $x_i$, but due to uncertainty, the clock edge may arrive as late as $\\beta x_i$ (where $\\beta \\ge 1$)3333.The longest propagation time for the signal through the combinational logic from $FF_i$ to $FF_j$ is $MAX(i, j)$4444.Therefore, the latest time the data signal can arrive at $FF_j$ and be ready for setup is $\\beta x_i + MAX(i, j) + SETUP$.The earliest the next clock edge can arrive at $FF_j$ is at time $\\alpha x_j + P$. This is because the nominal delay to $FF_j$ is $x_j$, but it may arrive as early as $\\alpha x_j$ (where $\\alpha \\le 1$), plus one clock period $P$5555.To prevent a setup violation, the latest data arrival time must be less than or equal to the earliest arrival of the next clock edge. This gives the inequality:$$\\beta x_i + MAX(i, j) + SETUP \\le \\alpha x_j + P$$6Solving for $P_{min}$:We rearrange the inequality to solve for the clock period $P$:$$P \\ge \\beta x_i - \\alpha x_j + MAX(i, j) + SETUP$$This constraint must be satisfied for every path $(i, j)$ in the system. Therefore, the system's minimum period ($P_{min}$) must be at least as large as the maximum value this expression yields for the worst-case path.The variables $x_i$ and $x_j$ are adjustable. The paper's linear program, LP_SPEED, is designed to find the optimal set of $x_i$ values that minimize this required $P$7777.Therefore, the final $P_{min}$ is the maximum value of the expression $\\beta x_i - \\alpha x_j + MAX(i, j) + SETUP$ across all paths, using the optimized $x_i$ and $x_j$ values. This optimization must also simultaneously satisfy the double-clocking (hold) constraint ($\\alpha x_i + MIN(i, j) \\ge \\beta x_j + HOLD$) for all paths 8888.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_29",
+  "generation_metadata": {
+    "generation_id": 548,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 145,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T05:35:05.739941",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011058884524898357,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 160,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 27,
+        "processes": 22,
+        "testing": 18,
+        "applications": 20,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_038.json"
+}

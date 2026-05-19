@@ -1,0 +1,61 @@
+{
+  "test_id": "MULTI_028",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "How does the selective raised CVD process for titanium silicide formation in the self-aligned silicide process improve the reliability and electrical performance of semiconductor transistors compared to conventional methods, and what are the key process parameters that influence this improvement?",
+  "gold_context_sources": [
+    {
+      "section_title": "DESCRIPTION OF THE PREFERRED EMBODIMENT",
+      "evidence": "The metal layer is thin (about 50-150 Å) so that the metal layer reacting with the gate and the source/drain regions only consumes light polysilicon of the gate and of the source/drain regions. Junction leakage formed between the source/drain regions and the substrate can thus be prevented. Furthermore, the second metal silicide layer is formed using selective raised CVD with little consuming polysilicon of the gate and the source/drain regions so that a thick second metal silicide layer can be formed to decrease sheet resistance of the gate. The selective CVD forms titanium silicide on a first metal silicide layer because the selective titanium silicide is affected by doping density and surface condition of the gate and the source/drain regions while directly forming titanium silicide on the gate or on the source/drain regions. The selectivity and deposition rate for titanium silicide formation using selective CVD may vary. Thus, quality and thickness of titanium silicide are difficult to control.",
+      "doc_id": "US6287967",
+      "has_image": false
+    },
+    {
+      "section_title": "DESCRIPTION OF THE PREFERRED EMBODIMENT",
+      "evidence": "The first metal silicide layers 110a, 110b and the second metal silicide layers 112a, 112b have a high-resistance C49 phase. A rapid thermal process is performed to transfer metal silicide from the high-resistance C49 phase to a low-resistance Cs phase. The rapid thermal process is performed at a temperature of about 825-875° C. and at a pressure of about 1-10 torr for about 10-30 seconds. The selective CVD is performed at a temperature of about 500-700° C. and a pressure of about 3-10 torr. The flow rate of silane is about 3-10 sccm. The flow rate of titanium chloride is about 3-10 sccm.",
+      "doc_id": "US6287967",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The selective raised Chemical Vapor Deposition (CVD) process for titanium silicide formation in the self-aligned silicide process improves transistor reliability and electrical performance by enabling the formation of a thick second metal silicide layer on a thin first metal silicide nucleation layer with minimal consumption of polysilicon in the gate and source/drain regions. This approach prevents junction leakage that typically arises from excessive polysilicon consumption in conventional methods. The selective CVD process is influenced by doping density and surface conditions of the transistor regions, which affects the selectivity and deposition rate of titanium silicide, thereby impacting the uniformity and quality of the silicide layer. Key process parameters critical to this improvement include maintaining the metal layer thickness between 50-150 Å for the initial layer, performing selective CVD at temperatures between 500-700°C and pressures of 3-10 torr, and controlling gas flow rates of silane and titanium chloride each in the range of 3-10 sccm. Additionally, a rapid thermal process conducted at 825-875°C under 1-10 torr pressure for 10-30 seconds transforms the high-resistance C49 phase of the metal silicide into the low-resistance Cs phase, thereby enhancing electrical conductivity. Collectively, these parameters enable the formation of a robust, low-resistance titanium silicide contact with improved reliability and reduced junction leakage compared to conventional methods that consume more polysilicon and result in higher leakage and less controlled silicide thickness.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_36",
+  "generation_metadata": {
+    "generation_id": 394,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3993,
+    "similarity_failures": 64,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T04:57:53.116886",
+    "semiconductor_analysis": {
+      "technical_density": 0.001220732126668539,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 165,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 26,
+        "processes": 29,
+        "testing": 19,
+        "applications": 20,
+        "parameters": 23
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_028.json"
+}

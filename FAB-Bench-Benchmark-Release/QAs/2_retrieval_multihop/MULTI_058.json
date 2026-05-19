@@ -1,0 +1,55 @@
+{
+  "test_id": "MULTI_058",
+  "test_type": "multi_hop",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the system's ability to retrieve and synthesize information from multiple, separate document sections to answer a complex question.",
+  "question": "Explain how wafer orientation affects hole mobility and Negative Bias Temperature Instability (NBTI) degradation in p-MOSFET devices, and discuss the implications of these effects for the fabrication of three-dimensional devices such as FinFETs on (100) and (110) oriented wafers.",
+  "gold_context_sources": [
+    {
+      "section_title": "9. Wafer orientation",
+      "evidence": "Most ICs are fabricated on (100) oriented Si wafers. However, it has been known since 1968 that hole mobility is higher for p-MOSFETs on (110) oriented wafers with the channel in the (110) direction [39,40]. Along with the higher hole mobility, however, is a higher interface trap density. Dy has been reported as D;(100)=7.7x 10\" and Dy(110)=14x10\"cm2eV™' [41]. Hence one would expect more severe NBTI degradation on (110) oriented wafers, as indeed has been observed, as shown in Fig. 11 [42,43]. This is a potential problem if (1 10) oriented wafers become important. For certain three-dimensional devices, e.g., FInFETs, when fabricated on (100) wafers with the channel in the conventional (110) direction, the vertical sidewalls are (110) oriented, leading to NBTI problems [42]. However, forming FinFETs on (100) wafers with the channel in the (100) direction, leads to (100) vertical sidewalls, illustrated in Fig. 12.",
+      "doc_id": "schroder2007",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "Wafer orientation significantly influences hole mobility and NBTI degradation in p-MOSFET devices. Devices fabricated on (110) oriented silicon wafers exhibit higher hole mobility compared to those on (100) wafers when the channel is aligned in the (110) direction. However, this improvement in mobility is accompanied by a higher interface trap density—reported as 7.7x10^10 cm^-2 eV^-1 for (100) wafers and 14x10^10 cm^-2 eV^-1 for (110) wafers. The elevated trap density on (110) wafers leads to more severe Negative Bias Temperature Instability (NBTI) degradation, which adversely affects device reliability. In the context of three-dimensional devices such as FinFETs, these effects become particularly important. FinFETs fabricated on (100) wafers with channels oriented along the conventional (110) direction have vertical sidewalls with (110) orientation, exposing the device to NBTI degradation issues similar to those observed on (110) wafers. Conversely, when FinFETs are formed on (100) wafers with channels oriented along the (100) direction, the vertical sidewalls adopt the (100) orientation, which mitigates the NBTI problems. Therefore, understanding and controlling wafer orientation and channel direction is critical to balancing mobility performance and device reliability, especially for advanced three-dimensional transistor architectures.",
+  "primary_metric": "completeness",
+  "secondary_metrics": [
+    "depth",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "multi_hop_13",
+  "generation_metadata": {
+    "generation_id": 803,
+    "attempt": 2,
+    "temperature_used": 0.9700000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 296,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T06:40:49.620004",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010504211939934048,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 153,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 23,
+        "devices": 27,
+        "processes": 17,
+        "testing": 16,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.6499999999999999,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "2_retrieval_multihop\\MULTI_058.json"
+}

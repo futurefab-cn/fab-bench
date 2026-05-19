@@ -1,0 +1,61 @@
+{
+  "test_id": "GEN_019",
+  "test_type": "generation_quality",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the generator model's accuracy and technical depth, assuming a perfect retrieval process.",
+  "question": "[Fill] In the heterogeneous 3D monolithic CFETs demonstrated using Ge (110)/<110> GAA nanosheet p-FETs on Si (100)/<110> tri-gate n-FETs, the primary mechanism enabling record-high hole mobility of 1200 cm2/V·s normalized by footprint is due to _____ blank _____ rather than compressive strain effects.",
+  "gold_context_sources": [
+    {
+      "section_title": "Ge(110) GAA Nanosheet / Si(100) Tri-gate Nanosheet Monolithic CFETs Featuring Record-High Hole Mobility",
+      "evidence": "Through experimental data, we revealed that the Ge channel exhibited enhanced hole mobility in the (110)/<110> channel due to the strong anisotropic shape of the valence band [4]. In addition, we obtained approximately 12 % higher μeff in the GAA structure than that of the tri-gate structure due to the high proportion of (110)/<110> channel with high hole μeff, which indicates mobility enhancement would be possible through surface orientation engineering. Moreover, orientation engineering is the most effective in GAA structure due to the increased proportion of (110)/<110> channel. ... Especially, while the enhancement of hole mobility through the compressive strain is the alteration limited, the improvement achieved via surface/channel orientation is notably compelling.",
+      "doc_id": "Ge110_GAA_Nanosheet___Si100_Tri-gate_Nanosheet_Monolithic_CFETs_Featuring_Record-High_Hole_Mobility",
+      "has_image": false
+    },
+    {
+      "section_title": "First_Demonstration_of_Monolithic_CFET_Inverter_at_48nm_Gate_Pitch_Toward_Future_Logic_Technology_Scaling",
+      "evidence": "By integrating this advanced channel on the Si bottom-tier n-FETs, we successfully demonstrated heterogeneous mCFETs, highlighting inverter operation. We anticipate that the findings of this study will be valuable in the circuit design of monolithically integrated logic applications by reducing the mobility disparity between n-FETs and p-FETs.",
+      "doc_id": "First_Demonstration_of_Monolithic_CFET_Inverter_at_48nm_Gate_Pitch_Toward_Future_Logic_Technology_Scaling",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is surface orientation engineering. Reasoning: The experimental data in the source clearly indicate that the record-high hole mobility in the Ge (110)/<110> GAA nanosheet p-FETs is primarily due to the strong anisotropic shape of the valence band, which is exploited by engineering the surface and channel orientation. The study notes that while compressive strain provides limited enhancement, the mobility improvement via surface/channel orientation engineering is notably more compelling and effective, especially in the GAA structure. Thus, the mechanism enabling the record-high mobility is surface orientation engineering rather than strain effects.",
+  "primary_metric": "depth",
+  "secondary_metrics": [
+    "completeness",
+    "factuality",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "generation_quality_19",
+  "generation_metadata": {
+    "generation_id": 1515,
+    "attempt": 1,
+    "temperature_used": 0.8900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 4096,
+    "similarity_failures": 306,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T09:45:02.911217",
+    "semiconductor_analysis": {
+      "technical_density": 0.0012728472640670247,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 157,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 25,
+        "processes": 23,
+        "testing": 17,
+        "applications": 21,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "3_generation_quality\\GEN_019.json"
+}

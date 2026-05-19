@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_039",
+  "test_type": "robustness",
+  "question_format": "OBJECTIVE",
+  "test_description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "[Fill] The threshold voltage shift caused by gate bias stress at gate voltages less than _____ is basically the same at different temperatures, according to the study on SiC MOSFETs under high temperature stress.",
+  "gold_context_sources": [
+    {
+      "section_title": "3.1 | Positive bias temperature instability (PBTI)",
+      "evidence": "This trend indicates that the 17y shift caused by gate bias stress at 155 < 30 V is basically the same at different temperatures.",
+      "doc_id": "IET Power Electronics - 2024 - Chen - Threshold voltage instability of SiC MOSFETs under very‐high temperature and wide",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The correct answer is 30 V. Reasoning: The exact phrase from the context states that the threshold voltage shift (17y shift) caused by gate bias stress at gate voltages less than 30 V (specifically 155 < 30 V) is basically the same at different temperatures, indicating that the threshold voltage shift is independent of temperature below this gate voltage threshold.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_29",
+  "generation_metadata": {
+    "generation_id": 31,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 1,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T11:06:28.969745",
+    "semiconductor_analysis": {
+      "technical_density": 0.0011687078852767674,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 160,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 27,
+        "processes": 22,
+        "testing": 18,
+        "applications": 22,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_039.json"
+}

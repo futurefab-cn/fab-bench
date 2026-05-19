@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_026",
+  "test_type": "robustness",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "How does the yield model incorporating fault clustering differ from the classical Poisson-based yield model for integrated circuits, and what is the significance of the clustering parameter in predicting chip yield, particularly in chips with redundancy?",
+  "gold_context_sources": [
+    {
+      "section_title": "YIELD MODELS",
+      "evidence": "Several modifications to the above yield formula have been proposed to account for fault clustering. The most commonly used modification is obtained by assuming the number of faults to be Poisson distributed but considering the parameter λ to be a random variable rather than a constant. This results in clustering of faults. The modified yield formula is obtained by averaging the classical Poisson yield formula with respect to a probability density function f(λ), commonly modeled by the Gamma distribution with parameters α and β. Evaluating this leads to the integrated-circuit yield formula involving a clustering parameter α and the grand average number of faults X. The clustering parameter α has physical significance: when α → ∞, the model reduces to the classical Poisson model representing random faults without clustering; smaller values of α indicate increased clustering. Actual values of α typically range between 0.3 and 5. The effect of clustering is illustrated by comparing yields for chips with many circuits, showing that clustering leads to higher yields than predicted by the Poisson model. For chips with redundancy, the yield can be calculated considering the probability of having at least (N-R) fault-free modules, where clustering affects the distribution of faults and hence the yield. Inclusion of clustering in redundancy yield calculation is important as it can significantly affect yield predictions, sometimes by factors of four or more.",
+      "doc_id": "koren1989",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The yield model incorporating fault clustering differs fundamentally from the classical Poisson-based yield model by treating the average number of faults per chip (λ) not as a fixed constant but as a random variable with its own distribution, often modeled by a Gamma distribution. This approach acknowledges that faults tend to cluster rather than occur independently and randomly. The resulting yield formula, derived by averaging the Poisson yield formula over the distribution of λ, introduces a clustering parameter α. The clustering parameter α quantifies the degree of fault clustering: as α approaches infinity, the model converges to the classical Poisson model representing purely random faults with no clustering; smaller values of α indicate more pronounced clustering effects. Physically, α captures wafer-to-wafer variations and spatial correlations of defects. The significance of including clustering is profound in yield prediction. The classical Poisson model tends to underestimate yields, especially for large chips or chips with many replicated modules, because it ignores clustering. Incorporating clustering predicts substantially higher yields for chips with many circuits or modules, as faults are not uniformly distributed but grouped, allowing more fault-free modules than expected under randomness. In chips with redundancy, where some faulty modules can be tolerated, considering clustering is even more critical. The clustering affects the probability distribution of fault-free modules and thus the chip yield. Neglecting clustering can lead to overestimating yield improvements from redundancy by a factor of up to four, which has significant cost and productivity implications in semiconductor manufacturing. Therefore, the clustering parameter is essential for accurate yield modeling, enabling better process control and design of fault-tolerant integrated circuits.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_8",
+  "generation_metadata": {
+    "generation_id": 53,
+    "attempt": 1,
+    "temperature_used": 0.7900000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 3,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T03:21:34.931317",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010525978132360594,
+      "precision_level": "high",
+      "dominant_category": "processes",
+      "total_tech_terms": 163,
+      "categories_found": {
+        "manufacturing": 26,
+        "materials": 22,
+        "devices": 25,
+        "processes": 26,
+        "testing": 19,
+        "applications": 23,
+        "parameters": 22
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_026.json"
+}

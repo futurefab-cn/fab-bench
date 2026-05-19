@@ -1,0 +1,55 @@
+{
+  "test_id": "ROB_054",
+  "test_type": "robustness",
+  "question_format": "SUBJECTIVE",
+  "description": "This test case evaluates the RAG system's robustness in retrieving a specific, rare, or hard-to-find fact (the 'needle') from a large context ('haystack').",
+  "question": "Analyze the techniques and mechanisms described for detecting and monitoring pellicle conditions in lithographic apparatuses, and explain how these approaches improve pellicle lifetime management and damage prevention during lithography.",
+  "gold_context_sources": [
+    {
+      "section_title": "SUMMARY",
+      "evidence": "[0007] It is desirable to provide an apparatus and method for determining a condition associated with a pellicle which overcomes or mitigates one or more problems associated with the art. Examples described herein may have use in an EUV lithographic apparatus. ... [00010] The sensor may be configured to measure infrared radiation (IR) associated with the pellicle. The sensor may be configured to measure an IR emission spectrum associated with the pellicle. ... [00014] The sensor may be configured to locate the particle on the pellicle by identifying a contrast between the infrared radiation being received from the particle and the pellicle. ... [00067] The apparatus may comprise a filter for filtering out radiation from the exposure radiation beam. ... [00069] This may have an advantage of preventing damage to the patterning device. ... [00070] The condition associated with the pellicle may be one or more selected from: lifetime of the pellicle, integrity of the pellicle, a defect in the pellicle, a local transmission change of the pellicle, a particle located on the pellicle, a stain on the pellicle, a deformation of the pellicle, an impending rupture of the pellicle, a rupture of the pellicle, and/or the presence of the pellicle.",
+      "doc_id": "US20230333462A1",
+      "has_image": false
+    }
+  ],
+  "ground_truth_answer": "The described techniques for detecting and monitoring pellicle conditions in lithographic apparatuses focus on utilizing sensors configured to measure properties indicative of pellicle health, particularly infrared (IR) radiation emissions. These sensors can measure the IR emission spectrum and intensity over specific wavelength bands (e.g., 2-8 µm), enabling the detection of temperature profiles and thermal hot spots on the pellicle or particles on it. By identifying contrasts in IR radiation between particles and the pellicle, the system can locate contaminations or defects in real time. The apparatus may also include filters to block exposure beam radiation to avoid interference and can be positioned strategically (e.g., outside the radiation beam path or integrated into the pellicle carrier) to enable in situ measurements without disrupting lithography. Furthermore, the system can actively control radiation beam power or initiate split exposure schemes based on sensor data to maintain pellicle integrity and optimize throughput. This proactive monitoring and control help prevent pellicle damage, increase pellicle lifetime, reduce cross-contamination risks, and avoid substrate damage, thereby improving reliability and efficiency of the lithographic process.",
+  "primary_metric": "factuality",
+  "secondary_metrics": [
+    "depth",
+    "completeness",
+    "relevance",
+    "context_utilization",
+    "support_quality"
+  ],
+  "source_chapter": "robustness_32",
+  "generation_metadata": {
+    "generation_id": 35,
+    "attempt": 1,
+    "temperature_used": 0.8400000000000001,
+    "top_p_used": 0.85,
+    "max_tokens_used": 3072,
+    "similarity_failures": 2,
+    "context_diversity_score": 1.0,
+    "context_type": "balanced_cross_dataset",
+    "diversity_mode": "balanced",
+    "timestamp": "2025-10-22T11:39:32.625614",
+    "semiconductor_analysis": {
+      "technical_density": 0.0010800582241630248,
+      "precision_level": "high",
+      "dominant_category": "manufacturing",
+      "total_tech_terms": 158,
+      "categories_found": {
+        "manufacturing": 27,
+        "materials": 22,
+        "devices": 27,
+        "processes": 22,
+        "testing": 19,
+        "applications": 20,
+        "parameters": 21
+      }
+    },
+    "similarity_threshold_used": 0.7,
+    "semiconductor_mode_enabled": true
+  },
+  "file_path": "1_retrieval_robustness\\ROB_054.json"
+}
